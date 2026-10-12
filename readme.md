@@ -281,6 +281,19 @@ Original SVGs in `assets/img/`:
 - [x] Bitcoin halving
 - [x] Solana
 
+### Articles to add:
+• Non-Fungible Tokens (NFTs): Standards (ERC-721, ERC-1155), generative art platforms (like Art Blocks, a digital system where artists use code to generate unique NFT artwork), and digital ownership.
+• Blockchain Gaming (GameFi): Play-to-earn models, in-game assets, and virtual land economies.
+• DAOs (Decentralized Autonomous Organizations): How voting, treasury management, and community governance work.
+• Global Regulations: Tax implications, KYC/AML (Know Your Customer / Anti-Money Laundering) laws, and SEC/global agency rulings.
+• Crypto History & Milestones: Timeline of major events (the Bitcoin Genesis block, the 2017 ICO boom, major network upgrades like The Merge, and significant market cycles/crashes).
+• Glossary of Slang & Terms: A quick-reference dictionary for common terms (HODL, WAGMI, gas fees, rug pull, whale).
+• Altcoins & Tokens: Governance tokens, utility tokens, and meme coins, outlining their real use cases vs. speculative value.
+• Stablecoins: Breakdown of fiat-backed, crypto-backed, and algorithmic stablecoins (how they maintain their peg).
+• Wallets & Security: Hot wallets vs. cold storage, seed phrases, private/public keys, and common phishing/scam prevention.
+• Smart Contracts & DApps: Definition, how they execute, and what decentralized applications (apps run on a peer-to-peer network rather than a single server) are.
+• Scaling & Layer 2s: Explanations of Layer 1 vs. Layer 2 networks, rollups, sidechains, and high-speed networks.
+
 ### 9. Testing ⏳ to do
 - [ ] Build the site, either with Ruby/Jekyll locally or by pushing to GitHub Pages, and fix any errors
 - [ ] Check the Main Page, an article, Contents, Categories, Search, the About page and a 404 under `/SplytWiki/`, with no broken links or images
