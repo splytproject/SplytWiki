@@ -1,0 +1,71 @@
+# ------------------------------------------------------------------
+#  SplytWiki site settings
+# ------------------------------------------------------------------
+title: SplytWiki
+tagline: The Free Crypto Encyclopedia
+site_sub: From SplytWiki, the free crypto encyclopedia
+description: >-
+  SplytWiki is a free online encyclopedia about cryptocurrency, blockchain
+  technology, decentralized finance and the people and ideas behind them.
+
+# GitHub Pages address: https://<username>.github.io/SplytWiki
+# GitHub account: splytproject
+# If you later use a custom domain, set baseurl to "" and add a CNAME file.
+url: "https://splytproject.github.io"
+baseurl: "/SplytWiki"
+lang: en
+
+# Shown on the Contact page. Leave empty to hide.
+contact_email: ""
+
+license:
+  name: Creative Commons Attribution-ShareAlike 4.0 License
+  url: https://creativecommons.org/licenses/by-sa/4.0/
+
+# A-ADS ad slots. Paste each ad unit's code into _includes/ads/<slot>.html.
+# While a slot is empty, a dashed placeholder shows where it will appear
+# if show_placeholders is true. Set it to false before going live.
+ads:
+  show_placeholders: true
+
+# ------------------------------------------------------------------
+#  Build settings (no need to change these)
+# ------------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_backlink: "^"
+
+collections:
+  wiki:
+    output: true
+    permalink: /wiki/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: wiki
+    values:
+      layout: article
+      has_toc: true
+      namespace: article
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - readme.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .jekyll-cache

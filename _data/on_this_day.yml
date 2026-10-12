@@ -1,0 +1,165 @@
+# ------------------------------------------------------------------
+#  "On this day" events for the Main Page.
+#  date: "MM-DD" (keep the quotes), year: YYYY, text: Markdown.
+#  Links are relative to the Main Page: [text](wiki/Article_Name/)
+#  Visitors see today's events; if there are none, they see this month's.
+# ------------------------------------------------------------------
+
+# January
+- date: "01-03"
+  year: 2009
+  text: "[Satoshi Nakamoto](wiki/Satoshi_Nakamoto/) mines the genesis block of [Bitcoin](wiki/Bitcoin/)."
+- date: "01-09"
+  year: 2009
+  text: "Version 0.1 of the Bitcoin software is released."
+- date: "01-10"
+  year: 2024
+  text: "The US Securities and Exchange Commission approves the first spot bitcoin exchange-traded funds."
+- date: "01-12"
+  year: 2009
+  text: "The first bitcoin transaction between two people: Satoshi Nakamoto sends 10 BTC to Hal Finney."
+- date: "01-26"
+  year: 2018
+  text: "Japanese exchange Coincheck is hacked and about 523 million NEM tokens are stolen."
+
+# February
+- date: "02-21"
+  year: 2025
+  text: "The exchange Bybit loses about $1.5 billion in ether in one of the largest crypto thefts ever recorded."
+- date: "02-24"
+  year: 2014
+  text: "Mt. Gox, once the largest bitcoin exchange, suspends all trading and its website goes offline."
+- date: "02-28"
+  year: 2014
+  text: "Mt. Gox files for bankruptcy protection in Tokyo."
+
+# March
+- date: "03-06"
+  year: 2025
+  text: "A US executive order establishes a Strategic Bitcoin Reserve."
+- date: "03-11"
+  year: 2021
+  text: "Beeple's digital artwork *Everydays: The First 5000 Days* sells as a [non-fungible token](wiki/Non-fungible_token/) for $69.3 million at Christie's."
+- date: "03-13"
+  year: 2024
+  text: "[Ethereum](wiki/Ethereum/)'s Dencun upgrade introduces cheaper \"blob\" data for layer-2 rollups."
+- date: "03-16"
+  year: 2020
+  text: "[Solana](wiki/Solana/) launches its mainnet beta."
+
+# April
+- date: "04-12"
+  year: 2023
+  text: "The Shanghai–Capella upgrade lets [Ethereum](wiki/Ethereum/) validators withdraw their staked ether for the first time."
+- date: "04-20"
+  year: 2024
+  text: "The fourth [Bitcoin halving](wiki/Bitcoin_halving/) cuts the block subsidy from 6.25 to 3.125 BTC."
+
+# May
+- date: "05-07"
+  year: 2025
+  text: "[Ethereum](wiki/Ethereum/) activates the Pectra upgrade."
+- date: "05-09"
+  year: 2022
+  text: "The algorithmic [stablecoin](wiki/Stablecoin/) TerraUSD loses its dollar peg, beginning the collapse of the Terra ecosystem."
+- date: "05-11"
+  year: 2020
+  text: "The third [Bitcoin halving](wiki/Bitcoin_halving/) cuts the block subsidy from 12.5 to 6.25 BTC."
+- date: "05-22"
+  year: 2010
+  text: "Laszlo Hanyecz pays 10,000 BTC for two pizzas, the first known purchase of goods with [bitcoin](wiki/Bitcoin/). The date is now celebrated as \"Bitcoin Pizza Day\"."
+
+# June
+- date: "06-09"
+  year: 2021
+  text: "El Salvador's Legislative Assembly passes a law making [bitcoin](wiki/Bitcoin/) legal tender."
+- date: "06-17"
+  year: 2016
+  text: "An attacker exploits a flaw in The DAO, a [smart contract](wiki/Smart_contract/) investment fund on [Ethereum](wiki/Ethereum/), and drains about 3.6 million ether."
+
+# July
+- date: "07-09"
+  year: 2016
+  text: "The second [Bitcoin halving](wiki/Bitcoin_halving/) cuts the block subsidy from 25 to 12.5 BTC."
+- date: "07-18"
+  year: 2025
+  text: "The GENIUS Act, the first US federal law regulating payment [stablecoins](wiki/Stablecoin/), is signed into law."
+- date: "07-20"
+  year: 2016
+  text: "[Ethereum](wiki/Ethereum/) hard-forks to reverse The DAO hack; the unchanged chain continues as Ethereum Classic."
+- date: "07-23"
+  year: 2024
+  text: "Spot ether exchange-traded funds begin trading in the United States."
+- date: "07-30"
+  year: 2015
+  text: "The [Ethereum](wiki/Ethereum/) network goes live with its \"Frontier\" release."
+
+# August
+- date: "08-01"
+  year: 2017
+  text: "Bitcoin Cash splits from [Bitcoin](wiki/Bitcoin/) in a hard fork over block size."
+- date: "08-05"
+  year: 2021
+  text: "[Ethereum](wiki/Ethereum/)'s London upgrade introduces EIP-1559, which burns part of every transaction fee."
+- date: "08-15"
+  year: 2010
+  text: "A bug in Bitcoin creates over 184 billion bitcoins in a single transaction; the developers fix it and the chain is rewritten within hours."
+- date: "08-18"
+  year: 2008
+  text: "The domain name bitcoin.org is registered."
+- date: "08-24"
+  year: 2017
+  text: "Segregated Witness (SegWit) activates on the [Bitcoin](wiki/Bitcoin/) network."
+
+# September
+- date: "09-07"
+  year: 2021
+  text: "[Bitcoin](wiki/Bitcoin/) becomes legal tender in El Salvador."
+- date: "09-15"
+  year: 2022
+  text: "\"The Merge\": [Ethereum](wiki/Ethereum/) switches from [proof of work](wiki/Proof_of_work/) to [proof of stake](wiki/Proof_of_stake/)."
+- date: "09-24"
+  year: 2021
+  text: "China's central bank declares all [cryptocurrency](wiki/Cryptocurrency/) transactions illegal."
+
+# October
+- date: "10-02"
+  year: 2013
+  text: "The FBI shuts down the Silk Road darknet market, which used [bitcoin](wiki/Bitcoin/) for payments."
+- date: "10-05"
+  year: 2009
+  text: "New Liberty Standard publishes the first known exchange rate for bitcoin: $1 = 1,309.03 BTC."
+- date: "10-10"
+  year: 2025
+  text: "Crypto markets see the largest liquidation event on record, with about $19 billion of leveraged positions closed in a single day."
+- date: "10-31"
+  year: 2008
+  text: "[Satoshi Nakamoto](wiki/Satoshi_Nakamoto/) publishes the [Bitcoin](wiki/Bitcoin/) white paper on a cryptography mailing list."
+
+# November
+- date: "11-11"
+  year: 2022
+  text: "The FTX cryptocurrency exchange files for bankruptcy in the United States."
+- date: "11-14"
+  year: 2021
+  text: "The Taproot upgrade activates on [Bitcoin](wiki/Bitcoin/)."
+- date: "11-28"
+  year: 2012
+  text: "The first [Bitcoin halving](wiki/Bitcoin_halving/) cuts the block subsidy from 50 to 25 BTC."
+- date: "11-28"
+  year: 2017
+  text: "CryptoKitties, an early [NFT](wiki/Non-fungible_token/) game, launches on Ethereum."
+
+# December
+- date: "12-01"
+  year: 2020
+  text: "The Ethereum Beacon Chain launches, the first step in [Ethereum](wiki/Ethereum/)'s move to [proof of stake](wiki/Proof_of_stake/)."
+- date: "12-05"
+  year: 2024
+  text: "The price of one [bitcoin](wiki/Bitcoin/) rises above $100,000 for the first time."
+- date: "12-06"
+  year: 2013
+  text: "Dogecoin, a [cryptocurrency](wiki/Cryptocurrency/) started as a joke based on the \"Doge\" meme, is launched."
+- date: "12-10"
+  year: 2017
+  text: "Cboe launches the first bitcoin futures contracts on a major US exchange."

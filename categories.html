@@ -1,0 +1,30 @@
+---
+title: Categories
+display_title: Categories
+tab: Special page
+permalink: /categories/
+description: Browse SplytWiki articles by topic.
+---
+{%- assign all_cats = "" | split: "" -%}
+{%- for d in site.wiki %}{% assign all_cats = all_cats | concat: d.categories %}{% endfor -%}
+{%- assign all_cats = all_cats | uniq | sort -%}
+<p>{{ site.title }} groups its articles into {{ all_cats.size }} categories, listed below in alphabetical order. Each article can belong to several categories.</p>
+<ul class="mw-allpages">
+  {%- for c in all_cats %}
+  {%- assign members = site.wiki | where_exp: "d", "d.categories contains c" %}
+  <li><a href="#{{ c | slugify }}">{{ c }}</a> ({{ members.size }} member{% if members.size != 1 %}s{% endif %})</li>
+  {%- endfor %}
+</ul>
+
+{%- for c in all_cats %}
+{%- assign members = site.wiki | where_exp: "d", "d.categories contains c" | sort: "title" %}
+<div class="category-section" id="{{ c | slugify }}">
+  <h2>Category: {{ c }}</h2>
+  <p>The following {{ members.size }} page{% if members.size == 1 %} is{% else %}s are{% endif %} in this category, out of {{ members.size }} total.</p>
+  <ul class="mw-allpages">
+    {%- for d in members %}
+    <li><a href="{{ d.url | relative_url }}">{{ d.title }}</a></li>
+    {%- endfor %}
+  </ul>
+</div>
+{%- endfor %}

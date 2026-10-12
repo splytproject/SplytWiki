@@ -1,0 +1,8 @@
+{%- comment -%}
+  Image with a caption, floated like a Wikipedia thumbnail.
+  Usage: {% include figure.html image="blockchain-diagram.svg" caption="Text" width="300" align="right" %}
+{%- endcomment -%}
+<figure class="thumb t{{ include.align | default: 'right' }}" style="width:{{ include.width | default: 240 }}px">
+  <a href="{{ '/assets/img/' | append: include.image | relative_url }}"><img src="{{ '/assets/img/' | append: include.image | relative_url }}" alt="{{ include.alt | default: include.caption | strip_html | escape }}" width="{{ include.width | default: 240 }}" loading="lazy"></a>
+  <figcaption>{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' | strip }}</figcaption>
+</figure>

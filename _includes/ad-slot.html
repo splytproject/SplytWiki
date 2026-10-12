@@ -1,0 +1,17 @@
+{%- comment -%}
+  Renders one ad slot. Usage: {% include ad-slot.html slot="top" %}
+  The ad code itself lives in _includes/ads/<slot>.html.
+{%- endcomment -%}
+{%- capture ad_code -%}{% include ads/{{ include.slot }}.html %}{%- endcapture -%}
+{%- assign ad_code = ad_code | strip -%}
+{%- if ad_code != "" -%}
+<aside class="splyt-ad splyt-ad-{{ include.slot }}" aria-label="Advertisement">
+  <div class="splyt-ad-label">Advertisement</div>
+  <div class="splyt-ad-unit">{{ ad_code }}</div>
+</aside>
+{%- elsif site.ads.show_placeholders -%}
+<aside class="splyt-ad splyt-ad-{{ include.slot }} splyt-ad-placeholder" aria-label="Advertisement placeholder">
+  <div class="splyt-ad-label">Advertisement</div>
+  <div class="splyt-ad-unit"><span>A-ADS &ldquo;{{ include.slot }}&rdquo; slot<small>Paste your ad code into _includes/ads/{{ include.slot }}.html</small></span></div>
+</aside>
+{%- endif -%}

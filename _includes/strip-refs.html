@@ -1,0 +1,9 @@
+{%- comment -%}
+  Returns include.html without footnote markers (<sup>…</sup>) and without
+  the footnote list. Used for search text and Main Page excerpts.
+{%- endcomment -%}
+{%- assign _html = include.html | split: '<div class="footnotes"' | first -%}
+{%- assign _parts = _html | split: '<sup' -%}
+{%- for _part in _parts -%}
+  {%- if forloop.first -%}{{ _part }}{%- else -%}{{ _part | split: '</sup>' | last }}{%- endif -%}
+{%- endfor -%}

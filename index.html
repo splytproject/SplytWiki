@@ -1,0 +1,115 @@
+---
+title: Main Page
+tab: Main Page
+is_main: true
+permalink: /
+---
+{%- assign mp = site.data.mainpage -%}
+{%- assign article_count = site.wiki | size -%}
+{%- assign wiki_href = '/wiki/' | relative_url | prepend: 'href="' -%}
+
+<div id="mp-topbanner">
+  <div id="mp-welcome">Welcome to <a href="{{ '/about/' | relative_url }}">{{ site.title }}</a>,</div>
+  <div id="mp-free">the free crypto encyclopedia that anyone can read.</div>
+  <div id="articlecount"><a href="{{ '/contents/' | relative_url }}">{{ article_count }}</a> articles in English</div>
+</div>
+
+<div class="mp-columns">
+  <div class="mp-box mp-left">
+    <h2 class="mp-h2" id="mp-tfa-h2">From today's featured article</h2>
+    <div id="mp-tfa" class="mp-body">
+      {%- for name in mp.featured %}
+        {%- assign d = site.wiki | where: "title", name | first -%}
+        {%- if d %}
+          {%- capture clean %}{% include strip-refs.html html=d.content %}{% endcapture -%}
+          {%- assign first_para = clean | split: '<h2' | first | split: '</p>' | first | split: '<p>' | last | replace: 'href="../', wiki_href %}
+      <div class="mp-tfa-item"{% unless forloop.first %} hidden{% endunless %}>
+        {%- if d.infobox.image %}
+        <div class="mp-tfa-img"><a href="{{ d.url | relative_url }}"><img src="{{ '/assets/img/' | append: d.infobox.image | relative_url }}" alt="{{ d.title }}"></a></div>
+        {%- endif %}
+        <p>{{ first_para }} (<b><a href="{{ d.url | relative_url }}">Full article...</a></b>)</p>
+      </div>
+        {%- endif %}
+      {%- endfor %}
+      <p class="mp-more"><a href="{{ '/contents/' | relative_url }}">All articles</a> · <a href="{{ '/random/' | relative_url }}" data-splyt-random>Random article</a></p>
+    </div>
+
+    <h2 class="mp-h2" id="mp-dyk-h2">Did you know ...</h2>
+    <div id="mp-dyk" class="mp-body">
+      <ul>
+        {%- for item in mp.did_you_know %}
+        <li>... {{ item | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="mp-box mp-right">
+    <h2 class="mp-h2" id="mp-basics-h2">Crypto basics</h2>
+    <div id="mp-basics" class="mp-body">
+      <p>New to crypto? Start with these articles:</p>
+      <ul>
+        {%- for item in mp.basics %}
+        <li><b><a href="{{ '/wiki/' | append: item.page | append: '/' | relative_url }}">{{ item.title }}</a></b> – {{ item.blurb }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <h2 class="mp-h2" id="mp-otd-h2">On this day</h2>
+    <div id="mp-otd" class="mp-body">
+      {%- assign build_month = site.time | date: "%m" %}
+      <p class="mp-otd-date">This month in crypto history: {{ site.time | date: "%B" }}</p>
+      <ul>
+        {%- assign events = site.data.on_this_day | sort: "date" %}
+        {%- for e in events %}
+          {%- assign m = e.date | slice: 0, 2 %}
+          {%- capture day_label %}{{ '2000-' | append: e.date | date: "%-d %B" }}{% endcapture %}
+        <li data-date="{{ e.date }}"{% if m != build_month %} hidden{% endif %}><b><span class="otd-day">{{ day_label }} </span>{{ e.year }}</b> – {{ e.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% include ad-slot.html slot="article" %}
+
+<div class="mp-box mp-tfp">
+  <h2 class="mp-h2" id="mp-tfp-h2">Today's featured picture</h2>
+  <div class="mp-body mp-tfp-inner">
+    <a href="{{ '/wiki/' | append: mp.picture.page | append: '/' | relative_url }}"><img src="{{ '/assets/img/' | append: mp.picture.image | relative_url }}" alt="{{ mp.picture.title }}"></a>
+    <div>
+      <p><b>{{ mp.picture.title }}</b></p>
+      <p>{{ mp.picture.caption | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+      <p><a href="{{ '/wiki/' | append: mp.picture.page | append: '/' | relative_url }}">Read more about {{ mp.picture.page | replace: '_', ' ' | downcase }}...</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="mp-box mp-other">
+  <h2 class="mp-h2" id="mp-topics-h2">Browse by category</h2>
+  <div class="mp-body">
+    {%- assign all_cats = "" | split: "" %}
+    {%- for d in site.wiki %}{% assign all_cats = all_cats | concat: d.categories %}{% endfor %}
+    {%- assign all_cats = all_cats | uniq | sort %}
+    <ul class="mp-topics">
+      {%- for c in all_cats %}
+        {%- assign members = site.wiki | where_exp: "d", "d.categories contains c" %}
+      <li><a href="{{ '/categories/' | relative_url }}#{{ c | slugify }}">{{ c }}</a> <small>{{ members.size }} article{% if members.size != 1 %}s{% endif %}</small></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="mp-box mp-other">
+  <h2 class="mp-h2" id="mp-other-h2">Other areas of {{ site.title }}</h2>
+  <div class="mp-body">
+    <ul class="mp-areas">
+      <li><b><a href="{{ '/contents/' | relative_url }}">Contents</a></b> – an alphabetical list of every article.</li>
+      <li><b><a href="{{ '/categories/' | relative_url }}">Categories</a></b> – articles grouped by topic.</li>
+      <li><b><a href="{{ '/contribute/' | relative_url }}">Contribute</a></b> – suggest corrections, new articles and sources.</li>
+      <li><b><a href="{{ '/about/' | relative_url }}">About {{ site.title }}</a></b> – who we are and how articles are written.</li>
+      <li><b><a href="{{ '/disclaimer/' | relative_url }}">Disclaimers</a></b> – {{ site.title }} is not financial advice.</li>
+      <li><b><a href="{{ '/contact/' | relative_url }}">Contact us</a></b> – get in touch with the editors.</li>
+    </ul>
+  </div>
+</div>

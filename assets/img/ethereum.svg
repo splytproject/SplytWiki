@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 320" width="200" height="320">
+  <title>Ether diamond illustration</title>
+  <rect width="200" height="320" fill="#fff"/>
+  <!-- upper pyramid -->
+  <polygon points="100,12 100,122 22,160" fill="#8c8c8c"/>
+  <polygon points="100,12 178,160 100,122" fill="#343434"/>
+  <polygon points="22,160 100,122 100,206" fill="#393939"/>
+  <polygon points="178,160 100,122 100,206" fill="#141414"/>
+  <!-- lower point -->
+  <polygon points="22,176 100,222 100,308" fill="#8c8c8c"/>
+  <polygon points="178,176 100,222 100,308" fill="#3c3c3b"/>
+</svg>
