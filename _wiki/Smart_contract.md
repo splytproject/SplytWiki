@@ -50,6 +50,7 @@ Whether a smart contract creates legally binding obligations depends on the juri
 
 ## See also
 
+- [Decentralized autonomous organization](../Decentralized_autonomous_organization/)
 - [Ethereum](../Ethereum/)
 - [Decentralized finance](../Decentralized_finance/)
 - [Non-fungible token](../Non-fungible_token/)

@@ -55,6 +55,7 @@ The size of DeFi is often measured by **total value locked** (TVL), the value of
 
 ## See also
 
+- [Decentralized autonomous organization](../Decentralized_autonomous_organization/)
 - [Smart contract](../Smart_contract/)
 - [Stablecoin](../Stablecoin/)
 - [Ethereum](../Ethereum/)

@@ -3,13 +3,16 @@ title: Non-fungible token
 description: Unique blockchain token used to record ownership of a digital or physical item
 aliases: [NFT, NFTs, Non-fungible tokens]
 categories: [Non-fungible tokens, Ethereum, Smart contracts]
-updated: 2026-10-12
+updated: 2026-10-13
 ---
 A **non-fungible token** (**NFT**) is a unique token recorded on a [blockchain](../Blockchain/), used to certify ownership of a particular item, most often a digital image, video, collectible, in-game object or membership pass. Unlike [cryptocurrencies](../Cryptocurrency/) such as [bitcoin](../Bitcoin/), where every unit is interchangeable (*fungible*), each NFT has its own identifier and cannot be swapped one-for-one with another.[^erc721]
 
 NFTs became widely known during a speculative boom in 2021, when some digital artworks and collectibles sold for millions of dollars and "NFT" was named Collins Dictionary's word of the year. Trading volumes and prices fell sharply in 2022. NFTs are used for digital art, collectibles, gaming, event tickets and proving membership of online communities. They have been criticised for speculation, fraud, and the fact that buying an NFT usually does not give the buyer copyright in the underlying work.
 
 ## How NFTs work
+
+Main article: [Non-fungible tokens: ERC-721 and ERC-1155 standards](../NFT_standards/)
+{: .hatnote}
 
 An NFT is created, or *minted*, by a [smart contract](../Smart_contract/) that keeps a record of which address owns each token ID. On [Ethereum](../Ethereum/), most NFTs follow the **ERC-721** standard, finalised in 2018, which defines a common set of functions for transferring tokens and checking ownership so that wallets and marketplaces can support any compatible NFT.[^erc721] The later **ERC-1155** standard lets a single contract manage both fungible and non-fungible tokens, which is useful for games.[^erc1155]
 
@@ -41,6 +44,16 @@ Trading volumes fell steeply in 2022 amid a broader fall in cryptocurrency price
 - **Tickets**: event tickets issued as NFTs can be verified and resold under rules set by the issuer.
 - **Domain names and identity**: services such as the Ethereum Name Service issue human-readable names as NFTs.
 
+## Generative art and digital ownership
+
+**Generative art platforms** connect artist-written code with NFT issuance. On **Art Blocks**, an artist designs an algorithm that produces varied compositions, and token-specific inputs determine individual works. The code defines the creative system; the NFT identifies the collectible associated with an output.[^artblocks]
+
+For example, a fictional artist could write a program that draws abstract gardens. Each mint could produce a different arrangement of colours and shapes under the same artistic rules. The resulting token is distinct from the code and displayed image.
+
+**Digital ownership** refers to the recorded holding of a token and any separately specified rights or benefits. A blockchain can record who holds the token, but it does not automatically give that holder copyright, exclusive access to an image or permanent access to a service. Files can be copied without transferring the NFT, and the issuer's identity and licence remain important.
+
+For a detailed explanation of Art Blocks, provenance, custody and the layers of digital ownership, see [Non-fungible tokens: ERC-721 and ERC-1155 standards](../NFT_standards/#generative-art-platforms).
+
 ## Criticism
 
 - **Rights**: buying an NFT normally transfers only the token, not the copyright or other intellectual property in the artwork, unless a separate licence says otherwise.
@@ -51,6 +64,7 @@ Trading volumes fell steeply in 2022 amid a broader fall in cryptocurrency price
 
 ## See also
 
+- [Blockchain gaming (GameFi)](../Blockchain_gaming/)
 - [Smart contract](../Smart_contract/)
 - [Ethereum](../Ethereum/)
 - [Cryptocurrency wallet](../Cryptocurrency_wallet/)
@@ -59,3 +73,4 @@ Trading volumes fell steeply in 2022 amid a broader fall in cryptocurrency price
 
 [^erc721]: Entriken, William; Shirley, Dieter; Evans, Jacob; Sachs, Nastassia (2018). ["ERC-721: Non-Fungible Token Standard"](https://eips.ethereum.org/EIPS/eip-721). *Ethereum Improvement Proposals*.
 [^erc1155]: Radomski, Witek; et al. (2018). ["ERC-1155: Multi Token Standard"](https://eips.ethereum.org/EIPS/eip-1155). *Ethereum Improvement Proposals*.
+[^artblocks]: ["Art Blocks Protocol Overview"](https://docs.artblocks.io/protocol/overview/). *Art Blocks documentation*. Accessed 13 October 2026.
