@@ -281,6 +281,9 @@ Original SVGs in `assets/img/`:
 - [x] Bitcoin halving
 - [x] Solana
 
+### Add Translations
+in Nigerian Pidgin, Dutch, Turkish, Arabic, Spanish, and German.
+
 ### 9. Testing ⏳ to do
 - [ ] Build the site, either with Ruby/Jekyll locally or by pushing to GitHub Pages, and fix any errors
 - [ ] Check the Main Page, an article, Contents, Categories, Search, the About page and a 404 under `/SplytWiki/`, with no broken links or images
