@@ -1,0 +1,26 @@
+es:
+  site:
+    title: "SplytWiki"
+  nav:
+    home: "Inicio"
+    about: "Acerca de"
+    docs: "Documentación"
+    contact: "Contacto"
+  search:
+    placeholder: "Buscar..."
+  auth:
+    login: "Iniciar sesión"
+    logout: "Cerrar sesión"
+    signup: "Registrarse"
+  buttons:
+    save: "Guardar"
+    cancel: "Cancelar"
+    edit: "Editar"
+  messages:
+    welcome: "Bienvenido a SplytWiki"
+    loading: "Cargando..."
+  errors:
+    not_found: "No encontrado"
+    server_error: "Algo salió mal"
+  footer:
+    copyright: "© %{year} SplytWiki. Todos los derechos reservados."
