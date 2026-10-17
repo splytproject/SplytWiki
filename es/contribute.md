@@ -22,7 +22,7 @@ lang: es
 {% if site.contact_email != "" -%}
 Envía un correo a **[{{ site.contact_email }}](mailto:{{ site.contact_email }})** e incluye:
 {%- else -%}
-Próximamente habrá un formulario de sugerencias. Mientras tanto, utiliza los datos de contacto en la [página de contacto](/es/contact/) e incluye:
+Próximamente habrá un formulario de sugerencias. Mientras tanto, utiliza los datos de contacto en la [página de contacto](../contact/) e incluye:
 {%- endif %}
 
 1. El nombre del artículo (o el artículo que te gustaría ver).

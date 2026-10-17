@@ -14,10 +14,11 @@
 1. [How the site works](#how-the-site-works)
 2. [Folder structure](#folder-structure)
 3. [Writing an article](#writing-an-article)
-4. [Setting up A-ADS ads](#setting-up-a-ads-ads)
-5. [Publishing on GitHub Pages](#publishing-on-github-pages)
-6. [Previewing on your own computer (optional)](#previewing-on-your-own-computer-optional)
-7. [Build plan & progress](#build-plan--progress)
+4. [Translating an article](#translating-an-article)
+5. [Setting up A-ADS ads](#setting-up-a-ads-ads)
+6. [Publishing on GitHub Pages](#publishing-on-github-pages)
+7. [Previewing on your own computer (optional)](#previewing-on-your-own-computer-optional)
+8. [Build plan & progress](#build-plan--progress)
 
 ---
 
@@ -147,17 +148,32 @@ Main article: [Bitcoin halving](../Bitcoin_halving/)
 
 ---
 
+## Translating an article
+
+Translations live in `de/wiki/` (German) and `es/wiki/` (Spanish). The file name must match the English one, for example `de/wiki/Bitcoin.md` for `_wiki/Bitcoin.md`, and the page appears at `/de/wiki/Bitcoin/`.
+
+1. Copy the English file into `de/wiki/` or `es/wiki/`.
+2. Add `ref:` to the front matter, set to the **English article's title**, for example `ref: Bitcoin`. This is what links the language versions together.
+3. Translate the `description`, `hatnote`, infobox rows and the article text. Keep `categories` in English: they are translated automatically using `_data/i18n.yml`.
+4. Use `## Einzelnachweise` (German) or `## Referencias` (Spanish) as the references heading, and translate "See also" / "External links".
+
+Once a translation exists, the article shows a **Languages** button next to its title, and Google is told about the other versions. Links inside a translation to articles that aren't translated yet go to the English page automatically. Interface text for each language, such as the tabs, footer and dates, is in `_data/i18n.yml`.
+
+Translated so far: **Bitcoin** and **Ethereum** (German and Spanish).
+
+---
+
 ## Setting up A-ADS ads
 
-There are three ad slots. Each one has its own file:
+There are three ad slots. Each has a **desktop** unit and a **mobile** unit in its own file. The site inserts only the unit that matches the visitor's screen (mobile below 1000px wide), so a hidden ad never loads.
 
-| Slot | File | Where it appears | Suggested A-ADS size |
-|---|---|---|---|
-| Top banner | `_includes/ads/top.html` | Above the title on every page | Adaptive (or 728×90) |
-| Sidebar | `_includes/ads/sidebar.html` | Right column on wide screens | 160×600 |
-| In-article | `_includes/ads/article.html` | Inside articles, and between boxes on the Main Page | Adaptive (or 300×250) |
+| Slot | Desktop file | Mobile file | Where it appears | A-ADS size | Units |
+|---|---|---|---|---|---|
+| Top banner | `_includes/ads/top.html` | `_includes/ads/top-mobile.html` | Above the title on every page | Adaptive | 2458811 / 2458512 |
+| Sidebar | `_includes/ads/sidebar.html` | `_includes/ads/sidebar-mobile.html` | Right column on wide screens; end of each article on narrow screens | Fixed 120×600 | 2458513 / 2458812 |
+| In-article | `_includes/ads/article.html` | `_includes/ads/article-mobile.html` | Inside articles, and between boxes on the Main Page | Fixed 300×250 | 2458514 / 2458813 |
 
-1. Sign in at [aads.com](https://aads.com) and create **one ad unit per slot** for your site address (`https://splytproject.github.io/SplytWiki/`).
+1. Sign in at [aads.com](https://aads.com) and create **one ad unit per slot and device** for your site address (`https://splytproject.github.io/SplytWiki/`).
 2. Copy each unit's embed code and paste it into the matching file, **below** the comment block at the top.
 3. Commit and push. The ad then appears on every page that uses that slot.
 4. Once all slots are filled, set `show_placeholders: false` in `_config.yml`. Until then, empty slots show a dashed "Advertisement" box so you can see where ads will go.

@@ -22,7 +22,7 @@ lang: de
 {% if site.contact_email != "" -%}
 Senden Sie eine E-Mail an **[{{ site.contact_email }}](mailto:{{ site.contact_email }})** und fügen Sie Folgendes bei:
 {%- else -%}
-Ein Vorschlagsformular ist in Arbeit. Bis dahin nutzen Sie bitte die Kontaktdaten auf der [Kontaktseite](/de/contact/) und geben Sie an:
+Ein Vorschlagsformular ist in Arbeit. Bis dahin nutzen Sie bitte die Kontaktdaten auf der [Kontaktseite](../contact/) und geben Sie an:
 {%- endif %}
 
 1. Den Namen des Artikels (oder den Artikel, den Sie sehen möchten).

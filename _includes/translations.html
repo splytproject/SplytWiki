@@ -1,0 +1,37 @@
+{%- comment -%}
+  Finds the language versions of the current article.
+
+  English articles live in _wiki/. A translation is a page in de/wiki/ or
+  es/wiki/ whose front matter has "ref:" set to the English article's title.
+  With include.mode="head" it prints <link rel="alternate" hreflang> tags;
+  otherwise it prints the "Languages" button next to the title.
+{%- endcomment -%}
+{%- assign _key = page.ref | default: page.title -%}
+{%- assign _en = site.wiki | where: "title", _key | first -%}
+{%- assign _trans = site.pages | where: "ref", _key -%}
+{%- if _en and _trans.size > 0 -%}
+  {%- if include.mode == "head" -%}
+<link rel="alternate" hreflang="en" href="{{ _en.url | absolute_url }}">
+    {%- for p in _trans %}
+<link rel="alternate" hreflang="{{ p.lang }}" href="{{ p.url | absolute_url }}">
+    {%- endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ _en.url | absolute_url }}">
+  {%- else -%}
+  {%- assign _total = _trans.size | plus: 1 %}
+<details class="splyt-dropdown lang-dropdown">
+  <summary class="lang-button" title="{{ t.languages }}">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M20 18h-1.44a.6.6 0 0 1-.4-.12.8.8 0 0 1-.23-.31L17 15h-5l-1 2.54a.8.8 0 0 1-.22.3.6.6 0 0 1-.4.14H9l4.55-11.47h1.89zm-3.53-4.31L14.89 9.5a12 12 0 0 1-.39-1.24q-.09.37-.19.69l-.19.56-1.58 4.19zm-6.3-1.58a13.4 13.4 0 0 1-2.91-1.41 11.46 11.46 0 0 0 2.81-5.37H12V4H7.31a4 4 0 0 0-.2-.56C6.87 2.79 6.6 2 6.6 2l-1.47.5s.4.89.6 1.5H0v1.33h2.15A11.23 11.23 0 0 0 5 10.7a17.2 17.2 0 0 1-5 2.1q.56.82.87 1.38a23.3 23.3 0 0 0 5.22-2.51 15.6 15.6 0 0 0 3.56 1.77zM3.63 5.33h4.91a8.1 8.1 0 0 1-2.45 4.45 9.1 9.1 0 0 1-2.46-4.45"/></svg>
+    {{ _total }} {{ t.language_count }}
+  </summary>
+  <div class="dropdown-panel lang-panel">
+    <div class="vector-menu-heading">{{ t.languages }}</div>
+    <ul>
+      <li><a href="{{ _en.url | relative_url }}" lang="en" hreflang="en"{% if page.url == _en.url %} class="selected"{% endif %}>English</a></li>
+      {%- for p in _trans %}
+      <li><a href="{{ p.url | relative_url }}" lang="{{ p.lang }}" hreflang="{{ p.lang }}"{% if page.url == p.url %} class="selected"{% endif %}>{{ site.data.i18n[p.lang].name | default: p.lang }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</details>
+  {%- endif -%}
+{%- endif -%}
