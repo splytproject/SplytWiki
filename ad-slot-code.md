@@ -1,14 +1,35 @@
-# A-ADS ad units
+<!-- BEGIN AADS AD UNIT 2458813 -->
 
-The live ad code is in `_includes/ads/`. This file is only a reference list.
-Each slot has a desktop and a mobile unit; the site shows the one that matches
-the visitor's screen (mobile = narrower than 1000px).
+<div id="frame" style="width: 300px;margin: auto;z-index: 99998;height: auto">
+          <iframe data-aa='2458813' src='//ad.a-ads.com/2458813/?size=300x250'
+                            style='border:0; padding:0; width:300px; height:250px; overflow:hidden;display: block;margin: auto'></iframe>
+        </div>
 
-| Slot | Device | File | Unit ID | Size |
-|---|---|---|---|---|
-| Top banner | Desktop | `_includes/ads/top.html` | 2458811 | Adaptive |
-| Top banner | Mobile | `_includes/ads/top-mobile.html` | 2458512 | Adaptive |
-| Sidebar | Desktop | `_includes/ads/sidebar.html` | 2458513 | 120x600 |
-| Sidebar | Mobile (end of article) | `_includes/ads/sidebar-mobile.html` | 2458812 | 120x600 |
-| In-article | Desktop | `_includes/ads/article.html` | 2458514 | 300x250 |
-| In-article | Mobile | `_includes/ads/article-mobile.html` | 2458813 | 300x250 |
+<!-- END AADS AD UNIT 2458813 -->
+
+Fixre mobile
+
+——-
+
+<!-- BEGIN AADS AD UNIT 2458812 -->
+
+<div id="frame" style="width: 120px;margin: auto;z-index: 99998;height: auto">
+          <iframe data-aa='2458812' src='//ad.a-ads.com/2458812/?size=120x600'
+                            style='border:0; padding:0; width:120px; height:600px; overflow:hidden;display: block;margin: auto'></iframe>
+        </div>
+
+<!-- END AADS AD UNIT 2458812 -->
+
+Fixed 120x600 mobile
+———
+<!-- BEGIN AADS AD UNIT 2458811 -->
+
+<div id="frame" style="width: 100%;margin: auto;position: relative; z-index: 99998;">
+          <iframe data-aa='2458811' src='//acceptable.a-ads.com/2458811/?size=Adaptive'
+                            style='border:0; padding:0; width:70%; height:auto; overflow:hidden;display: block;margin: auto'></iframe>
+        </div>
+
+<!-- END AADS AD UNIT 2458811 -->
+
+—-for adaptive. Desktop
+——
