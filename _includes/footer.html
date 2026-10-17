@@ -1,15 +1,16 @@
+{%- include i18n.html -%}
 <footer class="mw-footer" role="contentinfo">
   <ul class="footer-info">
     {%- assign edited = page.updated | default: site.time %}
-    <li>This page was last edited on {{ edited | date: "%-d %B %Y" }}.</li>
-    <li>Text is available under the <a rel="license" href="{{ site.license.url }}">{{ site.license.name }}</a>; additional terms may apply. Nothing on {{ site.title }} is financial or investment advice.</li>
+    <li>{{ t.last_edited }} {% include date.html date=edited %}.</li>
+    <li>{{ t.license_before }} <a rel="license" href="{{ site.license.url }}">{{ site.license.name }}</a>{{ t.license_after }}</li>
   </ul>
   <ul class="footer-places">
-    <li><a href="{{ '/privacy/' | relative_url }}">Privacy policy</a></li>
-    <li><a href="{{ '/about/' | relative_url }}">About {{ site.title }}</a></li>
-    <li><a href="{{ '/disclaimer/' | relative_url }}">Disclaimers</a></li>
-    <li><a href="{{ '/contact/' | relative_url }}">Contact {{ site.title }}</a></li>
-    <li><a href="{{ '/contribute/' | relative_url }}">Contribute</a></li>
+    <li><a href="{{ t.prefix | append: '/privacy/' | relative_url }}">{{ t.privacy }}</a></li>
+    <li><a href="{{ t.prefix | append: '/about/' | relative_url }}">{{ t.about_site }}</a></li>
+    <li><a href="{{ t.prefix | append: '/disclaimer/' | relative_url }}">{{ t.disclaimers }}</a></li>
+    <li><a href="{{ t.prefix | append: '/contact/' | relative_url }}">{{ t.contact_site }}</a></li>
+    <li><a href="{{ t.prefix | append: '/contribute/' | relative_url }}">{{ t.contribute }}</a></li>
   </ul>
   <ul class="footer-icons">
     <li><a class="footer-badge" href="{{ site.license.url }}" rel="license" title="{{ site.license.name }}"><span>cc</span> BY-SA 4.0</a></li>

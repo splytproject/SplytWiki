@@ -5,39 +5,38 @@ permalink: /de/privacy/
 description: Wie SplytWiki und seine Dienstleister mit Besucherdaten umgehen.
 lang: de
 ---
+Diese Erklärung beschreibt, welche Informationen beim Besuch von {{ site.title }} erhoben werden. Kurz gesagt: {{ site.title }} selbst fragt keine persönlichen Daten ab, sammelt sie nicht und verkauft sie nicht. Die Unternehmen, die die Website hosten und ihre Anzeigen ausliefern, können jedoch einige Daten verarbeiten, wie unten beschrieben.
 
-Diese Richtlinie erklärt, welche Informationen beim Besuch von {{ site.title }} erhoben werden. Kurz gesagt: {{ site.title }} selbst fordert keine persönlichen Daten an, sammelt sie nicht und verkauft sie nicht, aber die Firmen, die Dienste für die Seite bereitstellen, können [...]
+## Informationen, die {{ site.title }} erhebt
 
-## Informationen, die {{ site.title }} sammelt
+{{ site.title }} hat keine Benutzerkonten, Kommentarformulare oder Newsletter und setzt keine eigenen Tracking- oder Werbe-Cookies.
 
-{{ site.title }} hat keine Benutzerkonten, Kommentarfelder oder Newsletter und setzt keine eigenen Tracking- oder Werbecookies.
+**Darstellungseinstellungen.** Wenn Sie die Textgröße, die Seitenbreite oder das Farbschema ändern, wird Ihre Auswahl im lokalen Speicher (Local Storage) Ihres Browsers abgelegt, damit sie beim nächsten Besuch gilt. Diese Information verlässt Ihr Gerät nie, und Sie können sie löschen, indem Sie die Websitedaten in Ihrem Browser entfernen.
 
-**Erscheinungseinstellungen.** Wenn Sie die Schriftgröße, Seitenbreite oder Farbthema ändern, wird Ihre Auswahl im lokalen Speicher Ihres Browsers gespeichert, damit sie beim nächsten Besuch angewendet wird. Diese Informationen werden niemals [...] 
-
-**Suche.** Suchanfragen werden vollständig im Browser ausgeführt. Was Sie in das Suchfeld eingeben, wird nicht an {{ site.title }} gesendet.
+**Suche.** Die Suche läuft vollständig in Ihrem Browser. Was Sie in das Suchfeld eingeben, wird nicht an {{ site.title }} gesendet.
 
 ## Hosting
 
-{{ site.title }} wird auf **GitHub Pages** gehostet, einem Dienst von GitHub, Inc. Wie jeder Webhost kann GitHub technische Informationen über Besuche protokollieren, z. B. IP-Adressen, zum Schutz und zur Stabilität des Dienstes [...]
+{{ site.title }} wird bei **GitHub Pages** gehostet, einem Dienst von GitHub, Inc. Wie jeder Webhoster kann GitHub technische Informationen über Besuche protokollieren, etwa IP-Adressen, um den Dienst abzusichern und am Laufen zu halten. Siehe das [GitHub General Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) (englisch).
 
 ## Werbung
 
-{{ site.title }} zeigt Anzeigen von **[A-ADS](https://a-ads.com)** an, einem Drittanbieter-Werbenetzwerk. Anzeigen werden von A-ADS-Servern geladen und in klar gekennzeichneten "Advertisement"-Boxen angezeigt, daher kann A-ADS [...]
+{{ site.title }} zeigt Anzeigen von **[A-ADS](https://a-ads.com)**, einem externen Werbenetzwerk. Die Anzeigen werden von den Servern von A-ADS in deutlich als „Advertisement“ gekennzeichnete Felder geladen. Dadurch erhält A-ADS die technischen Informationen, die Ihr Browser bei jeder Webanfrage übermittelt (etwa Ihre IP-Adresse, Ihren Browsertyp und die aufgerufene Seite). {{ site.title }} gibt keine weiteren Informationen an A-ADS weiter. Wie A-ADS mit diesen Daten umgeht, entnehmen Sie bitte der Datenschutzerklärung auf deren Website.
 
-Ein Klick auf eine Anzeige führt Sie zu einer Website, die nicht von {{ site.title }} betrieben wird. Wir sind nicht verantwortlich für die Inhalte oder Datenschutzpraktiken der Werbetreibenden.
+Ein Klick auf eine Anzeige führt Sie zu einer Website, die nicht von {{ site.title }} betrieben wird. Wir sind nicht für die Inhalte oder den Datenschutz der Werbetreibenden verantwortlich.
 
 ## Externe Links
 
-Artikel verlinken auf externe Quellen wie Whitepapers und Nachrichtenartikel. Diese Seiten haben eigene Datenschutzrichtlinien.
+Artikel verlinken auf externe Quellen wie Whitepapers und Nachrichtenseiten. Diese Websites haben eigene Datenschutzerklärungen.
 
 ## Kinder
 
-{{ site.title }} ist ein Nachschlagewerk für ein allgemeines Publikum und nicht speziell an Kinder gerichtet.
+{{ site.title }} ist ein Nachschlagewerk für ein allgemeines Publikum und richtet sich nicht an Kinder.
 
 ## Änderungen
 
-Diese Richtlinie kann gelegentlich aktualisiert werden. Das Datum unten auf der Seite zeigt an, wann zuletzt Änderungen vorgenommen wurden.
+Diese Erklärung kann von Zeit zu Zeit aktualisiert werden. Das Datum unten auf dieser Seite zeigt, wann sie zuletzt geändert wurde.
 
 ## Kontakt
 
-Fragen zu dieser Richtlinie können über die Angaben auf unserer [Kontaktseite](/de/contact/) gesendet werden.
+Fragen zu dieser Erklärung können Sie über die Angaben auf unserer [Kontaktseite](../contact/) stellen.

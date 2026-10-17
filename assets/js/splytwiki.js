@@ -8,6 +8,7 @@
   var root = doc.documentElement;
   var BASE = (root.getAttribute('data-base') || '/').replace(/\/$/, ''); // e.g. "/SplytWiki"
   var PAGES = readJSON('splyt-pages') || [];                             // ["/wiki/Bitcoin/", ...]
+  var TRANSLATED = readJSON('splyt-translated') || [];                   // ["/de/wiki/Bitcoin/", ...]
   var params = new URLSearchParams(location.search);
   var wordmark = doc.querySelector('.mw-logo-wordmark');
   var SITE = wordmark ? wordmark.textContent.trim() : 'SplytWiki';
@@ -300,7 +301,11 @@
   function initReferences() {
     var notes = $('.mw-parser-output .footnotes');
     if (!notes) return;
-    var heading = doc.getElementById('references');
+    var heading = null;
+    ['references', 'einzelnachweise', 'referencias'].some(function (id) {
+      heading = doc.getElementById(id);
+      return heading;
+    });
     if (heading) {
       heading.parentNode.insertBefore(notes, heading.nextSibling);
     } else {
@@ -340,7 +345,9 @@
     if (!list || !content) return;
     var heads = $$('h2[id], h3[id]', content).filter(function (h) { return !h.closest('.infobox, .splyt-ad'); });
 
-    var html = '<li class="vector-toc-list-item vector-toc-level-1" data-target=""><a class="vector-toc-link" href="#">(Top)</a></li>';
+    var nav = list.closest('.vector-toc');
+    var topLabel = (nav && nav.getAttribute('data-top-label')) || '(Top)';
+    var html = '<li class="vector-toc-list-item vector-toc-level-1" data-target=""><a class="vector-toc-link" href="#">' + esc(topLabel) + '</a></li>';
     var open = false;
     heads.forEach(function (h, i) {
       var next = heads[i + 1];
@@ -398,8 +405,9 @@
   /* ---------------------------------------- red links, external links */
   function initLinks() {
     var known = {};
-    PAGES.forEach(function (u) { known[url(u)] = true; });
+    PAGES.concat(TRANSLATED).forEach(function (u) { known[url(u)] = true; });
     var wikiPrefix = url('/wiki/');
+    var langWiki = new RegExp('^' + regexEscape(BASE) + '/([a-z]{2})/wiki/');
     $$('.mw-parser-output a[href], .infobox a[href]').forEach(function (a) {
       if (a.protocol !== 'http:' && a.protocol !== 'https:') return;
       if (a.host !== location.host) {
@@ -408,6 +416,19 @@
         return;
       }
       var path = slashed(a.pathname);
+      var translated = path.match(langWiki);
+      if (translated) {
+        if (known[path]) return;
+        // Not translated yet: send the reader to the English article instead.
+        var english = path.replace(langWiki, BASE + '/wiki/');
+        if (known[english]) {
+          a.href = english + a.hash;
+          a.hreflang = 'en';
+          a.title = titleFromPath(english) + ' (English)';
+          return;
+        }
+        path = english;
+      }
       if (path.indexOf(wikiPrefix) !== 0) return;
       var title = titleFromPath(path);
       var decoded = path;
@@ -569,7 +590,24 @@
     }
   }
 
+  /* ------------------------------------------------------------- ads */
+  /* Each slot holds a desktop and a mobile ad code in <template> tags.
+     Only the one matching the screen is inserted, and only into slots that
+     are visible, so hidden ads never load or count as impressions. */
+  function initAds() {
+    var mobile = window.matchMedia && matchMedia('(max-width: 999px)').matches;
+    $$('[data-ad-slot]').forEach(function (unit) {
+      if (unit.offsetParent === null) return;
+      var want = $('template[data-ad="' + (mobile ? 'mobile' : 'desktop') + '"]', unit);
+      var other = $('template[data-ad="' + (mobile ? 'desktop' : 'mobile') + '"]', unit);
+      var tpl = want && want.innerHTML.trim() ? want : other;
+      if (!tpl || !tpl.innerHTML.trim()) return;
+      unit.appendChild(tpl.content.cloneNode(true));
+    });
+  }
+
   /* ------------------------------------------------------------ start */
+  initAds();
   initAppearance();
   initHeader();
   initReferences();

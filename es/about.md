@@ -5,30 +5,29 @@ permalink: /es/about/
 description: Qué es SplytWiki, cómo se redactan sus artículos y cómo se financia.
 lang: es
 ---
-
-**{{ site.title }}** es una enciclopedia en línea y gratuita sobre criptomonedas, tecnología blockchain, finanzas descentralizadas y las personas e ideas que las impulsan. Está escrita para ser leída por cualquiera, desde [...]
+**{{ site.title }}** es una enciclopedia en línea gratuita sobre criptomonedas, tecnología de cadena de bloques, finanzas descentralizadas y las personas e ideas que hay detrás. Está escrita para que cualquiera pueda leerla, desde principiantes absolutos hasta desarrolladores, y se puede leer gratis, sin cuenta ni muro de pago.
 
 ## Nuestros objetivos
 
-{{ site.title }} intenta explicar las criptomonedas de la misma forma en que una buena enciclopedia explica cualquier otro tema: de manera clara, neutral y con fuentes. El campo está lleno de marketing, especulación y jerga. Nuestro objetivo es [...]
+{{ site.title }} intenta explicar las criptomonedas como una buena enciclopedia explica cualquier otro tema: con claridad, neutralidad y fuentes. El sector está lleno de marketing, especulación y jerga. Queremos atravesar todo eso y describir qué son las cosas, cómo funcionan, de dónde vienen y qué dicen sus críticos.
 
 ## Cómo se redactan los artículos
 
-Cada artículo en {{ site.title }} sigue algunos principios sencillos:
+Todos los artículos de {{ site.title }} siguen unos principios sencillos:
 
-- **Punto de vista neutral.** Los artículos describen proyectos, personas y hechos de forma justa y sin promoción. Las críticas y riesgos significativos se incluyen junto con los beneficios.
-- **Verificabilidad.** Los hechos se apoyan en fuentes fiables, como white papers originales, especificaciones técnicas, investigaciones académicas, registros judiciales y periodismo reputado. Las fuentes se listan [...]
-- **Sin hablar de precios.** Los artículos evitan precios en tiempo real, capitalizaciones de mercado y predicciones, porque quedan obsoletos en pocas horas y no son el objetivo de una enciclopedia.
-- **Sin contenido pagado.** Los proyectos no pueden pagar para ser cubiertos, para que un artículo sea cambiado ni para que se eliminen críticas.
+- **Punto de vista neutral.** Los artículos describen proyectos, personas y acontecimientos de forma justa y sin promoción. Las críticas y los riesgos importantes se incluyen junto a las ventajas.
+- **Verificabilidad.** Los hechos se respaldan con fuentes fiables, como libros blancos originales, especificaciones técnicas, investigación académica, documentos judiciales y periodismo de calidad. Las fuentes figuran en la sección *Referencias* de cada artículo.
+- **Sin hablar de precios.** Los artículos evitan los precios en tiempo real, las capitalizaciones de mercado y las predicciones, porque quedan obsoletos en cuestión de horas y no son el propósito de una enciclopedia.
+- **Sin contenido pagado.** Los proyectos no pueden pagar para aparecer, para que se modifique un artículo ni para que se eliminen las críticas.
 
 ## Financiación y publicidad
 
-{{ site.title }} se financia mediante publicidad. Los anuncios los sirve la red publicitaria externa [A-ADS](https://a-ads.com) y siempre están claramente etiquetados como "Advertisement". Los anunciantes no tienen influencia sobre [...]
+{{ site.title }} se financia con publicidad. Los anuncios los sirve la red publicitaria externa de criptomonedas [A-ADS](https://a-ads.com) y siempre están claramente marcados como «Advertisement» (anuncio). Los anunciantes no tienen ninguna influencia sobre lo que se escribe en los artículos, y que un anuncio aparezca junto a un artículo no significa que {{ site.title }} lo respalde. Consulta nuestra [política de privacidad](../privacy/) para más detalles.
 
 ## No es asesoramiento financiero
 
-{{ site.title }} es una referencia educativa. Nada en este sitio constituye asesoramiento financiero, de inversión, legal o fiscal. Las criptoactivos son altamente volátiles y se puede perder todo el dinero invertido [...]
+{{ site.title }} es una obra de referencia educativa. Nada de lo que hay en este sitio constituye asesoramiento financiero, de inversión, legal ni fiscal. Los criptoactivos son muy volátiles y puedes perder todo el dinero que inviertas en ellos. Lee nuestro [descargo de responsabilidad general](../disclaimer/).
 
 ## Participa
 
-¿Has detectado un error, un hecho desactualizado o un tema que falta? Consulta [cómo contribuir](/es/contribute/) o [contáctanos](/es/contact/). 
+¿Has detectado un error, un dato desactualizado o un tema que falta? Consulta [cómo contribuir](../contribute/) o [contáctanos](../contact/).

@@ -1,0 +1,89 @@
+# ------------------------------------------------------------------
+#  Interface text for translated articles.
+#  A page's language comes from "lang:" in its front matter (default: en).
+# ------------------------------------------------------------------
+en:
+  prefix: ""
+  privacy: Privacy policy
+  about_site: About SplytWiki
+  disclaimers: Disclaimers
+  contact_site: Contact SplytWiki
+  contribute: Contribute
+  name: English
+  site_sub: From SplytWiki, the free crypto encyclopedia
+  article: Article
+  read: Read
+  suggest_edit: Suggest edit
+  contents: Contents
+  top: (Top)
+  categories: Categories
+  languages: Languages
+  language_count: languages
+  english_version: English version
+  last_edited: This page was last edited on
+  license_before: Text is available under the
+  license_after: "; additional terms may apply. Nothing on SplytWiki is financial or investment advice."
+  months: [January, February, March, April, May, June, July, August, September, October, November, December]
+  date_format: day-month-year
+
+de:
+  prefix: /de
+  privacy: Datenschutz
+  about_site: Über SplytWiki
+  disclaimers: Haftungsausschluss
+  contact_site: Kontakt
+  contribute: Mitmachen
+  name: Deutsch
+  site_sub: Aus SplytWiki, der freien Krypto-Enzyklopädie
+  article: Artikel
+  read: Lesen
+  suggest_edit: Änderung vorschlagen
+  contents: Inhalt
+  top: (Anfang)
+  categories: Kategorien
+  languages: Sprachen
+  language_count: Sprachen
+  english_version: Englische Version
+  last_edited: Diese Seite wurde zuletzt bearbeitet am
+  license_before: Der Text ist unter der
+  license_after: " verfügbar; zusätzliche Bedingungen können gelten. Nichts auf SplytWiki ist eine Finanz- oder Anlageberatung."
+  months: [Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+  date_format: day-dot-month-year
+  category_names:
+    Cryptocurrencies: Kryptowährungen
+    Bitcoin: Bitcoin
+    Ethereum: Ethereum
+    Proof-of-work cryptocurrencies: Kryptowährungen mit Proof of Work
+    Proof-of-stake cryptocurrencies: Kryptowährungen mit Proof of Stake
+    Smart contract platforms: Smart-Contract-Plattformen
+
+es:
+  prefix: /es
+  privacy: Política de privacidad
+  about_site: Acerca de SplytWiki
+  disclaimers: Descargo de responsabilidad
+  contact_site: Contacto
+  contribute: Contribuir
+  name: Español
+  site_sub: De SplytWiki, la enciclopedia libre de criptomonedas
+  article: Artículo
+  read: Leer
+  suggest_edit: Sugerir cambio
+  contents: Contenidos
+  top: (Inicio)
+  categories: Categorías
+  languages: Idiomas
+  language_count: idiomas
+  english_version: Versión en inglés
+  last_edited: Esta página se editó por última vez el
+  license_before: El texto está disponible bajo la
+  license_after: "; pueden aplicarse cláusulas adicionales. Nada en SplytWiki constituye asesoramiento financiero o de inversión."
+  months: [enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre]
+  date_format: day-de-month-de-year
+  category_names:
+    Cryptocurrencies: Criptomonedas
+    Bitcoin: Bitcoin
+    Ethereum: Ethereum
+    Proof-of-work cryptocurrencies: Criptomonedas de prueba de trabajo
+    Proof-of-stake cryptocurrencies: Criptomonedas de prueba de participación
+    Smart contract platforms: Plataformas de contratos inteligentes

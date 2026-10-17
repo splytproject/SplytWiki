@@ -56,6 +56,24 @@ defaults:
       type: pages
     values:
       layout: page
+  # Translated articles: de/wiki/*.md and es/wiki/*.md
+  # Each one needs "ref:" set to the English article's title.
+  - scope:
+      path: "de/wiki"
+    values:
+      layout: article
+      has_toc: true
+      namespace: article
+      lang: de
+      permalink: /de/wiki/:basename/
+  - scope:
+      path: "es/wiki"
+    values:
+      layout: article
+      has_toc: true
+      namespace: article
+      lang: es
+      permalink: /es/wiki/:basename/
 
 plugins:
   - jekyll-seo-tag
