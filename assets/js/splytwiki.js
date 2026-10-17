@@ -592,18 +592,34 @@
 
   /* ------------------------------------------------------------- ads */
   /* Each slot holds a desktop and a mobile ad code in <template> tags.
-     Only the one matching the screen is inserted, and only into slots that
-     are visible, so hidden ads never load or count as impressions. */
+     Only the one matching the screen is inserted, only into slots that are
+     visible at this screen size, and only when the slot scrolls within
+     200px of the viewport. Hidden or unseen ads never load. */
   function initAds() {
     var mobile = window.matchMedia && matchMedia('(max-width: 999px)').matches;
-    $$('[data-ad-slot]').forEach(function (unit) {
-      if (unit.offsetParent === null) return;
+    var slots = $$('[data-ad-slot]').filter(function (unit) { return unit.offsetParent !== null; });
+
+    function fill(unit) {
+      if (unit.getAttribute('data-ad-loaded')) return;
       var want = $('template[data-ad="' + (mobile ? 'mobile' : 'desktop') + '"]', unit);
       var other = $('template[data-ad="' + (mobile ? 'desktop' : 'mobile') + '"]', unit);
       var tpl = want && want.innerHTML.trim() ? want : other;
       if (!tpl || !tpl.innerHTML.trim()) return;
-      unit.appendChild(tpl.content.cloneNode(true));
-    });
+      var code = tpl.content.cloneNode(true);
+      $$('iframe', code).forEach(function (f) { f.setAttribute('loading', 'lazy'); f.title = f.title || 'Advertisement'; });
+      unit.appendChild(code);
+      unit.setAttribute('data-ad-loaded', '1');
+    }
+
+    if (!('IntersectionObserver' in window)) { slots.forEach(fill); return; }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        fill(entry.target);
+      });
+    }, { rootMargin: '200px 0px' });
+    slots.forEach(function (unit) { observer.observe(unit); });
   }
 
   /* ------------------------------------------------------------ start */

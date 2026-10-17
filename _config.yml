@@ -44,6 +44,11 @@ collections:
     permalink: /wiki/:path/
 
 defaults:
+  # Image shown when any page is shared on social media (1200x630).
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/og-default.png
   - scope:
       path: ""
       type: wiki
@@ -87,3 +92,12 @@ exclude:
   - vendor
   - node_modules
   - .jekyll-cache
+  # Internal notes and docs: not published on the website
+  - ad-slot-code.md
+  - de/ad-slot-code.md
+  - es/ad-slot-code.md
+  - de/readme.md
+  - es/readme.md
+  - config
+  - reports
+  - research_notes

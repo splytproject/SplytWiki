@@ -3,9 +3,10 @@
 {%- if page.is_main %}
 <title>{{ site.title }}, the free crypto encyclopedia</title>
 {%- else %}
-<title>{{ page.title }} - {{ site.title }}</title>
+<title>{{ page.seo_title | default: page.title }} - {{ site.title }}</title>
 {%- endif %}
 {% seo title=false %}
+{% include og-meta.html %}
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="{{ '/assets/img/logo.svg' | relative_url }}" type="image/svg+xml">
 <link rel="stylesheet" href="{{ '/assets/css/splytwiki.css' | relative_url }}">

@@ -1,0 +1,42 @@
+{%- comment -%}
+  Extra social and search metadata. jekyll-seo-tag (in head.html) already
+  prints the title, description, canonical URL, og:title/description/url/image
+  and the Twitter card; this adds image details, article dates and tags,
+  structured data for articles, and noindex for utility pages.
+
+  Per page you can set in front matter:
+    image: /assets/img/my-card.png   (1200x630 PNG/JPG; default: og-default.png)
+    noindex: true                    (keep a page out of search results)
+{%- endcomment -%}
+{%- include i18n.html -%}
+{%- assign og_image = page.image | default: "/assets/img/og-default.png" | absolute_url -%}
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ page.title | default: site.title | escape }} – {{ site.title }}">
+{%- if page.noindex %}
+<meta name="robots" content="noindex, follow">
+{%- endif %}
+{%- if page.namespace == "article" %}
+{%- assign modified = page.updated | default: site.time %}
+<meta property="article:modified_time" content="{{ modified | date_to_xmlschema }}">
+{%- for c in page.categories %}
+<meta property="article:tag" content="{{ t.category_names[c] | default: c | escape }}">
+{%- endfor %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: site.description | jsonify }},
+  "inLanguage": {{ lang | jsonify }},
+  "dateModified": {{ modified | date_to_xmlschema | jsonify }},
+  "image": {{ og_image | jsonify }},
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }},
+    "logo": { "@type": "ImageObject", "url": {{ "/assets/img/og-default.png" | absolute_url | jsonify }} }
+  }
+}
+</script>
+{%- endif %}
