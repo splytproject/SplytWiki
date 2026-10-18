@@ -2,11 +2,12 @@
 title: Bitcoin node
 description: Overview of what a Bitcoin full node does, how it syncs, and the main node modes
 aliases: [Full node, Bitcoin Core, Node software, Pruned node, Initial block download]
-categories: [Bitcoin, Protocol, Nodes]
+categories: [Bitcoin, Protocol, Nodes, Development]
 updated: 2026-10-18
 infobox:
   image: bitcoin.svg
   caption: Bitcoin node
+  audience: Developers
   rows:
     - header: Overview
     - Role: Independently validates blocks and transactions
@@ -14,11 +15,18 @@ infobox:
     - header: Modes
     - Variants: Archival, pruned, blocks-only
     - Alternatives: SPV and filter-based light clients
+dev: true
 ---
 
 > **In plain terms:** A node is a program that checks every rule itself instead of trusting anyone. It downloads blocks, verifies them, and passes valid data to other nodes.
 
 A **Bitcoin node** is software that connects to peers, downloads blocks and transactions, validates them against the consensus rules, and relays valid data. A node that checks everything from the genesis block forward is a **full node**. The most widely used implementation is **Bitcoin Core**.
+
+Developer summary
+
+- Who this is for: developers building wallets, explorers, or network tools that must validate or query chain data.
+- Focus: initial block download (IBD), UTXO maintenance, node modes (pruned vs archival) and RPCs you will need when integrating with a node.
+- Quick tasks: run a regtest node, inspect chainstate with RPCs, and trace a transaction from mempool to confirmed block.
 
 ## What a full node does
 
