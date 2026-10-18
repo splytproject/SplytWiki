@@ -1,70 +1,118 @@
 ---
-title: PSBT
-description: Overview of Partially Signed Bitcoin Transactions (BIP-174), their roles, and use with hardware wallets and multisig
-aliases: [Partially Signed Bitcoin Transaction, BIP-174, BIP-370, PSBTv2, Air-gapped signing]
-categories: [Bitcoin, Wallets, Transactions, Tooling]
+title: UTXO
+description: Explanation of unspent transaction outputs, the model Bitcoin uses to track ownership
+aliases: [Unspent transaction output, UTXO set, UTXO model, Coins]
+categories: [Bitcoin, Protocol, Data model]
 updated: 2026-10-18
 infobox:
   image: bitcoin.svg
-  caption: PSBT
+  caption: UTXO
   rows:
     - header: Overview
-    - Specification: BIP-174 (v0), BIP-370 (v2)
-    - Magic bytes: psbt followed by 0xff
-    - header: Roles
-    - Roles: Creator, Updater, Signer, Combiner, Finalizer, Extractor
-    - Used with: Hardware wallets, multisig, air-gapped signing
+    - Full name: Unspent transaction output
+    - Model: Output-based (not account-based)
+    - header: Developer reference
+    - Node storage: chainstate database
+    - Useful RPCs: gettxout, gettxoutsetinfo, dumptxoutset
 ---
 
-> **In plain terms:** A PSBT is a standard "work-in-progress" file for a transaction. One tool builds it, other devices add signatures, and a final step turns it into a broadcastable transaction. It lets a watch-only wallet and an offline signer cooperate safely.
+> **Plain language:** Bitcoin does not maintain an account balance for your wallet. It maintains a giant ledger of spendable outputs — unspent transaction outputs. Think of it as a pile of digital coins, each with an amount and a lock on it.
 
-A **Partially Signed Bitcoin Transaction (PSBT)** is a standardized container for an unsigned or partly signed transaction plus the metadata different tools need to complete it.
+This is the conceptual heart of Bitcoin. The UTXO model is what makes Bitcoin so different from a bank ledger or a database of balances. Instead of "Alice has 2.5 BTC," Bitcoin says: "Here are the outputs that can be spent with Alice's keys, and they sum to 2.5 BTC."
 
-## Why it exists
+If you look at Bitcoin as accounting, the UTXO model is the accounting language the whole network speaks.
 
-Before PSBT, every wallet and hardware device used its own format. Spending from a [multisig](../Multisignature/) or hardware wallet needed custom glue. PSBT standardized the hand-off.
+## Why Bitcoin uses UTXOs
 
-## Roles
+A normal bank account is a mutable balance: deposit, withdraw, subtract, add. Bitcoin works differently.
 
-| Role | Does |
-|---|---|
-| Creator | Builds the unsigned transaction |
-| Updater | Adds data signers need (previous outputs, scripts, key derivation paths) |
-| Signer | Adds signatures (often an offline or hardware device) |
-| Combiner | Merges PSBTs from several signers |
-| Input Finalizer | Converts signatures into final unlocking data |
-| Transaction Extractor | Produces the network-ready transaction |
+- Every transaction consumes existing outputs.
+- Every transaction creates new outputs.
+- An output is either spent or unspent.
+- The wallet's balance is just the sum of all unspent outputs it can unlock.
 
-## Typical flows
+This model is simple to validate, especially for a distributed system. A node does not need to read every historical transaction to know if an output is valid; it can look up the specific output by its transaction id and index.
 
-- **Hardware wallet:** a watch-only wallet creates a PSBT; the device signs it (via file, QR code or USB); the wallet finalizes and broadcasts.
-- **Multisig:** the PSBT passes among cosigners, or each signs separately and a Combiner merges them.
+## A simple example
 
-## What a PSBT reveals
+Imagine I have a UTXO worth 1 BTC. I want to send 0.3 BTC to you and 0.6 BTC back to myself as change.
 
-A PSBT is **not encrypted** by the specification. It can contain amounts, addresses, previous transactions, extended public keys and derivation paths, which is sensitive privacy information if intercepted. Proposals for authenticating or protecting PSBTs in transit have been discussed on the developer mailing list, including a 2020 proposal about man-in-the-middle changes to PSBT files.
+- Input: 1 BTC UTXO
+- Outputs:
+  - 0.3 BTC to you
+  - 0.6 BTC back to me
+  - 0.1 BTC fee to miners
 
-## Versions
+The original 1 BTC output is destroyed. New outputs are created. Nothing is "subtracted" from a bank account; the chain simply encodes a new state.
 
-- **BIP-174 (v0):** contains the unsigned transaction.
-- **BIP-370 (v2):** stores inputs and outputs as separate fields, making it easier to add inputs and outputs later.
-- Newer BIPs extend PSBT for [Silent_payments](../Silent_payments/).
+This is why change addresses are normal in Bitcoin. The wallet does not "move 0.3 BTC out of a balance"; it chooses inputs, spends them, and creates outputs.
+
+## How nodes validate this
+
+A full node enforces a few basic rules:
+
+- Each input must reference an output that exists and has not already been spent.
+- The unlocking script must satisfy the output's locking conditions.
+- Total input value must be at least total output value.
+- The difference is the fee.
+
+That last point is crucial. If your input is 1 BTC and your outputs total 0.99 BTC, then 0.01 BTC is paid as a fee to the miner who mines the block.
+
+## The UTXO set
+
+The UTXO set is the complete collection of all valid, unspent outputs at a given moment in the chain. It is not a list of addresses; it is a list of outputs.
+
+A node keeps this data in its chainstate database, which is conceptually a key-value store mapping output references to values and scripts.
+
+This is why Bitcoin Core can do things like:
+
+- look up whether a transaction input is valid
+- estimate whether a wallet has enough funds
+- reject attempts to double-spend outputs
+
+## Why this matters for privacy and wallet design
+
+UTXOs are part of why wallet software is a little more complex than a simple bank-app balance.
+
+A wallet usually has many small UTXOs from different transactions. If you spend one UTXO, the wallet may create change outputs, causing a new UTXO to appear. That is normal.
+
+This is also why address reuse is a privacy problem: a reused address often makes it easier to cluster a wallet's outputs together. That is one reason Bitcoin wallets often encourage fresh addresses and change handling.
 
 ## Developer notes
 
-- Bitcoin Core RPCs: `createpsbt`, `walletcreatefundedpsbt`, `walletprocesspsbt`, `decodepsbt`, `analyzepsbt`, `combinepsbt`, `finalizepsbt`, `utxoupdatepsbt`.
-- PSBTs are exchanged as base64 text or binary files.
-- Always `decodepsbt` and verify outputs on the signer's screen; the signing device is your last line of defence.
+- Bitcoin Core stores the UTXO set in the chainstate database, with a configurable cache size.
+- Useful RPCs:
+  - `bitcoin-cli gettxout <txid> <n>`
+  - `bitcoin-cli gettxoutsetinfo`
+  - `bitcoin-cli dumptxoutset` and `loadtxoutset`
+- Wallets usually expose a higher-level view such as `listunspent`, which aggregates the wallet's spendable outputs.
+
+## Common misconceptions
+
+- "My wallet has a balance." Not exactly. Your wallet has a set of spendable UTXOs, and the wallet can compute a balance from them.
+- "Change is a fee." No. Change is a new output back to you. The fee is whatever is left over after outputs are created.
+- "Bitcoin is just a ledger of balances." It is not. It is a ledger of transactions that create and destroy outputs.
+
+## Why the model matters for developers
+
+If you are building a wallet, a block explorer, a payment processor, or a node integration, the UTXO model affects almost every decision:
+
+- how you compute wallet balances
+- how you pick inputs for a spend
+- how you detect double-spends
+- how you reason about transaction fees
+- how you build block explorers and indexing systems
+
+This is also why a naive "balance by address" implementation can be misleading. In Bitcoin, balance is not just a stored field — it is a derived view over the current unspent outputs.
 
 ## See also
 
-- [Multisignature](../Multisignature/)
-- [Silent_payments](../Silent_payments/)
-- [HD_wallets_and_seed_phrases](../HD_wallets_and_seed_phrases/)
-- [Bitcoin_Script](../Bitcoin_Script/)
+- [Bitcoin_node](../Bitcoin_node/)
+- [Partial_UTXO_set](../Partial_UTXO_set/)
+- [OP_RETURN](../OP_RETURN/)
+- [How_to_contribute_to_Bitcoin](../how-to-contribute-to-bitcoin/)
 
 ## Notes and further reading
 
-- Based on BIP-174 and BIP-370, and a Bitcoin developer mailing-list discussion on authenticating PSBT files (January 2020).
-- The forum board has a thread on encrypting PSBT contents: [Encryption of the content of PSBT files](https://bitcointalk.org/index.php?topic=5596396.0) (linked, not summarized here).
-- (Add sourcing where appropriate: test vectors, hardware-wallet PSBT support matrices.)
+- Study Bitcoin Core's chainstate implementation, the UTXO rules in the consensus docs, and wallet coin-selection logic.
+- The UTXO model is one of the most important conceptual differences between Bitcoin and traditional banking systems.
