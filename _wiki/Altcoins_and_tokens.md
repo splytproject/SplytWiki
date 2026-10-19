@@ -81,7 +81,7 @@ A token listing is not proof of quality. A large community is not proof of decen
 - [Stablecoin](../Stablecoin/)
 - [Crypto glossary](../Crypto_glossary/)
 - [Decentralized autonomous organization](../Decentralized_autonomous_organization/)
-- [Global cryptocurrency regulation](../Global_cryptocurrency_regulation/)
+- [Cryptocurrency regulation](../Cryptocurrency_regulation/)
 
 ## References
 

@@ -21,16 +21,16 @@ infobox:
     - Lanzamiento de la red principal: 30 de julio de 2015
     - Desarrollador: "Ethereum Foundation y la comunidad"
     - header: Registro
-    - Consenso: "[Prueba de participación](../Proof_of_stake/) (desde septiembre de 2022)"
-    - Consenso anterior: "[Prueba de trabajo](../Proof_of_work/) (2015–2022)"
+    - Consenso: "[Prueba de participación](../../../wiki/Proof_of_stake/) (desde septiembre de 2022)"
+    - Consenso anterior: "[Prueba de trabajo](../../../wiki/Proof_of_work/) (2015–2022)"
     - Tiempo de bloque: "12 segundos (un slot)"
     - Suministro máximo: "Ninguno (la quema de comisiones compensa la emisión)"
 ---
-**Ethereum** es una plataforma descentralizada de [cadena de bloques](../Blockchain/) que permite a cualquiera crear y ejecutar programas llamados [contratos inteligentes](../Smart_contract/) (*smart contracts*). Su moneda nativa es el **ether** (código **ETH**, símbolo **Ξ**), que se usa para pagar el cómputo en la red y es la segunda [criptomoneda](../Cryptocurrency/) más grande después de [bitcoin](../Bitcoin/).
+**Ethereum** es una plataforma descentralizada de [cadena de bloques](../../../wiki/Blockchain/) que permite a cualquiera crear y ejecutar programas llamados [contratos inteligentes](../../../wiki/Smart_contract/) (*smart contracts*). Su moneda nativa es el **ether** (código **ETH**, símbolo **Ξ**), que se usa para pagar el cómputo en la red y es la segunda [criptomoneda](../../../wiki/Cryptocurrency/) más grande después de [bitcoin](../Bitcoin/).
 
-Ethereum fue propuesto en 2013 por el programador Vitalik Buterin y entró en funcionamiento el 30 de julio de 2015.[^history] Mientras que Bitcoin se diseñó principalmente como dinero digital, Ethereum se concibió como un «ordenador mundial» de uso general: su cadena de bloques no solo guarda saldos, sino también código y datos que cualquier usuario puede invocar. Esto lo convirtió en la base de la mayoría de las aplicaciones de [finanzas descentralizadas](../Decentralized_finance/) (DeFi), [monedas estables](../Stablecoin/) y [tokens no fungibles](../Non-fungible_token/) que surgieron después.
+Ethereum fue propuesto en 2013 por el programador Vitalik Buterin y entró en funcionamiento el 30 de julio de 2015.[^history] Mientras que Bitcoin se diseñó principalmente como dinero digital, Ethereum se concibió como un «ordenador mundial» de uso general: su cadena de bloques no solo guarda saldos, sino también código y datos que cualquier usuario puede invocar. Esto lo convirtió en la base de la mayoría de las aplicaciones de [finanzas descentralizadas](../../../wiki/Decentralized_finance/) (DeFi), [monedas estables](../../../wiki/Stablecoin/) y [tokens no fungibles](../../../wiki/Non-fungible_token/) que surgieron después.
 
-En septiembre de 2022, Ethereum pasó de la [prueba de trabajo](../Proof_of_work/) a la [prueba de participación](../Proof_of_stake/) mediante una actualización conocida como **The Merge** («la Fusión»), que redujo su consumo de energía en aproximadamente un 99,95 %.[^energy]
+En septiembre de 2022, Ethereum pasó de la [prueba de trabajo](../../../wiki/Proof_of_work/) a la [prueba de participación](../../../wiki/Proof_of_stake/) mediante una actualización conocida como **The Merge** («la Fusión»), que redujo su consumo de energía en aproximadamente un 99,95 %.[^energy]
 
 ## Historia
 
@@ -93,11 +93,11 @@ Los críticos señalan las altas comisiones de Ethereum en los periodos de mucha
 
 ## Véase también
 
-- [Contrato inteligente](../Smart_contract/)
-- [Prueba de participación](../Proof_of_stake/)
-- [Finanzas descentralizadas](../Decentralized_finance/)
-- [Token no fungible](../Non-fungible_token/)
-- [Solana](../Solana/)
+- [Contrato inteligente](../../../wiki/Smart_contract/)
+- [Prueba de participación](../../../wiki/Proof_of_stake/)
+- [Finanzas descentralizadas](../../../wiki/Decentralized_finance/)
+- [Token no fungible](../../../wiki/Non-fungible_token/)
+- [Solana](../../../wiki/Solana/)
 
 ## Referencias
 

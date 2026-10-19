@@ -21,16 +21,16 @@ infobox:
     - Start des Mainnets: 30. Juli 2015
     - Entwickler: "Ethereum Foundation und Community"
     - header: Ledger
-    - Konsens: "[Proof of Stake](../Proof_of_stake/) (seit September 2022)"
-    - Früherer Konsens: "[Proof of Work](../Proof_of_work/) (2015–2022)"
+    - Konsens: "[Proof of Stake](../../../wiki/Proof_of_stake/) (seit September 2022)"
+    - Früherer Konsens: "[Proof of Work](../../../wiki/Proof_of_work/) (2015–2022)"
     - Blockzeit: "12 Sekunden (ein Slot)"
     - Maximale Menge: "Keine (Gebührenverbrennung gleicht Ausgabe aus)"
 ---
-**Ethereum** ist eine dezentrale [Blockchain](../Blockchain/)-Plattform, auf der jeder Programme, sogenannte [Smart Contracts](../Smart_contract/), erstellen und ausführen kann. Ihre native Währung ist **Ether** (Kürzel **ETH**, Symbol **Ξ**). Ether wird zur Bezahlung von Rechenleistung im Netzwerk verwendet und ist nach [Bitcoin](../Bitcoin/) die zweitgrößte [Kryptowährung](../Cryptocurrency/).
+**Ethereum** ist eine dezentrale [Blockchain](../../../wiki/Blockchain/)-Plattform, auf der jeder Programme, sogenannte [Smart Contracts](../../../wiki/Smart_contract/), erstellen und ausführen kann. Ihre native Währung ist **Ether** (Kürzel **ETH**, Symbol **Ξ**). Ether wird zur Bezahlung von Rechenleistung im Netzwerk verwendet und ist nach [Bitcoin](../Bitcoin/) die zweitgrößte [Kryptowährung](../../../wiki/Cryptocurrency/).
 
-Ethereum wurde 2013 von dem Programmierer Vitalik Buterin vorgeschlagen und ging am 30. Juli 2015 in Betrieb.[^history] Während Bitcoin vor allem als digitales Geld gedacht war, wurde Ethereum als universeller „Weltcomputer“ entworfen: Seine Blockchain speichert nicht nur Kontostände, sondern auch Code und Daten, die jeder Nutzer aufrufen kann. Damit wurde Ethereum zur Grundlage der meisten Anwendungen für [dezentrale Finanzen](../Decentralized_finance/) (DeFi), [Stablecoins](../Stablecoin/) und [Non-Fungible Tokens](../Non-fungible_token/), die danach entstanden.
+Ethereum wurde 2013 von dem Programmierer Vitalik Buterin vorgeschlagen und ging am 30. Juli 2015 in Betrieb.[^history] Während Bitcoin vor allem als digitales Geld gedacht war, wurde Ethereum als universeller „Weltcomputer“ entworfen: Seine Blockchain speichert nicht nur Kontostände, sondern auch Code und Daten, die jeder Nutzer aufrufen kann. Damit wurde Ethereum zur Grundlage der meisten Anwendungen für [dezentrale Finanzen](../../../wiki/Decentralized_finance/) (DeFi), [Stablecoins](../../../wiki/Stablecoin/) und [Non-Fungible Tokens](../../../wiki/Non-fungible_token/), die danach entstanden.
 
-Im September 2022 wechselte Ethereum mit einem als **The Merge** bekannten Upgrade von [Proof of Work](../Proof_of_work/) zu [Proof of Stake](../Proof_of_stake/) und senkte dadurch seinen Energieverbrauch Schätzungen zufolge um 99,95 %.[^energy]
+Im September 2022 wechselte Ethereum mit einem als **The Merge** bekannten Upgrade von [Proof of Work](../../../wiki/Proof_of_work/) zu [Proof of Stake](../../../wiki/Proof_of_stake/) und senkte dadurch seinen Energieverbrauch Schätzungen zufolge um 99,95 %.[^energy]
 
 ## Geschichte
 
@@ -93,11 +93,11 @@ Kritiker bemängeln die hohen Transaktionsgebühren in Spitzenzeiten, den kompli
 
 ## Siehe auch
 
-- [Smart Contract](../Smart_contract/)
-- [Proof of Stake](../Proof_of_stake/)
-- [Dezentrale Finanzen](../Decentralized_finance/)
-- [Non-Fungible Token](../Non-fungible_token/)
-- [Solana](../Solana/)
+- [Smart Contract](../../../wiki/Smart_contract/)
+- [Proof of Stake](../../../wiki/Proof_of_stake/)
+- [Dezentrale Finanzen](../../../wiki/Decentralized_finance/)
+- [Non-Fungible Token](../../../wiki/Non-fungible_token/)
+- [Solana](../../../wiki/Solana/)
 
 ## Einzelnachweise
 

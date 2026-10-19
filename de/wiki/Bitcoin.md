@@ -4,7 +4,7 @@ ref: Bitcoin
 description: Erste dezentrale Kryptowährung, gestartet 2009
 categories: [Cryptocurrencies, Bitcoin, Proof-of-work cryptocurrencies]
 updated: 2026-10-17
-hatnote: "Dieser Artikel behandelt die Kryptowährung. Zur zugrunde liegenden Technik siehe [Blockchain](../Blockchain/)."
+hatnote: "Dieser Artikel behandelt die Kryptowährung. Zur zugrunde liegenden Technik siehe [Blockchain](../../../wiki/Blockchain/)."
 infobox:
   image: bitcoin.svg
   caption: Bitcoin-Symbol
@@ -15,7 +15,7 @@ infobox:
     - Kürzel: "BTC, XBT"
     - Kleinste Einheit: "Satoshi (0,000 000 01 BTC)"
     - header: Entwicklung
-    - Urheber: "[Satoshi Nakamoto](../Satoshi_Nakamoto/)"
+    - Urheber: "[Satoshi Nakamoto](../../../wiki/Satoshi_Nakamoto/)"
     - Whitepaper: "„Bitcoin: A Peer-to-Peer Electronic Cash System“"
     - Erstveröffentlichung: "0.1 / 9. Januar 2009"
     - Software: "Bitcoin Core (Referenzimplementierung)"
@@ -23,15 +23,15 @@ infobox:
     - Lizenz: MIT-Lizenz
     - header: Ledger
     - Beginn des Ledgers: 3. Januar 2009
-    - Zeitstempelverfahren: "[Proof of Work](../Proof_of_work/)"
+    - Zeitstempelverfahren: "[Proof of Work](../../../wiki/Proof_of_work/)"
     - Hashfunktion: "SHA-256 (zweifach angewendet)"
     - Blockzeit: Etwa 10 Minuten
     - Blockbelohnung: "₿3,125 (seit April 2024)"
     - Maximale Menge: "₿21.000.000"
 ---
-**Bitcoin** (Abkürzung: **BTC**; Zeichen: **₿**) ist die erste dezentrale [Kryptowährung](../Cryptocurrency/). Sie wurde 2008 in einem Whitepaper einer Person oder Gruppe unter dem Pseudonym [Satoshi Nakamoto](../Satoshi_Nakamoto/) beschrieben, und das Netzwerk nahm im Januar 2009 seinen Betrieb auf.[^whitepaper] Mit Bitcoin können Menschen einander über das Internet direkt Werte senden, ohne auf eine Bank, einen Zahlungsdienstleister oder einen anderen vertrauenswürdigen Vermittler angewiesen zu sein.
+**Bitcoin** (Abkürzung: **BTC**; Zeichen: **₿**) ist die erste dezentrale [Kryptowährung](../../../wiki/Cryptocurrency/). Sie wurde 2008 in einem Whitepaper einer Person oder Gruppe unter dem Pseudonym [Satoshi Nakamoto](../../../wiki/Satoshi_Nakamoto/) beschrieben, und das Netzwerk nahm im Januar 2009 seinen Betrieb auf.[^whitepaper] Mit Bitcoin können Menschen einander über das Internet direkt Werte senden, ohne auf eine Bank, einen Zahlungsdienstleister oder einen anderen vertrauenswürdigen Vermittler angewiesen zu sein.
 
-Transaktionen werden von einem Netzwerk von Computern, sogenannten *Knoten* (Nodes), überprüft und in einem öffentlichen, nur erweiterbaren Kassenbuch festgehalten, der [Blockchain](../Blockchain/). Neue Blöcke werden von *Minern* hinzugefügt, die im Wettbewerb ein Rechenrätsel lösen – ein Verfahren namens [Proof of Work](../Proof_of_work/) – und dafür mit neu geschaffenen Bitcoins und Transaktionsgebühren belohnt werden. Die Gesamtmenge ist auf knapp 21 Millionen Bitcoins begrenzt, und die Rate, mit der neue Coins entstehen, wird etwa alle vier Jahre [halbiert](../Bitcoin_halving/).[^supply]
+Transaktionen werden von einem Netzwerk von Computern, sogenannten *Knoten* (Nodes), überprüft und in einem öffentlichen, nur erweiterbaren Kassenbuch festgehalten, der [Blockchain](../../../wiki/Blockchain/). Neue Blöcke werden von *Minern* hinzugefügt, die im Wettbewerb ein Rechenrätsel lösen – ein Verfahren namens [Proof of Work](../../../wiki/Proof_of_work/) – und dafür mit neu geschaffenen Bitcoins und Transaktionsgebühren belohnt werden. Die Gesamtmenge ist auf knapp 21 Millionen Bitcoins begrenzt, und die Rate, mit der neue Coins entstehen, wird etwa alle vier Jahre [halbiert](../../../wiki/Bitcoin_halving/).[^supply]
 
 Bitcoin wird als zensurresistente Alternative zu staatlichem Geld gelobt und wegen seiner Kursschwankungen, seines Energieverbrauchs und seiner Nutzung für illegale Geschäfte kritisiert. Es ist mit Abstand die bekannteste Kryptowährung.
 
@@ -65,17 +65,17 @@ Im Januar 2024 genehmigte die US-Börsenaufsicht SEC die ersten börsengehandelt
 
 Die Rechnungseinheit ist der *Bitcoin*. Der kleinste Betrag, der auf der Blockchain erfasst werden kann, ist ein Hundertmillionstel Bitcoin (0,00000001 BTC). Er heißt zu Ehren des Erfinders **Satoshi**.
 
-Neue Bitcoins entstehen nur als Belohnung für den Miner eines Blocks. Die Belohnung betrug anfangs 50 Bitcoins pro Block und halbiert sich alle 210.000 Blöcke, also etwa alle vier Jahre. Nach der [vierten Halbierung](../Bitcoin_halving/) im April 2024 liegt sie bei 3,125 Bitcoins. Durch diesen Zeitplan wird die Gesamtzahl der Bitcoins 20.999.999,9769 nie überschreiten; die letzten neuen Bruchteile eines Coins werden voraussichtlich um das Jahr 2140 ausgegeben.[^supply]
+Neue Bitcoins entstehen nur als Belohnung für den Miner eines Blocks. Die Belohnung betrug anfangs 50 Bitcoins pro Block und halbiert sich alle 210.000 Blöcke, also etwa alle vier Jahre. Nach der [vierten Halbierung](../../../wiki/Bitcoin_halving/) im April 2024 liegt sie bei 3,125 Bitcoins. Durch diesen Zeitplan wird die Gesamtzahl der Bitcoins 20.999.999,9769 nie überschreiten; die letzten neuen Bruchteile eines Coins werden voraussichtlich um das Jahr 2140 ausgegeben.[^supply]
 
 ### Blockchain und Mining
 
-Die Bitcoin-[Blockchain](../Blockchain/) ist ein öffentliches Kassenbuch aller jemals getätigten Transaktionen. Transaktionen werden zu Blöcken zusammengefasst, von denen jeder den kryptografischen Hash des vorherigen Blocks enthält. Wer einen alten Block verändern wollte, müsste daher die gesamte danach geleistete Arbeit wiederholen.
+Die Bitcoin-[Blockchain](../../../wiki/Blockchain/) ist ein öffentliches Kassenbuch aller jemals getätigten Transaktionen. Transaktionen werden zu Blöcken zusammengefasst, von denen jeder den kryptografischen Hash des vorherigen Blocks enthält. Wer einen alten Block verändern wollte, müsste daher die gesamte danach geleistete Arbeit wiederholen.
 
 Um einen Block hinzuzufügen, muss ein Miner einen Wert (eine *Nonce*) finden, durch den der doppelte SHA-256-Hash des Blocks unter einer Zielzahl liegt. Der einzige bekannte Weg dorthin ist Ausprobieren, was enorme Rechenleistung erfordert. Das Netzwerk passt die Zielzahl alle 2.016 Blöcke (etwa zwei Wochen) automatisch an, sodass ungefähr alle zehn Minuten ein Block gefunden wird – unabhängig davon, wie viel Rechenleistung gerade mitarbeitet.[^whitepaper] Gemint wird heute meist mit Spezialchips, sogenannten ASICs, und Miner bündeln ihre Leistung in der Regel in *Mining-Pools*.
 
 ### Transaktionen, Schlüssel und Adressen
 
-Der Besitz von Bitcoins wird über kryptografische Schlüssel gesteuert. Die [Wallet](../Cryptocurrency_wallet/) eines Nutzers enthält *private Schlüssel*, aus denen öffentliche Schlüssel und *Adressen* abgeleitet werden. Um Coins auszugeben, signiert der Nutzer eine Transaktion mit dem privaten Schlüssel; jeder kann die Signatur mit dem öffentlichen Schlüssel prüfen, sie aber nicht fälschen. Bitcoin verwendete ursprünglich das Signaturverfahren ECDSA auf der Kurve secp256k1 und ergänzte mit dem Taproot-Upgrade 2021 Schnorr-Signaturen.
+Der Besitz von Bitcoins wird über kryptografische Schlüssel gesteuert. Die [Wallet](../../../wiki/Cryptocurrency_wallet/) eines Nutzers enthält *private Schlüssel*, aus denen öffentliche Schlüssel und *Adressen* abgeleitet werden. Um Coins auszugeben, signiert der Nutzer eine Transaktion mit dem privaten Schlüssel; jeder kann die Signatur mit dem öffentlichen Schlüssel prüfen, sie aber nicht fälschen. Bitcoin verwendete ursprünglich das Signaturverfahren ECDSA auf der Kurve secp256k1 und ergänzte mit dem Taproot-Upgrade 2021 Schnorr-Signaturen.
 
 Bitcoin-Adressen sind *pseudonym*: Auf der Blockchain selbst sind sie nicht mit realen Identitäten verknüpft. Da aber jede Transaktion öffentlich ist, lassen sie sich durch Analyse von Nutzungsmustern oft zurückverfolgen.
 
@@ -100,11 +100,11 @@ Kritiker verweisen auf die extremen Kursschwankungen, die geringe Nutzung für a
 
 ## Siehe auch
 
-- [Blockchain](../Blockchain/)
-- [Bitcoin-Halving](../Bitcoin_halving/)
-- [Kryptowährungs-Wallet](../Cryptocurrency_wallet/)
+- [Blockchain](../../../wiki/Blockchain/)
+- [Bitcoin-Halving](../../../wiki/Bitcoin_halving/)
+- [Kryptowährungs-Wallet](../../../wiki/Cryptocurrency_wallet/)
 - [Ethereum](../Ethereum/)
-- [Satoshi Nakamoto](../Satoshi_Nakamoto/)
+- [Satoshi Nakamoto](../../../wiki/Satoshi_Nakamoto/)
 
 ## Einzelnachweise
 
