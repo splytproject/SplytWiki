@@ -22,6 +22,8 @@ def anchors_of(text):
         t = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", h)
         t = re.sub(r"[^\w\- ]", "", t.lower()).strip().replace(" ", "-")
         ids.add(t)
+    # Explicit HTML anchors, e.g. <span id="bip-341"></span> in the BIP index table
+    ids.update(re.findall(r'\bid="([^"]+)"', text))
     return ids
 
 

@@ -3,7 +3,8 @@ title: How to contribute to Bitcoin
 description: A practical guide to contributing to Bitcoin Core, plus a part-by-part reading path through how Bitcoin works
 aliases: [Contributing to Bitcoin, Contribute to Bitcoin Core, Start here, Getting started, Developer onboarding, Learning path]
 categories: [Bitcoin, Development, Guide, Index]
-updated: 2026-10-18
+updated: 2026-10-20
+last_modified: 2026-10-20
 infobox:
   image: bitcoin.svg
   caption: How to contribute to Bitcoin
@@ -171,13 +172,26 @@ Every article opens with a plain-language summary, then covers how it works, why
 
 ## 4. Wallets and tooling
 13. [HD wallets and seed phrases](../HD_wallets_and_seed_phrases/): BIP-32 and BIP-39
-14. [PSBT](../PSBT/): passing unsigned or partly signed transactions between tools
-15. [Silent payments](../Silent_payments/): reusable addresses without address reuse
-16. [Testnet](../Testnet/): regtest, signet and testnet4
+14. [Miniscript and output descriptors](../Miniscript_and_output_descriptors/): describing what a wallet can spend, and scripts that software can analyse
+15. [PSBT](../PSBT/): passing unsigned or partly signed transactions between tools
+16. [Silent payments](../Silent_payments/): reusable addresses without address reuse
+17. [Testnet](../Testnet/): regtest, signet (BIP-325), testnet4 (BIP-94) and the retirement of testnet3
 
-## 5. Changing and scaling Bitcoin
-17. [Soft fork and hard fork](../Soft_fork_and_hard_fork/): how consensus rules change
-18. [Partial UTXO set](../Partial_UTXO_set/): why a node can't keep only recent blocks, and what works instead
+## 5. Running and syncing nodes
+18. [AssumeUTXO](../AssumeUTXO/): starting a node from a UTXO snapshot, with background validation
+19. [Compact block filters](../Compact_block_filters/): BIP-157/158, how light clients find their transactions privately
+20. [BIP-324 encrypted P2P transport](../BIP-324_encrypted_transport/): encrypted connections between nodes, and what they do not protect
+
+## 6. Changing and scaling Bitcoin
+21. [Soft fork and hard fork](../Soft_fork_and_hard_fork/): how consensus rules change
+22. [Partial UTXO set](../Partial_UTXO_set/): why a node can't keep only recent blocks, and what works instead
+23. [Lightning Network](../Lightning_Network/): the layer-2 payment channel network and its BOLT specifications
+24. [Lightning channels](../Lightning_channels/): commitment transactions, HTLCs, splicing and taproot channels
+25. [Lightning routing](../Lightning_routing/): onion routing, gossip, pathfinding and the four implementations
+
+## 7. Open debates
+26. [Ordinals, inscriptions and Runes](../Ordinals_inscriptions_and_Runes/): data and tokens in transactions, and the spam dispute
+27. [Quantum computing and Bitcoin](../Quantum_computing_and_Bitcoin/): exposed public keys, published timelines and migration proposals
 
 ## Suggested first session
 
