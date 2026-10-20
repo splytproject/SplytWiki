@@ -8,7 +8,7 @@ lang: es
 
 # SplytWiki
 
-**SplytWiki, la enciclopedia cripto gratuita.** Es una enciclopedia en línea sobre criptomonedas, blockchain y finanzas descentralizadas. Se parece y siente como Wikipedia, y A-ADS ([aads.com](https://a-ads.com)) sirve la publicidad.
+**SplytWiki, la enciclopedia cripto gratuita.** Es una enciclopedia en línea sobre criptomonedas, blockchain y finanzas descentralizadas. Se parece y siente como Wikipedia.
 
 - **Alojamiento:** GitHub Pages, en `https://splytproject.github.io/SplytWiki/`.
 - **Motor:** Jekyll. GitHub Pages construye el sitio a partir de los archivos Markdown cada vez que haces push, por lo que no hay nada que instalar.

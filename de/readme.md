@@ -8,7 +8,7 @@ lang: de
 
 # SplytWiki
 
-**SplytWiki, die kostenlose Krypto-Enzyklopädie.** Es ist eine Online-Enzyklopädie über Kryptowährungen, Blockchain und dezentrale Finanzen. Das Erscheinungsbild ähnelt Wikipedia, und A-ADS ([aads.com](https://a-ads.com)) liefert die Werbung.
+**SplytWiki, die kostenlose Krypto-Enzyklopädie.** Es ist eine Online-Enzyklopädie über Kryptowährungen, Blockchain und dezentrale Finanzen. Das Erscheinungsbild ähnelt Wikipedia.
 
 - **Hosting:** GitHub Pages, unter `https://splytproject.github.io/SplytWiki/`.
 - **Engine:** Jekyll. GitHub Pages baut die Seite aus den Markdown-Dateien bei jedem Push, deshalb muss nichts installiert werden.

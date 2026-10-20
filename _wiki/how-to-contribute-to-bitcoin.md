@@ -3,7 +3,8 @@ title: How to contribute to Bitcoin
 description: A practical guide to contributing to Bitcoin Core, plus a part-by-part reading path through how Bitcoin works
 aliases: [Contributing to Bitcoin, Contribute to Bitcoin Core, Start here, Getting started, Developer onboarding, Learning path]
 categories: [Bitcoin, Development, Guide, Index]
-updated: 2026-10-18
+updated: 2026-10-20
+last_modified: 2026-10-20
 infobox:
   image: bitcoin.svg
   caption: How to contribute to Bitcoin

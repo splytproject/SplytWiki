@@ -343,7 +343,7 @@
     var list = $('.vector-toc-contents');
     var content = $('.mw-parser-output');
     if (!list || !content) return;
-    var heads = $$('h2[id], h3[id]', content).filter(function (h) { return !h.closest('.infobox, .splyt-ad'); });
+    var heads = $$('h2[id], h3[id]', content).filter(function (h) { return !h.closest('.infobox'); });
 
     var nav = list.closest('.vector-toc');
     var topLabel = (nav && nav.getAttribute('data-top-label')) || '(Top)';
@@ -590,39 +590,7 @@
     }
   }
 
-  /* ------------------------------------------------------------- ads */
-  /* Each slot holds a desktop and a mobile ad code in <template> tags.
-     Only the one matching the screen is inserted, only into slots that are
-     visible at this screen size, and only when the slot scrolls within
-     200px of the viewport. Hidden or unseen ads never load. */
-  function initAds() {
-    var mobile = window.matchMedia && matchMedia('(max-width: 999px)').matches;
-    var slots = $$('[data-ad-slot]').filter(function (unit) { return unit.offsetParent !== null; });
-
-    function fill(unit) {
-      if (unit.getAttribute('data-ad-loaded')) return;
-      var want = $('template[data-ad="' + (mobile ? 'mobile' : 'desktop') + '"]', unit);
-      var other = $('template[data-ad="' + (mobile ? 'desktop' : 'mobile') + '"]', unit);
-      var tpl = want && want.innerHTML.trim() ? want : other;
-      if (!tpl || !tpl.innerHTML.trim()) return;
-      var code = tpl.content.cloneNode(true);
-      $$('iframe', code).forEach(function (f) { f.setAttribute('loading', 'lazy'); f.title = f.title || 'Advertisement'; });
-      unit.appendChild(code);
-      unit.setAttribute('data-ad-loaded', '1');
-    }
-
-    if (!('IntersectionObserver' in window)) { slots.forEach(fill); return; }
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        observer.unobserve(entry.target);
-        fill(entry.target);
-      });
-    }, { rootMargin: '200px 0px' });
-    slots.forEach(function (unit) { observer.observe(unit); });
-  }
-
-  /* -------------------------------------------------- sortable tables */
+    /* -------------------------------------------------- sortable tables */
   /* Tables marked {: .sortable} in Markdown sort when a heading is clicked
      or activated with Enter/Space. Numeric columns sort as numbers; a second
      click reverses the order. */
@@ -658,7 +626,6 @@
   }
 
   /* ------------------------------------------------------------ start */
-  initAds();
   initAppearance();
   initHeader();
   initReferences();

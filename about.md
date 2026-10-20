@@ -19,12 +19,6 @@ Every article on {{ site.title }} follows a few simple principles:
 - **No price talk.** Articles avoid live prices, market capitalisations and predictions, because they go out of date within hours and are not what an encyclopedia is for.
 - **No paid content.** Projects cannot pay to be covered, to have an article changed or to have criticism removed.
 
-{% if site.ads.enabled %}
-## Funding and advertising
-
-{{ site.title }} is funded by advertising. Ads are served by the third-party crypto ad network [A-ADS](https://a-ads.com) and are always clearly labelled "Advertisement". Advertisers have no say over what is written in any article, and an advert appearing next to an article is not an endorsement by {{ site.title }}. See our [privacy policy](../privacy/) for details.
-{% endif %}
-
 ## Not financial advice
 
 {{ site.title }} is an educational reference. Nothing on this site is financial, investment, legal or tax advice. Cryptoassets are highly volatile and you can lose all of the money you put into them. Please read our [general disclaimer](../disclaimer/).

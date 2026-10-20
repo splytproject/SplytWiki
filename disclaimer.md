@@ -20,12 +20,6 @@ Cryptoassets are highly volatile and largely unregulated in many countries. Thei
 
 Crypto changes quickly. Software is upgraded, projects are abandoned, laws change and companies collapse. An article may describe a situation that has since changed. The "last edited" date at the bottom of each page shows when it was last updated.
 
-{% if site.ads.enabled %}
-## Advertisements
-
-Adverts on {{ site.title }} are supplied by a third-party network ([A-ADS](https://a-ads.com)) and are labelled "Advertisement". {{ site.title }} does not endorse any advertised product, token or service, and the presence of an advert next to an article does not mean the article supports it. Be very careful with any advert that promises guaranteed returns or asks you to connect a wallet.
-{% endif %}
-
 ## External links
 
 Links to outside websites are provided for reference. {{ site.title }} has no control over, and accepts no responsibility for, their content.

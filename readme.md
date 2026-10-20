@@ -1,6 +1,6 @@
 # SplytWiki
 
-**SplytWiki, the free crypto encyclopedia.** It's an online encyclopedia about cryptocurrency, blockchain and decentralized finance. It looks and feels like Wikipedia, and A-ADS ([aads.com](https://aads.com)) ads pay for it.
+**SplytWiki, the free crypto encyclopedia.** It's an online encyclopedia about cryptocurrency, blockchain and decentralized finance. It looks and feels like Wikipedia.
 
 - **Hosting:** GitHub Pages, at `https://splytproject.github.io/SplytWiki/`.
 - **Engine:** Jekyll. GitHub Pages builds the site from the Markdown files every time you push, so there's nothing to install.
@@ -15,10 +15,9 @@
 2. [Folder structure](#folder-structure)
 3. [Writing an article](#writing-an-article)
 4. [Translating an article](#translating-an-article)
-5. [Setting up A-ADS ads](#setting-up-a-ads-ads)
-6. [Publishing on GitHub Pages](#publishing-on-github-pages)
-7. [Previewing on your own computer (optional)](#previewing-on-your-own-computer-optional)
-8. [Build plan & progress](#build-plan--progress)
+5. [Publishing on GitHub Pages](#publishing-on-github-pages)
+6. [Previewing on your own computer (optional)](#previewing-on-your-own-computer-optional)
+7. [Build plan & progress](#build-plan--progress)
 
 ---
 
@@ -28,7 +27,7 @@
 |---|---|
 | `_wiki/*.md` | One Markdown file per article. Each one becomes a page at `/wiki/<File_name>/`. |
 | `_layouts/` | Page templates: the header, sidebars and footer that wrap every page. |
-| `_includes/` | Reusable parts: menu, infobox, footer, ad slots. |
+| `_includes/` | Reusable parts: menu, infobox, footer. |
 | `assets/css/splytwiki.css` | The whole visual design, with light and dark mode. |
 | `assets/js/splytwiki.js` | Search suggestions, table of contents, references, link previews, appearance settings. |
 | `_config.yml` | Site name, web address, ad settings. |
@@ -48,7 +47,7 @@ The logo and wordmark belong to SplytWiki. Wikipedia's puzzle globe and wordmark
 
 ```
 SplytWiki/
-├─ _config.yml              site settings (name, URL, baseurl, ads)
+├─ _config.yml              site settings (name, URL, baseurl)
 ├─ _layouts/
 │  ├─ default.html          page shell: header, left column, content, right column, footer
 │  ├─ article.html          article: title, tabs, infobox, body, in-article ad, categories
@@ -60,13 +59,7 @@ SplytWiki/
 │  ├─ appearance.html       Text / Width / Color settings panel
 │  ├─ infobox.html          grey summary box built from an article's front matter
 │  ├─ figure.html           image with caption ("thumbnail")
-│  ├─ footer.html           last edited, licence, footer links
-│  ├─ ad-slot.html          wraps an ad, or shows a placeholder if empty
-│  └─ ads/
-│     ├─ top.html           ← paste A-ADS code: banner above the page title
-│     ├─ sidebar.html       ← paste A-ADS code: right column
-│     ├─ article.html       ← paste A-ADS code: inside articles and on the Main Page
-│     └─ head.html          optional extra <head> code (verification tags)
+│  └─ footer.html           last edited, licence, footer links
 ├─ _wiki/                   the articles (Bitcoin.md, Ethereum.md, …)
 ├─ _data/
 │  ├─ mainpage.yml          featured articles, "Did you know…", featured picture
@@ -163,25 +156,6 @@ Translated so far: **Bitcoin** and **Ethereum** (German and Spanish).
 
 ---
 
-## Setting up A-ADS ads
-
-There are three ad slots. Each has a **desktop** unit and a **mobile** unit in its own file. The site inserts only the unit that matches the visitor's screen (mobile below 1000px wide), so a hidden ad never loads.
-
-| Slot | Desktop file | Mobile file | Where it appears | A-ADS size | Units |
-|---|---|---|---|---|---|
-| Top banner | `_includes/ads/top.html` | `_includes/ads/top-mobile.html` | Above the title on every page | Adaptive | 2458811 / 2458512 |
-| Sidebar | `_includes/ads/sidebar.html` | `_includes/ads/sidebar-mobile.html` | Right column on wide screens; end of each article on narrow screens | Fixed 120×600 | 2458513 / 2458812 |
-| In-article | `_includes/ads/article.html` | `_includes/ads/article-mobile.html` | Inside articles, and between boxes on the Main Page | Fixed 300×250 | 2458514 / 2458813 |
-
-1. Sign in at [aads.com](https://aads.com) and create **one ad unit per slot and device** for your site address (`https://splytproject.github.io/SplytWiki/`).
-2. Copy each unit's embed code and paste it into the matching file, **below** the comment block at the top.
-3. Commit and push. The ad then appears on every page that uses that slot.
-4. Once all slots are filled, set `show_placeholders: false` in `_config.yml`. Until then, empty slots show a dashed "Advertisement" box so you can see where ads will go.
-
-Ads only load when the site is served over the web (https). They won't show if you open an HTML file directly from your computer.
-
----
-
 ## Publishing on GitHub Pages
 
 *(We'll do this once the website is finished.)*
@@ -215,7 +189,7 @@ Docker is another option, but on this computer it needs WSL (Windows Subsystem f
 ## Build plan & progress
 
 ### Goal
-The goal is a lightweight Wikipedia-style crypto encyclopedia on GitHub Pages, with A-ADS ad slots and around 14 well-sourced starter articles. Adding a new article should only take one Markdown file.
+The goal is a lightweight Wikipedia-style crypto encyclopedia on GitHub Pages, with around 14 well-sourced starter articles. Adding a new article should only take one Markdown file.
 
 ### 1. Foundation ✅ done
 - [x] `_config.yml`: site name, tagline, `baseurl: /SplytWiki`, `wiki` collection at `/wiki/<name>/`, footnote settings, ad settings, `jekyll-seo-tag` + `jekyll-sitemap` plugins
@@ -223,10 +197,9 @@ The goal is a lightweight Wikipedia-style crypto encyclopedia on GitHub Pages, w
 
 ### 2. Layouts & shared parts ✅ done
 - [x] `_layouts/default.html`: three-column page shell (Contents/menu · content · Appearance + sidebar ad), top ad, footer
-- [x] `_layouts/article.html`: title, Article/Read/Suggest edit tabs, "From SplytWiki…", hatnote, infobox, in-article ad before the 2nd section, Categories box
+- [x] `_layouts/article.html`: title, Article/Read/Suggest edit tabs, "From SplytWiki…", hatnote, infobox, Categories box
 - [x] `_layouts/page.html`: project and special pages
 - [x] `_includes/`: `head`, `header` (menu, logo, search), `main-menu`, `appearance`, `footer`, `infobox`, `figure`
-- [x] `_includes/ad-slot.html` + `ads/top`, `ads/sidebar`, `ads/article`, `ads/head`
 
 ### 3. Visual design ✅ done
 - [x] `assets/css/splytwiki.css`:
@@ -234,7 +207,7 @@ The goal is a lightweight Wikipedia-style crypto encyclopedia on GitHub Pages, w
   - Header, search box and suggestions
   - Sticky contents list, Appearance panel
   - Article content, infobox, thumbnails, tables, `[1]` references, category box
-  - Ad slots and placeholders, footer, link-preview cards
+  - Footer, link-preview cards
   - Main Page boxes (green, blue, purple), search results, Contents and Categories lists
   - Dark mode
   - Responsive breakpoints at 1200, 1000 and 720px, plus print styles
@@ -269,7 +242,7 @@ The goal is a lightweight Wikipedia-style crypto encyclopedia on GitHub Pages, w
 - [x] About SplytWiki
 - [x] Contribute (how to suggest edits and new articles)
 - [x] Contact
-- [x] Privacy policy (names A-ADS as the third-party ad network)
+- [x] Privacy policy
 - [x] General disclaimer (not financial advice)
 
 ### 7. Images ✅ done
@@ -311,13 +284,10 @@ in Nigerian Pidgin, Dutch, Turkish, Arabic, Spanish, and German.
   - Link previews appear
   - Light/dark and text size persist after a reload
 - [ ] Screen widths 1400, 1100, 800 and 375px: no sideways scrolling, and the small-screen buttons work
-- [ ] Ad placeholders show in all three slots; real ads appear once A-ADS code is pasted and the site is live
 - [ ] CSS + JS total stays under about 30 KB
 
 ### 10. Publish ⏳ after the site is finished
 - [ ] Create the GitHub repo, push, turn on Pages (see [Publishing on GitHub Pages](#publishing-on-github-pages))
-- [ ] Create the A-ADS ad units for the live URL and paste in the codes
-- [ ] Turn off ad placeholders
 
 ---
 

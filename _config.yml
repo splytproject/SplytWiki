@@ -22,15 +22,6 @@ license:
   name: Creative Commons Attribution-ShareAlike 4.0 License
   url: https://creativecommons.org/licenses/by-sa/4.0/
 
-# A-ADS ad slots. Paste each ad unit's code into _includes/ads/<slot>.html.
-# While a slot is empty, a dashed placeholder shows where it will appear
-# if show_placeholders is true. Set it to false before going live.
-ads:
-  # Master switch. false = no ad code, slots, placeholders or ad disclosures
-  # are rendered anywhere on the site. Set to true to turn ads back on.
-  enabled: false
-  show_placeholders: false
-
 # ------------------------------------------------------------------
 #  Build settings (no need to change these)
 # ------------------------------------------------------------------
@@ -98,9 +89,6 @@ exclude:
   - node_modules
   - .jekyll-cache
   # Internal notes and docs: not published on the website
-  - ad-slot-code.md
-  - de/ad-slot-code.md
-  - es/ad-slot-code.md
   - de/readme.md
   - es/readme.md
   - config

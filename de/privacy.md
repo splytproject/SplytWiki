@@ -5,7 +5,7 @@ permalink: /de/privacy/
 description: Wie SplytWiki und seine Dienstleister mit Besucherdaten umgehen.
 lang: de
 ---
-Diese Erklärung beschreibt, welche Informationen beim Besuch von {{ site.title }} erhoben werden. Kurz gesagt: {{ site.title }} selbst fragt keine persönlichen Daten ab, sammelt sie nicht und verkauft sie nicht. Die Unternehmen, die die Website hosten{% if site.ads.enabled %} und ihre Anzeigen ausliefern{% endif %}, können jedoch einige Daten verarbeiten, wie unten beschrieben.
+Diese Erklärung beschreibt, welche Informationen beim Besuch von {{ site.title }} erhoben werden. Kurz gesagt: {{ site.title }} selbst fragt keine persönlichen Daten ab, sammelt sie nicht und verkauft sie nicht. Die Unternehmen, die die Website hosten, können jedoch einige Daten verarbeiten, wie unten beschrieben.
 
 ## Informationen, die {{ site.title }} erhebt
 
@@ -18,14 +18,6 @@ Diese Erklärung beschreibt, welche Informationen beim Besuch von {{ site.title 
 ## Hosting
 
 {{ site.title }} wird bei **GitHub Pages** gehostet, einem Dienst von GitHub, Inc. Wie jeder Webhoster kann GitHub technische Informationen über Besuche protokollieren, etwa IP-Adressen, um den Dienst abzusichern und am Laufen zu halten. Siehe das [GitHub General Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) (englisch).
-
-{% if site.ads.enabled %}
-## Werbung
-
-{{ site.title }} zeigt Anzeigen von **[A-ADS](https://a-ads.com)**, einem externen Werbenetzwerk. Die Anzeigen werden von den Servern von A-ADS in deutlich als „Advertisement“ gekennzeichnete Felder geladen. Dadurch erhält A-ADS die technischen Informationen, die Ihr Browser bei jeder Webanfrage übermittelt (etwa Ihre IP-Adresse, Ihren Browsertyp und die aufgerufene Seite). {{ site.title }} gibt keine weiteren Informationen an A-ADS weiter. Wie A-ADS mit diesen Daten umgeht, entnehmen Sie bitte der Datenschutzerklärung auf deren Website.
-
-Ein Klick auf eine Anzeige führt Sie zu einer Website, die nicht von {{ site.title }} betrieben wird. Wir sind nicht für die Inhalte oder den Datenschutz der Werbetreibenden verantwortlich.
-{% endif %}
 
 ## Externe Links
 

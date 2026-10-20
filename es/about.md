@@ -20,12 +20,6 @@ Todos los artículos de {{ site.title }} siguen unos principios sencillos:
 - **Sin hablar de precios.** Los artículos evitan los precios en tiempo real, las capitalizaciones de mercado y las predicciones, porque quedan obsoletos en cuestión de horas y no son el propósito de una enciclopedia.
 - **Sin contenido pagado.** Los proyectos no pueden pagar para aparecer, para que se modifique un artículo ni para que se eliminen las críticas.
 
-{% if site.ads.enabled %}
-## Financiación y publicidad
-
-{{ site.title }} se financia con publicidad. Los anuncios los sirve la red publicitaria externa de criptomonedas [A-ADS](https://a-ads.com) y siempre están claramente marcados como «Advertisement» (anuncio). Los anunciantes no tienen ninguna influencia sobre lo que se escribe en los artículos, y que un anuncio aparezca junto a un artículo no significa que {{ site.title }} lo respalde. Consulta nuestra [política de privacidad](../privacy/) para más detalles.
-{% endif %}
-
 ## No es asesoramiento financiero
 
 {{ site.title }} es una obra de referencia educativa. Nada de lo que hay en este sitio constituye asesoramiento financiero, de inversión, legal ni fiscal. Los criptoactivos son muy volátiles y puedes perder todo el dinero que inviertas en ellos. Lee nuestro [descargo de responsabilidad general](../disclaimer/).

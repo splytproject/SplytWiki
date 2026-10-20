@@ -15,7 +15,6 @@ Eine Kontaktadresse für die Herausgeber von {{ site.title }} wird hier bald ver
 ## Bevor Sie schreiben
 
 - **Um einen Fehler zu melden oder einen Artikel vorzuschlagen,** lesen Sie zuerst [wie man beiträgt](../contribute/), damit wir alle benötigten Informationen erhalten.
-{% if site.ads.enabled %}- **Zu einer Anzeige:** Anzeigen werden von [A-ADS](https://a-ads.com) ausgeliefert. Wir wählen keine einzelnen Anzeigen aus, aber sagen Sie uns Bescheid, wenn Sie eine irreführende oder betrügerische Anzeige sehen, und fügen Sie die Seite und einen Screenshot bei, wenn möglich.{% endif %}
 - **Wir können nicht helfen bei** der Wiederherstellung verlorener Gelder, privaten Schlüsseln oder Passwörtern, Investitionsentscheidungen oder Problemen mit Börsen und Wallets. Vorsicht vor Personen, die behaupten, von {{ site.title }} zu sein und private Informationen anfordern.
 
 ## Presse und rechtliche Angelegenheiten

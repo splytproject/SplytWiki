@@ -5,7 +5,7 @@ permalink: /es/privacy/
 description: Cómo SplytWiki y sus proveedores de servicios manejan los datos de los visitantes.
 lang: es
 ---
-Esta política explica qué información se recopila cuando visitas {{ site.title }}. En resumen: {{ site.title }} en sí no solicita, recopila ni vende información personal, pero las empresas que alojan el sitio{% if site.ads.enabled %} y sirven sus anuncios{% endif %} pueden tratar algunos datos, como se describe a continuación.
+Esta política explica qué información se recopila cuando visitas {{ site.title }}. En resumen: {{ site.title }} en sí no solicita, recopila ni vende información personal, pero las empresas que alojan el sitio pueden tratar algunos datos, como se describe a continuación.
 
 ## Información que recopila {{ site.title }}
 
@@ -18,14 +18,6 @@ Esta política explica qué información se recopila cuando visitas {{ site.titl
 ## Alojamiento
 
 {{ site.title }} está alojado en **GitHub Pages**, un servicio de GitHub, Inc. Como cualquier servicio de alojamiento web, GitHub puede registrar información técnica sobre las visitas, como las direcciones IP, por motivos de seguridad y para mantener el servicio en funcionamiento. Consulta la [Declaración general de privacidad de GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) (en inglés).
-
-{% if site.ads.enabled %}
-## Publicidad
-
-{{ site.title }} muestra anuncios de **[A-ADS](https://a-ads.com)**, una red publicitaria externa. Los anuncios se cargan desde los servidores de A-ADS dentro de recuadros claramente marcados como «Advertisement» (anuncio), por lo que A-ADS recibe la información técnica que tu navegador envía con cualquier petición web (como tu dirección IP, el tipo de navegador y la página que estás viendo). {{ site.title }} no comparte ninguna otra información con A-ADS. Consulta la política de privacidad de A-ADS en su sitio web para saber cómo tratan estos datos.
-
-Al hacer clic en un anuncio irás a un sitio que no gestiona {{ site.title }}. No somos responsables del contenido ni de las prácticas de privacidad de los anunciantes.
-{% endif %}
 
 ## Enlaces externos
 

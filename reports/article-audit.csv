@@ -1,5 +1,43 @@
 ﻿page,issue,line,suggested fix
 _wiki/Altcoins_and_tokens.md,"Uncited claim: ""Use value concerns a function the asset performs. Speculative value reflects what buyers e…""",69,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/BIP-324_encrypted_transport.md,Broken anchor: ../BIP_index/#bip-324,23,Point to an existing heading id
+_wiki/BIP-324_encrypted_transport.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bitcoin/blob/master/src/protocol.h,143,Open manually to confirm; replace if dead
+_wiki/BIP-324_encrypted_transport.md,"Uncited claim: ""Specifications: BIP-324""",23,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/BIP-350.md,Broken anchor: ../BIP_index/#bip-173,31,Point to an existing heading id
+_wiki/BIP-350.md,Broken anchor: ../BIP_index/#bip-341,31,Point to an existing heading id
+_wiki/BIP-350.md,Broken anchor: ../BIP_index/#bip-141,43,Point to an existing heading id
+_wiki/BIP-350.md,Broken anchor: ../BIP_index/#bip-3,97,Point to an existing heading id
+_wiki/BIP-350.md,Broken anchor: ../BIP_index/#bip-173,182,Point to an existing heading id
+_wiki/BIP-350.md,Broken anchor: ../BIP_index/#bip-141,183,Point to an existing heading id
+_wiki/BIP-350.md,Broken anchor: ../BIP_index/#bip-341,184,Point to an existing heading id
+_wiki/BIP-350.md,Broken anchor: ../BIP_index/#bip-3,185,Point to an existing heading id
+_wiki/BIP-350.md,"Uncited claim: ""Valid bech32m strings""",137,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/BIP-350.md,"Uncited claim: ""The first valid address encodes the x-coordinate of the secp256k1 generator as a version 1…""",157,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/BIP-350.md,"Uncited claim: ""BIP-173: the original bech32 format; still used for version 0 addresses.""",182,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/BIP-350.md,"Uncited claim: ""BIP-141: defines witness versions and program lengths.""",183,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/BIP-350.md,"Uncited claim: ""BIP-341: Taproot, the first version 1 output type.""",184,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/BIP-350.md,"Uncited claim: ""BIP-3: the BIP process that defines the Deployed status.""",185,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/BIP_index.md,Raw-slug / unlinked bracket: [soft/hard],258,Bracketed text is not a link: add a target or remove the brackets
+_wiki/BIP_index.md,Broken anchor: #bip-2,27,Point to an existing heading id
+_wiki/BIP_index.md,Broken anchor: #bip-3,29,Point to an existing heading id
+_wiki/BIP_index.md,Broken anchor: #bip-123,44,Point to an existing heading id
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki,65,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0370.mediawiki,132,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0387.mediawiki,141,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0018.mediawiki,149,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0127.mediawiki,156,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0322.mediawiki,161,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0353.mediawiki,166,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0388.mediawiki,168,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0117.mediawiki,183,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0178.mediawiki,193,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0300.mediawiki,195,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0320.mediawiki,198,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0326.mediawiki,200,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0331.mediawiki,203,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0349.md,208,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0180.mediawiki,288,Open manually to confirm; replace if dead
+_wiki/BIP_index.md,"Uncited claim: ""This index lists all 213 BIPs in that repository as of commit (2 October 2026). Each table…""",15,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Bitcoin.md,"Uncited claim: ""Nakamoto continued to work on the software with other volunteers until late 2010, then han…""",46,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Bitcoin.md,"Uncited claim: ""In 2011 and 2012 Bitcoin became associated with the Silk Road, an online black market that…""",52,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Bitcoin.md,"Uncited claim: ""The price of bitcoin rose in a series of boom-and-bust cycles: it first passed $1,000 in l…""",56,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
@@ -11,6 +49,38 @@ _wiki/Bitcoin.md,"Uncited claim: ""Segregated Witness (SegWit), activated in Aug
 _wiki/Bitcoin.md,"Uncited claim: ""Taproot, activated in November 2021, which added Schnorr signatures and made complex trans…""",89,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Bitcoin.md,"Uncited claim: ""Disagreements over how to scale the network led to a split in August 2017, when a group th…""",91,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Bitcoin.md,"Uncited claim: ""Supporters argue that Bitcoin's fixed supply makes it a hedge against inflation, sometimes…""",97,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [v01],35,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [v02],36,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [v03],37,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rn-0.4.0],38,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rn-0.5.0],39,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rn-0.6.0],40,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rn-0.7.0],41,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rn-0.8.0],42,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rn-0.9.0],43,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rn-0.10.0],44,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-0.11.0],45,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-0.12.0],46,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-0.13.0],47,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-0.14.0],48,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-0.15.0],49,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-0.16.0],50,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-0.17.0],51,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-0.18.0],52,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-0.19.0.1],53,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-0.20.0],54,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-0.21.0],55,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-22.0],56,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-23.0],57,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-24.0.1],58,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-25.0],59,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-26.0],60,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-27.0],61,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-28.0],62,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-29.0],63,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-30.0],64,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,Raw-slug / unlinked bracket: [rel-31.0],65,Bracketed text is not a link: add a target or remove the brackets
+_wiki/Bitcoin_Core_release_history.md,"Uncited claim: ""This article lists every major release up to the current one, as of October 2026. Each rel…""",25,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Bitcoin_Script.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
 _wiki/Bitcoin_Script.md,"Uncited claim: ""Example: the classic pay-to-public-key-hash (P2PKH) locking script:""",29,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Bitcoin_halving.md,"Uncited claim: ""Four halvings have taken place, in 2012, 2016, 2020 and 2024, reducing the reward from 50 …""",26,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
@@ -55,6 +125,35 @@ _wiki/Chain_reorganization.md,"Uncited claim: ""Most reorganizations are simple,
 _wiki/Chain_reorganization.md,"Uncited claim: ""Deeper reorganizations (2 or more blocks) are rare on Bitcoin mainnet; anything beyond a f…""",36,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Chain_reorganization.md,"Uncited claim: ""Confirmations: pick a confirmation policy that matches your threat model. For retail value…""",40,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Chain_reorganization.md,"Uncited claim: ""Assuming the first seen block is permanent. Always design to handle reorgs.""",52,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Compact_block_filters.md,Broken anchor: ../BIP_index/#bip-157,23,Point to an existing heading id
+_wiki/Compact_block_filters.md,Broken anchor: ../BIP_index/#bip-158,23,Point to an existing heading id
+_wiki/Compact_block_filters.md,Broken anchor: ../BIP_index/#bip-157,27,Point to an existing heading id
+_wiki/Compact_block_filters.md,Broken anchor: ../BIP_index/#bip-158,27,Point to an existing heading id
+_wiki/Compact_block_filters.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bitcoin/blob/master/src/protocol.h,158,Open manually to confirm; replace if dead
+_wiki/Compact_block_filters.md,"Uncited claim: ""Specifications: BIP-157 · BIP-158""",23,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Covenant_proposals.md,"Editor note: ""TBD""",35,Resolve the note or remove it
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-360,25,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-347,33,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-119,34,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-348,35,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-345,36,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-443,36,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-360,37,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-119,38,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-348,38,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-349,38,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-442,38,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-440,39,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-441,39,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-118,65,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-119,87,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-348,87,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-349,87,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-442,87,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-440,95,Point to an existing heading id
+_wiki/Covenant_proposals.md,Broken anchor: ../BIP_index/#bip-441,95,Point to an existing heading id
+_wiki/Covenant_proposals.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0349.md,117,Open manually to confirm; replace if dead
+_wiki/Covenant_proposals.md,"Uncited claim: ""This page summarizes the status of seven proposals as of October 2026. It sets out the str…""",23,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Crypto_Anarchism.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
 _wiki/Crypto_Anarchism.md,"Uncited claim: ""At its core, crypto anarchism is not simply a belief that cryptocurrencies are good or bad…""",12,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Crypto_Anarchism.md,"Uncited claim: ""The intellectual roots of crypto anarchism are often traced to the convergence of cyberlib…""",16,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
@@ -150,33 +249,64 @@ _wiki/Fiat_currency.md,"Uncited claim: ""The gradual decline of classical bimeta
 _wiki/Fiat_currency.md,"Uncited claim: ""The final global move away from gold convertibility when the United States ended direct co…""",36,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Fiat_currency.md,"Uncited claim: ""Inflation and hyperinflation: Poor policy choices, fiscal dominance (where fiscal needs di…""",69,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Fiat_currency.md,"Uncited claim: ""Hyperinflation examples: Weimar Republic (early 1920s), Zimbabwe (2000s), and Venezuela (2…""",104,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/HD_wallets_and_seed_phrases.md,Weak source: forum thread linked as source,77,House style bars forum threads as primary sources: replace with a primary source
+_wiki/HD_wallets_and_seed_phrases.md,Broken anchor: ../BIP_index/#bip-32,20,Point to an existing heading id
+_wiki/HD_wallets_and_seed_phrases.md,Broken anchor: ../BIP_index/#bip-39,20,Point to an existing heading id
+_wiki/HD_wallets_and_seed_phrases.md,Broken anchor: ../BIP_index/#bip-44,20,Point to an existing heading id
+_wiki/HD_wallets_and_seed_phrases.md,Broken anchor: ../BIP_index/#bip-49,20,Point to an existing heading id
+_wiki/HD_wallets_and_seed_phrases.md,Broken anchor: ../BIP_index/#bip-84,20,Point to an existing heading id
+_wiki/HD_wallets_and_seed_phrases.md,Broken anchor: ../BIP_index/#bip-86,20,Point to an existing heading id
+_wiki/HD_wallets_and_seed_phrases.md,Weak source: forum thread linked as source,79,House style bars forum threads as primary sources: replace with a primary source
 _wiki/HD_wallets_and_seed_phrases.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
-_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""A hierarchical deterministic (HD) wallet generates a tree of keys from a single seed. BIP-…""",22,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""Generate random entropy (128 to 256 bits).""",26,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""Split into 11-bit groups, each selecting a word from a fixed 2,048-word list (12 words for…""",28,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""Convert the words to a 512-bit seed by running PBKDF2-HMAC-SHA512 for 2,048 iterations, us…""",29,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""Before HD wallets, every key needed its own backup. One seed now backs up an unlimited num…""",53,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""Never type a recovery phrase into a website or an unverified app.""",59,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""Specifications: BIP-32 · BIP-39 · BIP-44 · BIP-49 · BIP-84 · BIP-86""",20,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""A hierarchical deterministic (HD) wallet generates a tree of keys from a single seed. BIP-…""",24,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""Generate random entropy (128 to 256 bits).""",28,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""Split into 11-bit groups, each selecting a word from a fixed 2,048-word list (12 words for…""",30,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""Convert the words to a 512-bit seed by running PBKDF2-HMAC-SHA512 for 2,048 iterations, us…""",31,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""Before HD wallets, every key needed its own backup. One seed now backs up an unlimited num…""",55,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/HD_wallets_and_seed_phrases.md,"Uncited claim: ""Never type a recovery phrase into a website or an unverified app.""",61,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/KYC_and_AML.md,Unverified external link (HTTP 403; may block bots): https://www.fatf-gafi.org/en/topics/virtual-assets.html,137,Open manually to confirm; replace if dead
-_wiki/KYC_and_AML.md,Unverified external link (HTTP 403; may block bots): https://www.fatf-gafi.org/en/topics/beneficial-ownership.html,139,Open manually to confirm; replace if dead
+_wiki/KYC_and_AML.md,Unverified external link (HTTP 403; may block bots): https://www.fatf-gafi.org/en/publications/Fatfgeneral/Financial-inclusion-cdd-2017.html,140,Open manually to confirm; replace if dead
 _wiki/KYC_and_AML.md,Unverified external link (HTTP 403; may block bots): https://www.fatf-gafi.org/content/dam/fatf/documents/recommendations/Updated-Guidance-VA-VASP.pdf,142,Open manually to confirm; replace if dead
 _wiki/KYC_and_AML.md,"Uncited claim: ""Public blockchain addresses usually identify locations to which transactions can be attrib…""",38,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/KYC_and_AML.md,"Uncited claim: ""A risk-based approach means directing attention and controls according to assessed risk. I…""",61,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/KYC_and_AML.md,"Uncited claim: ""For example, a small personal purchase and a complex business arrangement can raise differ…""",65,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Mempool.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-22.0.md,310,Open manually to confirm; replace if dead
-_wiki/Mempool.md,"Uncited claim: ""When a node receives a transaction, it checks consensus rules first, then policy. Accepted…""",42,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Mempool.md,"Uncited claim: ""Expiry and eviction only remove a transaction from one node. The transaction stays valid. …""",77,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Multisignature.md,Weak source: forum thread linked as source,66,House style bars forum threads as primary sources: replace with a primary source
+_wiki/Lightning_Network.md,Broken external link (HTTP 404): https://crates.io/crates/lightning,168,Replace with a working URL (check web.archive.org) or another primary source
+_wiki/Lightning_Network.md,"Uncited claim: ""This article covers the problem, the design at a high level, the specification, the histor…""",29,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Lightning_Network.md,"Uncited claim: ""Four implementations are widely used as of October 2026. Each is described further in Ligh…""",81,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Lightning_channels.md,"Uncited claim: ""BOLT 2 defines two ways to open:""",37,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Lightning_routing.md,Broken external link (HTTP 404): https://crates.io/crates/lightning,161,Replace with a working URL (check web.archive.org) or another primary source
+_wiki/Mempool.md,Broken anchor: ../BIP_index/#bip-125,23,Point to an existing heading id
+_wiki/Mempool.md,Broken anchor: ../BIP_index/#bip-133,23,Point to an existing heading id
+_wiki/Mempool.md,Broken anchor: ../BIP_index/#bip-331,23,Point to an existing heading id
+_wiki/Mempool.md,Broken anchor: ../BIP_index/#bip-431,23,Point to an existing heading id
+_wiki/Mempool.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0331.mediawiki,147,Open manually to confirm; replace if dead
+_wiki/Mempool.md,Unverified external link (HTTP 429; may block bots): https://github.com/bitcoin/bips/blob/master/bip-0331.mediawiki,321,Open manually to confirm; replace if dead
+_wiki/Mempool.md,"Uncited claim: ""Specifications: BIP-125 · BIP-133 · BIP-331 · BIP-431""",23,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Mempool.md,"Uncited claim: ""When a node receives a transaction, it checks consensus rules first, then policy. Accepted…""",44,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Mempool.md,"Uncited claim: ""Expiry and eviction only remove a transaction from one node. The transaction stays valid. …""",79,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Miniscript_and_output_descriptors.md,Broken anchor: ../BIP_index/#bip-379,22,Point to an existing heading id
+_wiki/Miniscript_and_output_descriptors.md,Broken anchor: ../BIP_index/#bip-380,22,Point to an existing heading id
+_wiki/Miniscript_and_output_descriptors.md,Broken anchor: ../BIP_index/#bip-381,22,Point to an existing heading id
+_wiki/Miniscript_and_output_descriptors.md,Broken anchor: ../BIP_index/#bip-382,22,Point to an existing heading id
+_wiki/Miniscript_and_output_descriptors.md,Broken anchor: ../BIP_index/#bip-383,22,Point to an existing heading id
+_wiki/Miniscript_and_output_descriptors.md,Broken anchor: ../BIP_index/#bip-384,22,Point to an existing heading id
+_wiki/Miniscript_and_output_descriptors.md,Broken anchor: ../BIP_index/#bip-385,22,Point to an existing heading id
+_wiki/Miniscript_and_output_descriptors.md,Broken anchor: ../BIP_index/#bip-386,22,Point to an existing heading id
+_wiki/Miniscript_and_output_descriptors.md,"Uncited claim: ""Specifications: BIP-379 · BIP-380 · BIP-381 · BIP-382 · BIP-383 · BIP-384 · BIP-385 · BIP-…""",22,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Multisignature.md,Broken anchor: ../BIP_index/#bip-11,19,Point to an existing heading id
+_wiki/Multisignature.md,Broken anchor: ../BIP_index/#bip-16,19,Point to an existing heading id
+_wiki/Multisignature.md,Broken anchor: ../BIP_index/#bip-147,19,Point to an existing heading id
+_wiki/Multisignature.md,Weak source: forum thread linked as source,68,House style bars forum threads as primary sources: replace with a primary source
 _wiki/Multisignature.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
-_wiki/Multisignature.md,"Uncited claim: ""Multisignature (multisig) lets an output require signatures from *m* of *n* listed public …""",21,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Multisignature.md,"Uncited claim: ""A 2-of-3 locking script looks like:""",25,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Multisignature.md,"Uncited claim: ""An early implementation error causes to remove one more item from the stack than it should…""",33,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Multisignature.md,"Uncited claim: ""The dummy must be an empty value under the ""NULLDUMMY"" rule (BIP-147, part of the SegWit s…""",38,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Multisignature.md,"Uncited claim: ""Up to 20 public keys by script rules, but a P2SH redeem script is limited to 520 bytes, wh…""",42,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Multisignature.md,"Uncited claim: ""Legacy sigop accounting counts each as up to 20 signature operations, which constrained ho…""",43,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Multisignature.md,"Uncited claim: ""Standardness: default nodes relay only certain multisig forms. Scripts that are valid by c…""",44,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Multisignature.md,"Uncited claim: ""Tapscript disables . Multisig there uses , or key aggregation (MuSig2) so the group spends…""",48,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Multisignature.md,"Uncited claim: ""Specifications: BIP-11 · BIP-16 · BIP-147""",19,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Multisignature.md,"Uncited claim: ""Multisignature (multisig) lets an output require signatures from *m* of *n* listed public …""",23,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Multisignature.md,"Uncited claim: ""A 2-of-3 locking script looks like:""",27,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Multisignature.md,"Uncited claim: ""An early implementation error causes to remove one more item from the stack than it should…""",35,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Multisignature.md,"Uncited claim: ""The dummy must be an empty value under the ""NULLDUMMY"" rule (BIP-147, part of the SegWit s…""",40,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Multisignature.md,"Uncited claim: ""Up to 20 public keys by script rules, but a P2SH redeem script is limited to 520 bytes, wh…""",44,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Multisignature.md,"Uncited claim: ""Legacy sigop accounting counts each as up to 20 signature operations, which constrained ho…""",45,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Multisignature.md,"Uncited claim: ""Standardness: default nodes relay only certain multisig forms. Scripts that are valid by c…""",46,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Multisignature.md,"Uncited claim: ""Tapscript disables . Multisig there uses , or key aggregation (MuSig2) so the group spends…""",50,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/NFT_standards.md,"Uncited claim: ""Alice could hold 200 units of ID 1, three units of ID 2 and the single unit of ID 4. Bob c…""",88,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/NFT_standards.md,"Uncited claim: ""The address is an example, not an actual NFT asset. The ownership record, metadata file an…""",141,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/NFT_standards.md,"Uncited claim: ""ERC-721 or ERC-1155 describes token records and transfers. The artist's algorithm describe…""",203,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
@@ -207,20 +337,29 @@ _wiki/OP_RETURN.md,"Uncited claim: ""Witness data, introduced by Segregated Witn
 _wiki/OP_RETURN.md,"Uncited claim: ""Bytes in the base section count as four weight units and witness bytes as one, so only byt…""",42,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/OP_RETURN.md,"Uncited claim: ""Specification and code. In Bitcoin Core's transaction serialization, outputs and witness s…""",47,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/OP_RETURN.md,"Uncited claim: ""Because is only an opcode, it can also appear inside a witness script, for example in a br…""",51,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/OP_RETURN_policy_dispute.md,Broken anchor: ../BIP_index/#bip-110,24,Point to an existing heading id
+_wiki/OP_RETURN_policy_dispute.md,"Uncited claim: ""The OP_RETURN policy dispute is a disagreement among Bitcoin developers and node operators…""",24,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Ordinals_inscriptions_and_Runes.md,Broken anchor: ../BIP_index/#bip-141,22,Point to an existing heading id
+_wiki/Ordinals_inscriptions_and_Runes.md,Broken anchor: ../BIP_index/#bip-341,22,Point to an existing heading id
+_wiki/Ordinals_inscriptions_and_Runes.md,Broken anchor: ../BIP_index/#bip-342,22,Point to an existing heading id
+_wiki/Ordinals_inscriptions_and_Runes.md,"Uncited claim: ""Specifications: BIP-141 · BIP-341 · BIP-342""",22,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,Broken anchor: ../BIP_index/#bip-174,19,Point to an existing heading id
+_wiki/PSBT.md,Broken anchor: ../BIP_index/#bip-370,19,Point to an existing heading id
 _wiki/PSBT.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
-_wiki/PSBT.md,"Uncited claim: ""This is the conceptual heart of Bitcoin. The UTXO model is what makes Bitcoin so different…""",21,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: ""Input: 1 BTC UTXO""",40,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: ""0.3 BTC to you""",42,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: ""0.6 BTC back to me""",43,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: ""0.1 BTC fee to miners""",44,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: ""The original 1 BTC output is destroyed. New outputs are created. Nothing is ""subtracted"" f…""",46,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: ""This is why change addresses are normal in Bitcoin. The wallet does not ""move 0.3 BTC out …""",48,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: ""That last point is crucial. If your input is 1 BTC and your outputs total 0.99 BTC, then 0…""",59,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: ""estimate whether a wallet has enough funds""",70,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: """"My wallet has a balance."" Not exactly. Your wallet has a set of spendable UTXOs, and the …""",92,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: """"Change is a fee."" No. Change is a new output back to you. The fee is whatever is left ove…""",93,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: """"Bitcoin is just a ledger of balances."" It is not. It is a ledger of transactions that cre…""",94,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/PSBT.md,"Uncited claim: ""This is also why a naive ""balance by address"" implementation can be misleading. In Bitcoin…""",106,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: ""Specifications: BIP-174 · BIP-370""",19,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: ""This is the conceptual heart of Bitcoin. The UTXO model is what makes Bitcoin so different…""",23,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: ""Input: 1 BTC UTXO""",42,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: ""0.3 BTC to you""",44,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: ""0.6 BTC back to me""",45,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: ""0.1 BTC fee to miners""",46,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: ""The original 1 BTC output is destroyed. New outputs are created. Nothing is ""subtracted"" f…""",48,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: ""This is why change addresses are normal in Bitcoin. The wallet does not ""move 0.3 BTC out …""",50,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: ""That last point is crucial. If your input is 1 BTC and your outputs total 0.99 BTC, then 0…""",61,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: ""estimate whether a wallet has enough funds""",72,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: """"My wallet has a balance."" Not exactly. Your wallet has a set of spendable UTXOs, and the …""",94,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: """"Change is a fee."" No. Change is a new output back to you. The fee is whatever is left ove…""",95,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: """"Bitcoin is just a ledger of balances."" It is not. It is a ledger of transactions that cre…""",96,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/PSBT.md,"Uncited claim: ""This is also why a naive ""balance by address"" implementation can be misleading. In Bitcoin…""",108,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Partial_UTXO_set.md,Weak source: forum thread linked as source,57,House style bars forum threads as primary sources: replace with a primary source
 _wiki/Partial_UTXO_set.md,Weak source: forum thread linked as source,58,House style bars forum threads as primary sources: replace with a primary source
 _wiki/Partial_UTXO_set.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
@@ -238,6 +377,15 @@ _wiki/Proof_of_work.md,No numbered references on page,,Add a References section 
 _wiki/Proof_of_work.md,"Uncited claim: ""A block header is 80 bytes:""",25,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Proof_of_work.md,"Uncited claim: ""Every 2,016 blocks, the target is retargeted so blocks keep arriving about every 10 minute…""",40,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Proof_of_work.md,"Uncited claim: ""Nodes follow the valid chain with the greatest cumulative work, not simply the most blocks…""",44,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Quantum_computing_and_Bitcoin.md,"Editor note: ""TBD""",78,Resolve the note or remove it
+_wiki/Quantum_computing_and_Bitcoin.md,Broken anchor: ../BIP_index/#bip-360,22,Point to an existing heading id
+_wiki/Quantum_computing_and_Bitcoin.md,Broken anchor: ../BIP_index/#bip-361,22,Point to an existing heading id
+_wiki/Quantum_computing_and_Bitcoin.md,Broken anchor: ../BIP_index/#bip-340,22,Point to an existing heading id
+_wiki/Quantum_computing_and_Bitcoin.md,Broken anchor: ../BIP_index/#bip-360,67,Point to an existing heading id
+_wiki/Quantum_computing_and_Bitcoin.md,Broken anchor: ../BIP_index/#bip-361,73,Point to an existing heading id
+_wiki/Quantum_computing_and_Bitcoin.md,"Uncited claim: ""Specifications: BIP-360 · BIP-361 · BIP-340""",22,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Quantum_computing_and_Bitcoin.md,"Uncited claim: ""This page covers which coins are exposed, what published estimates say about amounts and t…""",28,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Quantum_computing_and_Bitcoin.md,"Uncited claim: ""No CRQC exists as of October 2026. The sources below give estimates, not facts.""",55,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Satoshi_Nakamoto.md,"Uncited claim: ""Nakamoto is believed to control a large number of bitcoins mined in the network's first ye…""",23,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Satoshi_Nakamoto.md,"Uncited claim: ""On 3 January 2009 Nakamoto mined the first block of the Bitcoin blockchain, the *genesis b…""",29,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Satoshi_Nakamoto.md,"Uncited claim: ""In mid-2010 Nakamoto began handing control of the project to the developer Gavin Andresen,…""",33,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
@@ -245,24 +393,34 @@ _wiki/Satoshi_Nakamoto.md,"Uncited claim: ""By analysing patterns in the earlies
 _wiki/Satoshi_Nakamoto.md,"Uncited claim: ""Hal Finney, a cryptographer who received the first Bitcoin transaction from Nakamoto. He d…""",47,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Satoshi_Nakamoto.md,"Uncited claim: ""Peter Todd, a Bitcoin developer named in the 2024 HBO documentary *Money Electric: The Bit…""",51,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Satoshi_Nakamoto.md,"Uncited claim: ""Nakamoto is widely regarded as one of the most influential and mysterious figures in the h…""",55,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Schnorr_signature.md,Weak source: forum thread linked as source,52,House style bars forum threads as primary sources: replace with a primary source
+_wiki/Schnorr_signature.md,Broken anchor: ../BIP_index/#bip-340,20,Point to an existing heading id
+_wiki/Schnorr_signature.md,Broken anchor: ../BIP_index/#bip-327,20,Point to an existing heading id
+_wiki/Schnorr_signature.md,Weak source: forum thread linked as source,54,House style bars forum threads as primary sources: replace with a primary source
 _wiki/Schnorr_signature.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
-_wiki/Schnorr_signature.md,"Uncited claim: ""Schnorr signatures on secp256k1 were standardized for Bitcoin in BIP-340 and became usable…""",22,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Schnorr_signature.md,"Uncited claim: ""Fixed 64-byte signatures and 32-byte x-only public keys (only the x-coordinate is stored, …""",26,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Schnorr_signature.md,"Uncited claim: ""Key aggregation: protocols such as MuSig2 (BIP-327) let multiple parties produce one aggre…""",33,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Segregated_Witness.md,Weak source: forum thread linked as source,58,House style bars forum threads as primary sources: replace with a primary source
+_wiki/Schnorr_signature.md,"Uncited claim: ""Specifications: BIP-340 · BIP-327""",20,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Schnorr_signature.md,"Uncited claim: ""Schnorr signatures on secp256k1 were standardized for Bitcoin in BIP-340 and became usable…""",24,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Schnorr_signature.md,"Uncited claim: ""Fixed 64-byte signatures and 32-byte x-only public keys (only the x-coordinate is stored, …""",28,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Schnorr_signature.md,"Uncited claim: ""Key aggregation: protocols such as MuSig2 (BIP-327) let multiple parties produce one aggre…""",35,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Segregated_Witness.md,Broken anchor: ../BIP_index/#bip-141,19,Point to an existing heading id
+_wiki/Segregated_Witness.md,Broken anchor: ../BIP_index/#bip-143,19,Point to an existing heading id
+_wiki/Segregated_Witness.md,Broken anchor: ../BIP_index/#bip-144,19,Point to an existing heading id
+_wiki/Segregated_Witness.md,Broken anchor: ../BIP_index/#bip-173,19,Point to an existing heading id
+_wiki/Segregated_Witness.md,Weak source: forum thread linked as source,60,House style bars forum threads as primary sources: replace with a primary source
 _wiki/Segregated_Witness.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
-_wiki/Segregated_Witness.md,"Uncited claim: ""Segregated Witness (SegWit) separates a transaction's unlocking data (signatures and simil…""",21,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Segregated_Witness.md,"Uncited claim: ""Witness versions. Output scripts carry a version number, allowing future upgrades. Version…""",26,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Segregated_Witness.md,"Uncited claim: ""New signature hash (BIP-143) that fixes quadratic hashing costs for large transactions.""",27,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Segregated_Witness.md,"Uncited claim: ""A block may contain at most 4,000,000 weight units. Base (non-witness) bytes count four un…""",34,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Segregated_Witness.md,"Uncited claim: ""Only bytes in the witness section are discounted. Outputs, including OP_RETURN outputs, ar…""",36,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Silent_payments.md,Weak source: forum thread linked as source,66,House style bars forum threads as primary sources: replace with a primary source
+_wiki/Segregated_Witness.md,"Uncited claim: ""Specifications: BIP-141 · BIP-143 · BIP-144 · BIP-173 · BIP-350""",19,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Segregated_Witness.md,"Uncited claim: ""Segregated Witness (SegWit) separates a transaction's unlocking data (signatures and simil…""",23,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Segregated_Witness.md,"Uncited claim: ""Witness versions. Output scripts carry a version number, allowing future upgrades. Version…""",28,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Segregated_Witness.md,"Uncited claim: ""New signature hash (BIP-143) that fixes quadratic hashing costs for large transactions.""",29,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Segregated_Witness.md,"Uncited claim: ""A block may contain at most 4,000,000 weight units. Base (non-witness) bytes count four un…""",36,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Segregated_Witness.md,"Uncited claim: ""Only bytes in the witness section are discounted. Outputs, including OP_RETURN outputs, ar…""",38,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Silent_payments.md,Broken anchor: ../BIP_index/#bip-352,20,Point to an existing heading id
+_wiki/Silent_payments.md,Weak source: forum thread linked as source,68,House style bars forum threads as primary sources: replace with a primary source
 _wiki/Silent_payments.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
-_wiki/Silent_payments.md,"Uncited claim: ""Silent payments (BIP-352) is a protocol for static payment addresses in Bitcoin without on…""",22,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Silent_payments.md,"Uncited claim: ""Input restrictions: only certain input types (those with a single clear public key) take p…""",42,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Silent_payments.md,"Uncited claim: ""Address length: the address is longer than a normal Bech32 address (about 117 characters) …""",44,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Silent_payments.md,"Uncited claim: ""Support has been spreading through wallets and hardware devices (for example, Sparrow adde…""",48,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Silent_payments.md,"Uncited claim: ""Specifications: BIP-352""",20,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Silent_payments.md,"Uncited claim: ""Silent payments (BIP-352) is a protocol for static payment addresses in Bitcoin without on…""",24,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Silent_payments.md,"Uncited claim: ""Input restrictions: only certain input types (those with a single clear public key) take p…""",44,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Silent_payments.md,"Uncited claim: ""Address length: the address is longer than a normal Bech32 address (about 117 characters) …""",46,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Silent_payments.md,"Uncited claim: ""Support has been spreading through wallets and hardware devices (for example, Sparrow adde…""",50,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Smart_contract.md,"Uncited claim: ""The concept was introduced by the computer scientist Nick Szabo in the 1990s, but it becam…""",10,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Smart_contract.md,"Uncited claim: ""Despite the name, most smart contracts are neither especially ""smart"" nor legal contracts:…""",12,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Smart_contract.md,"Uncited claim: ""Tokens: contracts that keep track of balances of a digital asset, such as those following …""",28,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
@@ -286,24 +444,16 @@ _wiki/Stablecoin.md,"Uncited claim: ""In March 2023 USDC briefly fell to about 8
 _wiki/Stablecoin.md,"Uncited claim: ""Crypto-backed stablecoins are created by smart contracts that lock up other cryptocurrenci…""",36,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Stablecoin.md,"Uncited claim: ""Algorithmic stablecoins try to maintain their peg by automatically expanding or contractin…""",40,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/Stablecoin.md,"Uncited claim: ""Some stablecoins track the price of a commodity, most often gold, and are backed by physic…""",44,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Taproot.md,Weak source: forum thread linked as source,77,House style bars forum threads as primary sources: replace with a primary source
-_wiki/Taproot.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
-_wiki/Taproot.md,"Uncited claim: ""Taproot (also known as P2TR, for pay-to-Taproot) is a Bitcoin output type and the soft for…""",21,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Taproot.md,"Uncited claim: ""Before Taproot, outputs with complex spending conditions, such as multisignature setups, e…""",25,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Taproot.md,"Uncited claim: ""The result *Q* is the key placed in the output. Observers see only an ordinary key, so the…""",33,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Taproot.md,"Uncited claim: ""If no scripts are wanted, wallets still apply a tweak with an empty script tree. Consensus…""",35,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Taproot.md,"Uncited claim: ""The spender produces a Schnorr signature valid for the output key *Q*. Only the signature …""",43,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Taproot.md,"Uncited claim: ""The 33 bytes contain a leaf-version and parity byte plus the internal key. Each of the *m*…""",51,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Taproot.md,"Uncited claim: ""With a single script and nothing to hide, the script path can cost slightly more than the …""",55,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Taproot.md,"Uncited claim: ""With several alternative spending conditions, Taproot reveals only the branch used plus on…""",56,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Taproot.md,"Uncited claim: ""The control block grows by 32 bytes for each level of depth, so designs typically place fr…""",57,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Taproot.md,"Uncited claim: ""Taproot was activated through a miner-signalling process counted from block 681,408, with …""",65,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Testnet.md,Weak source: forum thread linked as source,64,House style bars forum threads as primary sources: replace with a primary source
-_wiki/Testnet.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
-_wiki/Testnet.md,"Uncited claim: ""Public test networks use a special rule so they stay usable when little hashpower is prese…""",40,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Testnet.md,"Uncited claim: ""Testnet3 suffered this, and testnet4 was designed to address the shortcomings, but kept a …""",42,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Testnet.md,"Uncited claim: ""Developers reported that testnet4 had a similar loophole, and a 2025 mailing-list proposal…""",43,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/Testnet.md,"Uncited claim: ""A Bitcoin Core pull request (#34420) proposed disabling min-difficulty blocks on testnet4 …""",44,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Taproot.md,Broken anchor: ../BIP_index/#bip-340,23,Point to an existing heading id
+_wiki/Taproot.md,Broken anchor: ../BIP_index/#bip-341,23,Point to an existing heading id
+_wiki/Taproot.md,Broken anchor: ../BIP_index/#bip-342,23,Point to an existing heading id
+_wiki/Taproot.md,"Uncited claim: ""Specifications: BIP-340 · BIP-341 · BIP-342 · BIP-350""",23,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Taproot.md,"Uncited claim: ""Vector 0: no script tree""",260,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Taproot.md,"Uncited claim: ""Vector 1: one tapscript leaf""",269,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Taproot.md,"Uncited claim: ""Vector 3: two leaves, one with an unknown leaf version""",284,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/Testnet.md,Broken anchor: ../BIP_index/#bip-325,22,Point to an existing heading id
+_wiki/Testnet.md,Broken anchor: ../BIP_index/#bip-94,22,Point to an existing heading id
+_wiki/Testnet.md,"Uncited claim: ""Specifications: BIP-325 · BIP-94""",22,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/UTXO.md,Weak source: forum thread linked as source,61,House style bars forum threads as primary sources: replace with a primary source
 _wiki/UTXO.md,No numbered references on page,,Add a References section with numbered footnotes to primary sources
 _wiki/UTXO.md,"Uncited claim: ""An output is spent entirely, so paying 0.3 BTC from a 1.0 BTC output creates a payment out…""",32,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
@@ -326,9 +476,12 @@ _wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""Changes to consensus or 
 _wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""Other projects: libsecp256k1 (cryptography), wallets, Lightning implementations, alternati…""",137,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""Schnorr signature: BIP-340 signatures and key aggregation""",169,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 _wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""HD wallets and seed phrases: BIP-32 and BIP-39""",173,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""Testnet: regtest, signet and testnet4""",176,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""Partial UTXO set: why a node can't keep only recent blocks, and what works instead""",180,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
-_wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""Build Bitcoin Core (Step 2 above), start regtest, and work through the ""Developer notes"" o…""",184,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""Testnet: regtest, signet (BIP-325), testnet4 (BIP-94) and the retirement of testnet3""",177,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""Compact block filters: BIP-157/158, how light clients find their transactions privately""",181,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""BIP-324 encrypted P2P transport: encrypted connections between nodes, and what they do not…""",182,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""Partial UTXO set: why a node can't keep only recent blocks, and what works instead""",186,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""Lightning Network: the layer-2 payment channel network and its BOLT specifications""",187,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
+_wiki/how-to-contribute-to-bitcoin.md,"Uncited claim: ""Build Bitcoin Core (Step 2 above), start regtest, and work through the ""Developer notes"" o…""",197,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 de/wiki/Bitcoin.md,"Uncited claim: ""Nakamoto arbeitete bis Ende 2010 gemeinsam mit anderen Freiwilligen an der Software, überg…""",46,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 de/wiki/Bitcoin.md,"Uncited claim: ""2011 und 2012 wurde Bitcoin mit Silk Road in Verbindung gebracht, einem Online-Schwarzmark…""",52,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"
 de/wiki/Bitcoin.md,"Uncited claim: ""Der Bitcoin-Kurs stieg in einer Reihe von Boom-und-Bust-Zyklen: Ende 2013 überschritt er e…""",56,"Add a numbered footnote to a primary source (BIP, release notes, official doc, filing, paper) or remove the claim"

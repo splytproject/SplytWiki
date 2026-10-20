@@ -25,20 +25,8 @@ layout: default
     <div class="hatnote">{{ page.hatnote | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
     {%- endif %}
     {% include infobox.html %}
-    {%- comment -%} Put the in-article ad just before the second section. {%- endcomment -%}
-    {%- assign sections = content | split: '<h2 ' -%}
-    {%- for section in sections -%}
-      {%- if forloop.first -%}
-        {{ section }}
-      {%- else -%}
-        {%- if forloop.index == 3 %}{% include ad-slot.html slot="article" %}{% endif -%}
-        <h2 {{ section }}
-      {%- endif -%}
-    {%- endfor -%}
-    {%- if sections.size < 3 %}{% include ad-slot.html slot="article" %}{% endif %}
+    {{ content }}
   </div>
-  {%- comment -%} Narrow screens have no sidebar column, so its ad goes here. {%- endcomment -%}
-  {% include ad-slot.html slot="sidebar" placement="bottom" %}
   {%- if page.categories.size > 0 %}
   <div id="catlinks" class="catlinks">
     <a href="{{ '/categories/' | relative_url }}">{{ t.categories }}</a>:
