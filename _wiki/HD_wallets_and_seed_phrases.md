@@ -17,8 +17,6 @@ infobox:
     - Extended public key: xpub
 ---
 
-**Specifications:** [BIP-32](../BIP_index/#bip-32) · [BIP-39](../BIP_index/#bip-39) · [BIP-44](../BIP_index/#bip-44) · [BIP-49](../BIP_index/#bip-49) · [BIP-84](../BIP_index/#bip-84) · [BIP-86](../BIP_index/#bip-86)
-
 > **In plain terms:** Instead of backing up each key separately, a wallet derives all its keys from one secret. That secret is written as 12 or 24 words, your recovery phrase. Anyone with the words can recreate every key.
 
 A **hierarchical deterministic (HD) wallet** generates a tree of keys from a single seed. **BIP-32** defines the tree; **BIP-39** defines how a human-readable word list encodes the seed.
@@ -70,10 +68,11 @@ Before HD wallets, every key needed its own backup. One seed now backs up an unl
 
 - [ECDSA](../ECDSA/)
 - [PSBT](../PSBT/)
-- [Silent payments](../Silent_payments/)
+- [Silent_payments](../Silent_payments/)
 - [Multisignature](../Multisignature/)
 
 ## Notes and further reading
 
 - Based on BIP-32, BIP-39, BIP-44, BIP-49, BIP-84 and BIP-86.
-- The forum board has a thread of experimental BIP-39 research: [Experimental BIP-39 research: prime-coordinate representation and entropy analysis](https://bitcointalk.org/index.php?topic=5594019.0). Treat its experimental claims with caution.
+- The forum board has a thread of experimental BIP-39 research: [Experimental BIP-39 research: prime-coordinate representation and entropy analysis](https://bitcointalk.org/index.php?topic=5594019.0) (linked, not summarized here; treat experimental claims with caution).
+- (Add sourcing where appropriate: BIP test vectors, descriptor specifications.)

@@ -17,8 +17,6 @@ infobox:
     - Cost: Receiver must scan the chain
 ---
 
-**Specifications:** [BIP-352](../BIP_index/#bip-352)
-
 > **In plain terms:** Normally, publishing one address means everyone paying you reuses it, which links all your payments publicly. Silent payments let you publish one address, while each payer secretly derives a different on-chain address that only you can recognize.
 
 **Silent payments (BIP-352)** is a protocol for static payment addresses in Bitcoin without on-chain linkability of payments and without on-chain notifications.
@@ -59,10 +57,11 @@ Support has been spreading through wallets and hardware devices (for example, Sp
 
 - [Taproot](../Taproot/)
 - [PSBT](../PSBT/)
-- [Schnorr signature](../Schnorr_signature/)
+- [Schnorr_signature](../Schnorr_signature/)
 - [UTXO](../UTXO/)
 
 ## Notes and further reading
 
 - Based on BIP-352 and its review discussion on GitHub (bitcoin/bips PR #1458), the Bitcoin Wiki article, and Bitcoin Optech's topic page.
-- The forum board has a long thread on silent payments: [Silent payments](https://bitcointalk.org/index.php?topic=5400363.0).
+- The forum board has a long thread on silent payments: [Silent payments](https://bitcointalk.org/index.php?topic=5400363.0) (linked, not summarized here).
+- (Add sourcing where appropriate: scanning performance data, wallet support table, light-client designs.)

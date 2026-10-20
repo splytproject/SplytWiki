@@ -81,9 +81,9 @@ Regulators require licensed crypto intermediaries to implement AML/KYC measures 
 
 ## See also
 - [Cryptocurrency](../Cryptocurrency/)
-- [Cryptocurrency regulation](../Cryptocurrency_regulation/)
-- [Cryptocurrency taxation](../Cryptocurrency_taxation/)
-- [KYC and AML](../KYC_and_AML/)
+- [Cryptocurrency_regulation](../Cryptocurrency_regulation/)
+- [Cryptocurrency_taxation](../Cryptocurrency_taxation/)
+- [KYC_and_AML](../KYC_and_AML/)
 - [Blockchain](../Blockchain/)
 
 ## References

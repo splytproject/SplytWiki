@@ -22,7 +22,7 @@ An **unspent transaction output (UTXO)** is an output of an earlier transaction 
 
 ## How it works
 
-Every transaction consumes existing outputs (its *inputs*) and creates new outputs. Each output carries an amount and a locking condition (see [Bitcoin Script](../Bitcoin_Script/)). An output is identified by the transaction id that created it plus its index, for example `txid:0`.
+Every transaction consumes existing outputs (its *inputs*) and creates new outputs. Each output carries an amount and a locking condition (see [Bitcoin_Script](../Bitcoin_Script/)). An output is identified by the transaction id that created it plus its index, for example `txid:0`.
 
 Rules a node enforces:
 
@@ -40,7 +40,7 @@ The UTXO model makes validation local and parallelizable: to check one input, a 
 - Bitcoin Core keeps the UTXO set in a LevelDB database (`chainstate/`), with a configurable in-memory cache (`-dbcache`).
 - `bitcoin-cli gettxout <txid> <n>` returns an output if it is unspent.
 - `bitcoin-cli gettxoutsetinfo` summarizes the whole set (it can take a while).
-- `bitcoin-cli dumptxoutset` and `loadtxoutset` export and load UTXO snapshots, the basis of *assumeUTXO* (see [Partial UTXO set](../Partial_UTXO_set/)).
+- `bitcoin-cli dumptxoutset` and `loadtxoutset` export and load UTXO snapshots, the basis of *assumeUTXO* (see [Partial_UTXO_set](../Partial_UTXO_set/)).
 - Wallet tools such as `listunspent` show only the UTXOs your wallet can spend.
 
 ## Common misconceptions
@@ -51,11 +51,13 @@ The UTXO model makes validation local and parallelizable: to check one input, a 
 
 ## See also
 
-- [Bitcoin node](../Bitcoin_node/)
-- [Partial UTXO set](../Partial_UTXO_set/)
+- [Bitcoin_node](../Bitcoin_node/)
+- [Partial_UTXO_set](../Partial_UTXO_set/)
 - [OP_RETURN](../OP_RETURN/)
-- [How to contribute to Bitcoin](../how-to-contribute-to-bitcoin/)
+- [How_to_contribute_to_Bitcoin](../how-to-contribute-to-bitcoin/)
 
 ## Notes and further reading
 
+- Based on standard protocol behaviour and Bitcoin Core's RPC documentation.
 - Forum discussion of UTXO snapshots and partial sets: [Can a Bitcoin node build a partial UTXO set from recent N blocks?](https://bitcointalk.org/index.php?topic=5593895.0)
+- (Add sourcing where appropriate: chainstate size measurements, coin-selection research.)

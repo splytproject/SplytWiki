@@ -41,7 +41,7 @@ Every 2,016 blocks, the target is retargeted so blocks keep arriving about every
 
 ## Choosing the best chain
 
-Nodes follow the valid chain with the **greatest cumulative work**, not simply the most blocks. Work per block derives from the target; a numerically lucky hash does not count extra. When two valid blocks compete, the tie resolves when the next block extends one of them (see [Chain reorganization](../Chain_reorganization/)).
+Nodes follow the valid chain with the **greatest cumulative work**, not simply the most blocks. Work per block derives from the target; a numerically lucky hash does not count extra. When two valid blocks compete, the tie resolves when the next block extends one of them (see [Chain_reorganization](../Chain_reorganization/)).
 
 ## Why it exists
 
@@ -56,12 +56,13 @@ Without a cost to produce blocks, anyone could create alternative histories for 
 
 ## See also
 
-- [Chain reorganization](../Chain_reorganization/)
-- [Bitcoin node](../Bitcoin_node/)
+- [Chain_reorganization](../Chain_reorganization/)
+- [Bitcoin_node](../Bitcoin_node/)
 - [Testnet](../Testnet/)
-- [Soft fork and hard fork](../Soft_fork_and_hard_fork/)
+- [Soft_fork_and_hard_fork](../Soft_fork_and_hard_fork/)
 
 ## Notes and further reading
 
 - Based on the original Bitcoin design and Bitcoin Core's implementation.
 - Forum discussion of competing blocks and cumulative work: [Isn't block reorganization the most common phenomenon in the Bitcoin blockchain?](https://bitcointalk.org/index.php?topic=5593881.0)
+- (Add sourcing where appropriate: the Bitcoin white paper, the timewarp-attack literature.)
