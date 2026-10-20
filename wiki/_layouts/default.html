@@ -1,0 +1,47 @@
+{%- include i18n.html -%}
+<!DOCTYPE html>
+<html lang="{{ lang }}" class="client-nojs splyt-size-standard" data-base="{{ '/' | relative_url }}">
+<head>
+{% include head.html %}
+</head>
+<body class="{% if page.is_main %}page-main {% endif %}{% if page.has_toc %}has-toc {% endif %}ns-{{ page.namespace | default: 'project' }}">
+<a class="skip-link" href="#content">Jump to content</a>
+<div class="mw-page-container">
+  {% include header.html %}
+
+  <div class="mw-page-container-inner">
+    <div class="vector-column-start">
+      {%- if page.has_toc %}
+      <nav id="vector-toc" class="vector-toc" aria-label="{{ t.contents }}" data-top-label="{{ t.top }}">
+        <div class="vector-pinnable-header">
+          <span>{{ t.contents }}</span>
+          <button type="button" class="toc-close" aria-label="Close">×</button>
+        </div>
+        <ul class="vector-toc-contents"></ul>
+      </nav>
+      {%- else %}
+      <div class="vector-main-menu-pinned">
+        {% include main-menu.html %}
+      </div>
+      {%- endif %}
+    </div>
+
+    <div class="mw-content-container">
+      <main id="content" class="mw-body">
+        {{ content }}
+      </main>
+    </div>
+
+    <div class="vector-column-end">
+      {% include appearance.html %}
+    </div>
+
+    {% include footer.html %}
+  </div>
+</div>
+<div class="splyt-overlay" hidden></div>
+<script id="splyt-pages" type="application/json">{{ site.wiki | map: 'url' | jsonify }}</script>
+<script id="splyt-translated" type="application/json">{{ site.pages | where_exp: "p", "p.ref" | map: 'url' | jsonify }}</script>
+<script src="{{ '/assets/js/splytwiki.js' | relative_url }}" defer></script>
+</body>
+</html>
