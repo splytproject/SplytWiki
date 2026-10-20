@@ -18,7 +18,7 @@ infobox:
 
 > **In plain terms:** A signature proves "the owner of this key approved this exact transaction" without revealing the key. ECDSA is the math Bitcoin used for this from the start. It works, but it has a sharp edge: reusing one secret number even once can leak your private key.
 
-**ECDSA** (Elliptic Curve Digital Signature Algorithm) over the **secp256k1** curve is the signature scheme used by legacy and SegWit v0 Bitcoin outputs. (Taproot adds [Schnorr signature](../Schnorr_signature/).)
+**ECDSA** (Elliptic Curve Digital Signature Algorithm) over the **secp256k1** curve is the signature scheme used by legacy and SegWit v0 Bitcoin outputs. (Taproot adds [Schnorr_signature](../Schnorr_signature/).)
 
 ## How it works
 
@@ -51,12 +51,13 @@ The standard fix is **deterministic nonces (RFC 6979)**: derive `k` from the pri
 
 ## See also
 
-- [Schnorr signature](../Schnorr_signature/)
-- [Segregated Witness](../Segregated_Witness/)
-- [Bitcoin Script](../Bitcoin_Script/)
-- [HD wallets and seed phrases](../HD_wallets_and_seed_phrases/)
+- [Schnorr_signature](../Schnorr_signature/)
+- [Segregated_Witness](../Segregated_Witness/)
+- [Bitcoin_Script](../Bitcoin_Script/)
+- [HD_wallets_and_seed_phrases](../HD_wallets_and_seed_phrases/)
 
 ## Notes and further reading
 
 - Based on standard cryptographic specifications (SEC 2, RFC 6979) and BIP-66.
-- The forum board has a thread of sample (r, s, z, k) values for study: [R,S,Z , K nonce and public key Signature samples](https://bitcointalk.org/index.php?topic=5500713.0).
+- The forum board has a thread of sample (r, s, z, k) values for study: [R,S,Z , K nonce and public key Signature samples](https://bitcointalk.org/index.php?topic=5500713.0) (linked, not summarized here).
+- (Add sourcing where appropriate: documented real-world nonce-reuse incidents, test vectors.)

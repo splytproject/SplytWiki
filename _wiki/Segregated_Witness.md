@@ -16,8 +16,6 @@ infobox:
     - Address style: Bech32 (bc1…)
 ---
 
-**Specifications:** [BIP-141](../BIP_index/#bip-141) · [BIP-143](../BIP_index/#bip-143) · [BIP-144](../BIP_index/#bip-144) · [BIP-173](../BIP_index/#bip-173) · [BIP-350](../BIP-350/)
-
 > **In plain terms:** SegWit moved the signature data of a transaction into a separate section. That fixed a bug that let third parties tweak transaction ids, and it let blocks hold more transactions.
 
 **Segregated Witness (SegWit)** separates a transaction's unlocking data (signatures and similar items, called the **witness**) from the rest of the transaction. It was deployed as a [soft fork](../Soft_fork_and_hard_fork/) in 2017.
@@ -52,9 +50,10 @@ It addressed malleability, enabled script upgrades via versioning, and raised ef
 - [Taproot](../Taproot/)
 - [OP_RETURN](../OP_RETURN/)
 - [Mempool](../Mempool/)
-- [Bitcoin Script](../Bitcoin_Script/)
+- [Bitcoin_Script](../Bitcoin_Script/)
 
 ## Notes and further reading
 
 - Based on BIP-141, BIP-143, BIP-144, BIP-173, BIP-350.
 - Forum discussion of what counts as witness data: [Looking for proof OP_RETURN isn't part of witness data](https://bitcointalk.org/index.php?topic=5597097.0); and on SegWit as a soft vs hard fork: [How do developers decide whether a Bitcoin upgrade will be a soft or hard fork?](https://bitcointalk.org/index.php?topic=5596302.0)
+- (Add sourcing where appropriate: activation timeline and adoption statistics.)

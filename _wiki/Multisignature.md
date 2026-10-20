@@ -16,8 +16,6 @@ infobox:
     - Replaced in Tapscript by: OP_CHECKSIGADD
 ---
 
-**Specifications:** [BIP-11](../BIP_index/#bip-11) · [BIP-16](../BIP_index/#bip-16) · [BIP-147](../BIP_index/#bip-147)
-
 > **In plain terms:** Multisig is a shared lock. For example, a "2-of-3" setup needs any two of three keys to approve a spend, so losing one key (or having one stolen) isn't fatal.
 
 **Multisignature** (multisig) lets an output require signatures from *m* of *n* listed public keys. In legacy and SegWit v0 scripts it is implemented with the opcode `OP_CHECKMULTISIG`.
@@ -47,7 +45,7 @@ The dummy must be an empty value under the "NULLDUMMY" rule (BIP-147, part of th
 
 ## Taproot
 
-Tapscript disables `OP_CHECKMULTISIG`. Multisig there uses `OP_CHECKSIGADD`, or key aggregation (MuSig2) so the group spends via the key path as a single signer (see [Taproot](../Taproot/) and [Schnorr signature](../Schnorr_signature/)).
+Tapscript disables `OP_CHECKMULTISIG`. Multisig there uses `OP_CHECKSIGADD`, or key aggregation (MuSig2) so the group spends via the key path as a single signer (see [Taproot](../Taproot/) and [Schnorr_signature](../Schnorr_signature/)).
 
 ## Developer notes
 
@@ -57,7 +55,7 @@ Tapscript disables `OP_CHECKMULTISIG`. Multisig there uses `OP_CHECKSIGADD`, or 
 
 ## See also
 
-- [Bitcoin Script](../Bitcoin_Script/)
+- [Bitcoin_Script](../Bitcoin_Script/)
 - [PSBT](../PSBT/)
 - [Taproot](../Taproot/)
 - [Mempool](../Mempool/)
@@ -65,4 +63,5 @@ Tapscript disables `OP_CHECKMULTISIG`. Multisig there uses `OP_CHECKSIGADD`, or 
 ## Notes and further reading
 
 - The off-by-one explanation is from a 2011 Bitcoin developer mailing-list discussion; standardness discussions are from Bitcoin Core GitHub (e.g. [PR #26348](https://github.com/bitcoin/bitcoin/pull/26348)).
-- The forum board has a thread on unusual multisig use: [non-standard CHECKMULTISIG usage](https://bitcointalk.org/index.php?topic=5595966.0).
+- The forum board has a thread on unusual multisig use: [non-standard CHECKMULTISIG usage](https://bitcointalk.org/index.php?topic=5595966.0) (linked, not summarized here).
+- (Add sourcing where appropriate: BIP-147, descriptor documentation.)

@@ -52,12 +52,13 @@ Because `OP_RETURN` is only an opcode, it can also appear inside a witness scrip
 
 ## See also
 
-- [Segregated Witness](../Segregated_Witness/)
+- [Segregated_Witness](../Segregated_Witness/)
 - [Taproot](../Taproot/)
 - [UTXO](../UTXO/)
-- [Bitcoin Script](../Bitcoin_Script/)
+- [Bitcoin_Script](../Bitcoin_Script/)
 
 ## Notes and further reading
 
 - ["Looking for proof OP_RETURN isn't part of witness data" discussion thread](https://bitcointalk.org/index.php?topic=5597097.0), Bitcoin Forum, October 2026
 - BIP-141, Segregated Witness (Consensus layer)
+- (Add sourcing where appropriate: Bitcoin Core release notes describing changes to relay policy for data carrier output size, and annotated weight calculations for real transactions.)

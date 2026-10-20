@@ -49,9 +49,11 @@ Classifying a change is the comparatively simple step. Most of the effort lies i
 ## See also
 
 - [Taproot](../Taproot/)
-- [Segregated Witness](../Segregated_Witness/)
-- [Chain reorganization](../Chain_reorganization/)
+- [Segregated_Witness](../Segregated_Witness/)
+- [Chain_reorganization](../Chain_reorganization/)
+- [Bitcoin_Improvement_Proposal](../Bitcoin_Improvement_Proposal/)
 
 ## Notes and further reading
 
 - ["How do developers decide whether a Bitcoin upgrade will be a soft or hard fork?" discussion thread](https://bitcointalk.org/index.php?topic=5596302.0), Bitcoin Forum, October 2026
+- (Add sourcing where appropriate: activation mechanisms such as BIP-9 signalling, a timeline of past soft forks including P2SH, CLTV, CSV, SegWit and Taproot, and accounts of historical chain splits.)

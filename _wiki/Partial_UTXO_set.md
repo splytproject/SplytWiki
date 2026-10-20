@@ -49,10 +49,12 @@ Lightweight (SPV) wallets do not keep a UTXO set. They store block headers and r
 ## See also
 
 - [UTXO](../UTXO/)
-- [Bitcoin node](../Bitcoin_node/)
-- [Chain reorganization](../Chain_reorganization/)
+- [Bitcoin_node](../Bitcoin_node/)
+- [Chain_reorganization](../Chain_reorganization/)
+- [Simplified_payment_verification](../Simplified_payment_verification/)
 
 ## Notes and further reading
 
 - ["Can a Bitcoin node build a partial UTXO set from recent N blocks?" discussion thread](https://bitcointalk.org/index.php?topic=5593895.0), Bitcoin Forum, September 2026
 - [Mandacaru discussion thread](https://bitcointalk.org/index.php?topic=5579479.0), Bitcoin Forum, concerning a Utreexo-based client
+- (Add sourcing where appropriate: documentation of the `dumptxoutset` and `loadtxoutset` RPCs, the Utreexo paper, and storage and bandwidth measurements.)

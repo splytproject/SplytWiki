@@ -60,10 +60,12 @@ A wallet connected to your own node does not have to trust a third party's view 
 ## See also
 
 - [UTXO](../UTXO/)
-- [Partial UTXO set](../Partial_UTXO_set/)
-- [Chain reorganization](../Chain_reorganization/)
-- [How to contribute to Bitcoin](../how-to-contribute-to-bitcoin/)
+- [Partial_UTXO_set](../Partial_UTXO_set/)
+- [Chain_reorganization](../Chain_reorganization/)
+- [How_to_contribute_to_Bitcoin](../how-to-contribute-to-bitcoin/)
 
 ## Notes and further reading
 
-- Forum discussions touching on node trade-offs: [Can a Bitcoin node build a partial UTXO set from recent N blocks?](https://bitcointalk.org/index.php?topic=5593895.0); the board also has a thread on hardware requirements for a full node: [Hardware requirements for running a full node with the official client](https://bitcointalk.org/index.php?topic=5593377.0).
+- Based on standard Bitcoin Core behaviour and documentation.
+- Forum discussions touching on node trade-offs: [Can a Bitcoin node build a partial UTXO set from recent N blocks?](https://bitcointalk.org/index.php?topic=5593895.0); the board also has a thread on hardware requirements for a full node: [Hardware requirements for running a full node with the official client](https://bitcointalk.org/index.php?topic=5593377.0) (linked, not summarized here).
+- (Add sourcing where appropriate: current storage and sync-time benchmarks for the latest Bitcoin Core release.)

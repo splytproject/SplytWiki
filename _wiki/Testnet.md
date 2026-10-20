@@ -16,8 +16,6 @@ infobox:
     - Rule at issue: Minimum-difficulty blocks after 20 minutes
 ---
 
-**Specifications:** [BIP-94](../BIP_index/#bip-94) · [BIP-325](../BIP_index/#bip-325)
-
 > **In plain terms:** Test networks are practice versions of Bitcoin where the coins are worthless, so developers can experiment freely.
 
 A **testnet** is a Bitcoin network separate from mainnet, used to test software without risking real funds. Coins on it are intended to have no value.
@@ -55,12 +53,13 @@ Why it matters: when test coins become scarce or traded, they stop being free fo
 
 ## See also
 
-- [Proof of work](../Proof_of_work/)
-- [Soft fork and hard fork](../Soft_fork_and_hard_fork/)
-- [Bitcoin node](../Bitcoin_node/)
-- [How to contribute to Bitcoin](../how-to-contribute-to-bitcoin/)
+- [Proof_of_work](../Proof_of_work/)
+- [Soft_fork_and_hard_fork](../Soft_fork_and_hard_fork/)
+- [Bitcoin_node](../Bitcoin_node/)
+- [How_to_contribute_to_Bitcoin](../how-to-contribute-to-bitcoin/)
 
 ## Notes and further reading
 
 - Based on a Bitcoin developer mailing-list thread ("Unbreaking testnet4", March 2025), the Bitcoin Core GitHub pull request #34420, BIP-94 and BIP-325.
 - The forum board has a thread on this: [Fixing Testnet4: proposal](https://bitcointalk.org/index.php?topic=5569103.0); the PR above links back to it.
+- (Add sourcing where appropriate: the current status of testnet4 fixes, faucet lists.)

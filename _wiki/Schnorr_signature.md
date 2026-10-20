@@ -17,8 +17,6 @@ infobox:
     - Notable feature: Linearity (key aggregation)
 ---
 
-**Specifications:** [BIP-340](../BIP_index/#bip-340) · [BIP-327](../BIP_index/#bip-327)
-
 > **In plain terms:** Schnorr is a newer, simpler signature scheme. Its maths lets several people combine their keys into one, so a group can sign together and the result looks like a single ordinary signature.
 
 **Schnorr signatures** on secp256k1 were standardized for Bitcoin in **BIP-340** and became usable with the [Taproot](../Taproot/) activation. They coexist with [ECDSA](../ECDSA/); older output types still use ECDSA.
@@ -46,9 +44,10 @@ infobox:
 - [ECDSA](../ECDSA/)
 - [Taproot](../Taproot/)
 - [Multisignature](../Multisignature/)
-- [Segregated Witness](../Segregated_Witness/)
+- [Segregated_Witness](../Segregated_Witness/)
 
 ## Notes and further reading
 
 - Based on BIP-340, BIP-341, BIP-342 and BIP-327.
 - Forum context on Taproot and Schnorr claims: [How Taproot actually works](https://bitcointalk.org/index.php?topic=5594411.0).
+- (Add sourcing where appropriate: status of batch-verification support in libsecp256k1 and Bitcoin Core.)

@@ -55,8 +55,9 @@ Alice broadcasts a transaction and sees it included in block A. Bob, elsewhere o
 
 ## See also
 
-- [Proof of work](../Proof_of_work/)
-- [Bitcoin node](../Bitcoin_node/)
+- [Proof_of_work](../Proof_of_work/)
+- [Bitcoin_node](../Bitcoin_node/)
+- [Block_propagation](../Block_propagation/)
 
 ## Notes and further reading
 
