@@ -376,8 +376,8 @@ No. A network's technical consensus and an organization's governance are differe
 [^ozguide]: ["How to set up on-chain governance"](https://docs.openzeppelin.com/contracts/5.x/governance). *OpenZeppelin Contracts 5.x documentation*. Accessed 13 October 2026.
 [^ozapi]: ["Governance"](https://docs.openzeppelin.com/contracts/5.x/api/governance). *OpenZeppelin Contracts 5.x API documentation*. Accessed 13 October 2026.
 [^snapshot]: ["Getting started"](https://docs.snapshot.box/). *Snapshot documentation*. Accessed 13 October 2026.
-[^snapshotstrategy]: ["Voting strategies"](https://docs.snapshot.box/user-guides/strategies/voting-strategies). *Snapshot documentation*. Accessed 13 October 2026.
-[^snapshotquadratic]: ["Anti-whale"](https://docs.snapshot.box/space-handbook/anti-whale). *Snapshot documentation*. Accessed 13 October 2026.
+[^snapshotstrategy]: ["Voting strategies"](https://docs.snapshot.box/user-guides/voting-strategies). *Snapshot documentation*. Accessed 19 October 2026.
+[^snapshotquadratic]: ["Voting types"](https://docs.snapshot.box/proposals/voting-types). *Snapshot documentation*. Accessed 19 October 2026.
 [^safeglossary]: ["Glossary"](https://docs.safe.global/home/glossary). *Safe documentation*. Accessed 13 October 2026.
 [^safemodules]: ["Safe Modules"](https://docs.safe.global/advanced/smart-account-modules). *Safe documentation*. Accessed 13 October 2026.
 [^ensprocess]: ["Governance Process"](https://docs.ens.domains/dao/governance/process/). *ENS documentation*. Accessed 13 October 2026.

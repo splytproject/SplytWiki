@@ -21,9 +21,11 @@ Los criptoactivos son muy volátiles y en muchos países están en gran medida s
 
 El mundo cripto cambia rápido. El software se actualiza, los proyectos se abandonan, las leyes cambian y las empresas quiebran. Un artículo puede describir una situación que ya ha cambiado. La fecha de «última edición» al pie de cada página indica cuándo se actualizó por última vez.
 
+{% if site.ads.enabled %}
 ## Publicidad
 
 Los anuncios de {{ site.title }} los proporciona una red externa ([A-ADS](https://a-ads.com)) y están marcados como «Advertisement» (anuncio). {{ site.title }} no respalda ningún producto, token ni servicio anunciado, y que un anuncio aparezca junto a un artículo no significa que el artículo lo apoye. Ten mucho cuidado con cualquier anuncio que prometa rentabilidades garantizadas o te pida conectar un monedero.
+{% endif %}
 
 ## Enlaces externos
 

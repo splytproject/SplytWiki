@@ -15,7 +15,7 @@ Despite the name, most smart contracts are neither especially "smart" nor legal 
 
 Nick Szabo coined the term in 1994 and developed the idea in a 1996 essay, describing a smart contract as "a set of promises, specified in digital form, including protocols within which the parties perform on these promises".[^szabo] He used the **vending machine** as a simple example: it accepts coins and automatically dispenses a product and change, enforcing the terms of the sale without a shopkeeper.
 
-[Bitcoin](../Bitcoin/) (2009) included a limited scripting language that allows simple conditions on spending, such as requiring several signatures or a time delay. [Vitalik Buterin](../Vitalik_Buterin/)'s Ethereum proposal of 2013 argued for a blockchain with a fully programmable language,[^whitepaper] and Ethereum went live in July 2015. Many other blockchains, including [Solana](../Solana/), Cardano and Avalanche, now support smart contracts.
+[Bitcoin](../Bitcoin/) (2009) included a limited scripting language that allows simple conditions on spending, such as requiring several signatures or a time delay. Vitalik Buterin's Ethereum proposal of 2013 argued for a blockchain with a fully programmable language,[^whitepaper] and Ethereum went live in July 2015. Many other blockchains, including [Solana](../Solana/), Cardano and Avalanche, now support smart contracts.
 
 ## How they work
 

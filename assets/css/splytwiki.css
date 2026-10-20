@@ -375,6 +375,11 @@ html.splyt-width-wide .mw-page-container { max-width: none; }
 .mw-parser-output table:not(.infobox) th,
 .mw-parser-output table:not(.infobox) td { border: 1px solid var(--border); padding: .2em .4em; }
 .mw-parser-output table:not(.infobox) th { background: var(--bg-muted); text-align: center; }
+.mw-parser-output table.sortable th { cursor: pointer; white-space: nowrap; }
+.mw-parser-output table.sortable th::after { content: " \2195"; opacity: .45; }
+.mw-parser-output table.sortable th[aria-sort="ascending"]::after { content: " \25B2"; opacity: 1; }
+.mw-parser-output table.sortable th[aria-sort="descending"]::after { content: " \25BC"; opacity: 1; }
+.mw-parser-output table.sortable th:focus-visible { outline: 2px solid currentColor; outline-offset: -2px; }
 
 /* references (kramdown footnotes) */
 sup[role="doc-noteref"], sup.reference { line-height: 1; font-size: .75em; font-weight: normal; white-space: nowrap; }

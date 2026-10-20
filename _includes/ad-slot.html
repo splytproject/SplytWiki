@@ -9,6 +9,7 @@
   Both are kept inside <template> tags, so nothing loads until
   splytwiki.js inserts the one that matches the visitor's screen.
 {%- endcomment -%}
+{%- if site.ads.enabled -%}
 {%- capture ad_desktop -%}{% include ads/{{ include.slot }}.html %}{%- endcapture -%}
 {%- capture ad_mobile -%}{% include ads/{{ include.slot }}-mobile.html %}{%- endcapture -%}
 {%- assign ad_desktop = ad_desktop | strip -%}
@@ -28,4 +29,5 @@
   <div class="splyt-ad-label">Advertisement</div>
   <div class="splyt-ad-unit"><span>A-ADS &ldquo;{{ include.slot }}&rdquo; slot<small>Paste your ad code into _includes/ads/{{ include.slot }}.html</small></span></div>
 </aside>
+{%- endif -%}
 {%- endif -%}

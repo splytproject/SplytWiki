@@ -26,7 +26,10 @@ license:
 # While a slot is empty, a dashed placeholder shows where it will appear
 # if show_placeholders is true. Set it to false before going live.
 ads:
-  show_placeholders: true
+  # Master switch. false = no ad code, slots, placeholders or ad disclosures
+  # are rendered anywhere on the site. Set to true to turn ads back on.
+  enabled: false
+  show_placeholders: false
 
 # ------------------------------------------------------------------
 #  Build settings (no need to change these)
@@ -83,6 +86,8 @@ defaults:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  # Lets BIP pages answer at /wiki/BIP350/ and /wiki/bip-0350/ via redirect_from
+  - jekyll-redirect-from
 
 exclude:
   - readme.md

@@ -15,7 +15,7 @@ Una dirección de contacto para los editores de {{ site.title }} se publicará a
 ## Antes de escribir
 
 - **Para reportar un error o sugerir un artículo,** lee primero [cómo contribuir](../contribute/) para que tengamos todo lo necesario.
-- **Sobre un anuncio:** los anuncios los sirve [A-ADS](https://a-ads.com). No elegimos anuncios individuales, pero dinos si ves uno que sea engañoso o estafa e incluye la página y una captura si puedes.
+{% if site.ads.enabled %}- **Sobre un anuncio:** los anuncios los sirve [A-ADS](https://a-ads.com). No elegimos anuncios individuales, pero dinos si ves uno que sea engañoso o estafa e incluye la página y una captura si puedes.{% endif %}
 - **No podemos ayudar con** recuperar fondos perdidos, claves privadas o contraseñas, decisiones de inversión o problemas con exchanges y monederos. Ten cuidado con cualquiera que afirme ser de {{ site.title }} y pida información privada.
 
 ## Prensa y asuntos legales

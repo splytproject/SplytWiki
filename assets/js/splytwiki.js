@@ -622,6 +622,41 @@
     slots.forEach(function (unit) { observer.observe(unit); });
   }
 
+  /* -------------------------------------------------- sortable tables */
+  /* Tables marked {: .sortable} in Markdown sort when a heading is clicked
+     or activated with Enter/Space. Numeric columns sort as numbers; a second
+     click reverses the order. */
+  function initSortable() {
+    $$('.mw-parser-output table.sortable').forEach(function (table) {
+      var body = table.tBodies[0];
+      if (!body) return;
+      $$('thead th', table).forEach(function (th, col) {
+        th.tabIndex = 0;
+        th.setAttribute('role', 'button');
+        th.setAttribute('aria-sort', 'none');
+        th.title = 'Sort by ' + th.textContent.trim();
+        function sort() {
+          var asc = th.getAttribute('aria-sort') !== 'ascending';
+          $$('thead th', table).forEach(function (h) { h.setAttribute('aria-sort', 'none'); });
+          th.setAttribute('aria-sort', asc ? 'ascending' : 'descending');
+          var rows = Array.prototype.slice.call(body.rows);
+          rows.sort(function (a, b) {
+            var x = a.cells[col].textContent.trim(), y = b.cells[col].textContent.trim();
+            var nx = parseFloat(x), ny = parseFloat(y);
+            var cmp = (!isNaN(nx) && !isNaN(ny) && /^[\d.]+$/.test(x) && /^[\d.]+$/.test(y))
+              ? nx - ny : x.localeCompare(y, undefined, { numeric: true, sensitivity: 'base' });
+            return asc ? cmp : -cmp;
+          });
+          rows.forEach(function (r) { body.appendChild(r); });
+        }
+        th.addEventListener('click', sort);
+        th.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); sort(); }
+        });
+      });
+    });
+  }
+
   /* ------------------------------------------------------------ start */
   initAds();
   initAppearance();
@@ -635,4 +670,5 @@
   initRandom();
   initMainPage();
   initRequestNotice();
+  initSortable();
 })();

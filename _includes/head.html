@@ -24,4 +24,4 @@
 })();
 </script>
 {% include translations.html mode="head" %}
-{% include ads/head.html %}
+{% if site.ads.enabled %}{% include ads/head.html %}{% endif %}

@@ -20,9 +20,11 @@ Jeder Artikel auf {{ site.title }} folgt einigen einfachen Grundsätzen:
 - **Keine Kursangaben.** Artikel verzichten auf Live-Preise, Marktkapitalisierungen und Prognosen, weil diese innerhalb von Stunden veralten und nicht der Zweck einer Enzyklopädie sind.
 - **Keine bezahlten Inhalte.** Projekte können nicht dafür bezahlen, behandelt zu werden, einen Artikel ändern zu lassen oder Kritik entfernen zu lassen.
 
+{% if site.ads.enabled %}
 ## Finanzierung und Werbung
 
 {{ site.title }} finanziert sich durch Werbung. Die Anzeigen werden vom externen Krypto-Werbenetzwerk [A-ADS](https://a-ads.com) ausgeliefert und sind stets deutlich als „Advertisement“ (Anzeige) gekennzeichnet. Werbetreibende haben keinen Einfluss darauf, was in einem Artikel steht, und eine Anzeige neben einem Artikel ist keine Empfehlung von {{ site.title }}. Einzelheiten stehen in unserer [Datenschutzerklärung](../privacy/).
+{% endif %}
 
 ## Keine Finanzberatung
 
