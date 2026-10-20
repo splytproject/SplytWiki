@@ -4,7 +4,7 @@ display_title: "SplytWiki:Privacy policy"
 permalink: /privacy/
 description: How SplytWiki and its service providers handle visitor data.
 ---
-This policy explains what information is collected when you visit {{ site.title }}. In short: {{ site.title }} itself does not ask for, collect or sell any personal information, but the companies that host the site and serve its adverts may process some data as described below.
+This policy explains what information is collected when you visit {{ site.title }}. In short: {{ site.title }} itself does not ask for, collect or sell any personal information, but the companies that host the site{% if site.ads.enabled %} and serve its adverts{% endif %} may process some data as described below.
 
 ## Information {{ site.title }} collects
 
@@ -18,11 +18,13 @@ This policy explains what information is collected when you visit {{ site.title 
 
 {{ site.title }} is hosted on **GitHub Pages**, a service of GitHub, Inc. Like any web host, GitHub may log technical information about visits, such as IP addresses, for security and to keep the service running. See the [GitHub General Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
+{% if site.ads.enabled %}
 ## Advertising
 
 {{ site.title }} shows adverts from **[A-ADS](https://a-ads.com)**, a third-party advertising network. Ads are loaded from A-ADS's servers inside clearly labelled "Advertisement" boxes, so A-ADS receives the technical information your browser sends with any web request (such as your IP address, browser type and the page you are viewing). {{ site.title }} does not share any other information with A-ADS. Please refer to A-ADS's own privacy policy on their website for how they handle this data.
 
 Clicking an advert takes you to a site that is not run by {{ site.title }}. We are not responsible for the content or privacy practices of advertisers.
+{% endif %}
 
 ## External links
 

@@ -17,6 +17,8 @@ infobox:
     - Cost: Receiver must scan the chain
 ---
 
+**Specifications:** [BIP-352](../BIP_index/#bip-352)
+
 > **In plain terms:** Normally, publishing one address means everyone paying you reuses it, which links all your payments publicly. Silent payments let you publish one address, while each payer secretly derives a different on-chain address that only you can recognize.
 
 **Silent payments (BIP-352)** is a protocol for static payment addresses in Bitcoin without on-chain linkability of payments and without on-chain notifications.

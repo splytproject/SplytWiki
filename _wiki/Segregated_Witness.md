@@ -16,6 +16,8 @@ infobox:
     - Address style: Bech32 (bc1…)
 ---
 
+**Specifications:** [BIP-141](../BIP_index/#bip-141) · [BIP-143](../BIP_index/#bip-143) · [BIP-144](../BIP_index/#bip-144) · [BIP-173](../BIP_index/#bip-173) · [BIP-350](../BIP-350/)
+
 > **In plain terms:** SegWit moved the signature data of a transaction into a separate section. That fixed a bug that let third parties tweak transaction ids, and it let blocks hold more transactions.
 
 **Segregated Witness (SegWit)** separates a transaction's unlocking data (signatures and similar items, called the **witness**) from the rest of the transaction. It was deployed as a [soft fork](../Soft_fork_and_hard_fork/) in 2017.

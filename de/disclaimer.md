@@ -21,9 +21,11 @@ Kryptowerte sind sehr volatil und in vielen Ländern weitgehend unreguliert. Ihr
 
 Krypto verändert sich schnell. Software wird aktualisiert, Projekte werden aufgegeben, Gesetze ändern sich und Unternehmen brechen zusammen. Ein Artikel kann eine Lage beschreiben, die sich inzwischen geändert hat. Das Datum „zuletzt bearbeitet“ unten auf jeder Seite zeigt, wann sie zuletzt aktualisiert wurde.
 
+{% if site.ads.enabled %}
 ## Werbung
 
 Die Anzeigen auf {{ site.title }} stammen von einem externen Netzwerk ([A-ADS](https://a-ads.com)) und sind als „Advertisement“ (Anzeige) gekennzeichnet. {{ site.title }} empfiehlt keine beworbenen Produkte, Tokens oder Dienste, und eine Anzeige neben einem Artikel bedeutet nicht, dass der Artikel sie unterstützt. Seien Sie besonders vorsichtig bei Anzeigen, die garantierte Renditen versprechen oder Sie auffordern, eine Wallet zu verbinden.
+{% endif %}
 
 ## Externe Links
 

@@ -20,6 +20,8 @@ infobox:
     - Fee bumping: RBF (full-RBF default), CPFP, TRUC, P2A anchors
 ---
 
+**Specifications:** [BIP-125](../BIP_index/#bip-125) · [BIP-133](../BIP_index/#bip-133) · [BIP-331](../BIP_index/#bip-331) · [BIP-431](../BIP_index/#bip-431)
+
 > **In plain terms:** A broadcast payment does not enter a block straight away. Each node keeps its own waiting room of valid transactions, called the mempool. Miners build blocks from their waiting rooms, usually picking the transactions that pay the most per byte.
 
 The **mempool** (memory pool) is a node's in-memory set of valid transactions that are not yet in a block. Each node keeps its own mempool, so there is no single network-wide list. Its contents depend on the node's software version, settings, peers and uptime.

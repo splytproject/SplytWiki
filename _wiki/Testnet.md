@@ -16,6 +16,8 @@ infobox:
     - Rule at issue: Minimum-difficulty blocks after 20 minutes
 ---
 
+**Specifications:** [BIP-94](../BIP_index/#bip-94) · [BIP-325](../BIP_index/#bip-325)
+
 > **In plain terms:** Test networks are practice versions of Bitcoin where the coins are worthless, so developers can experiment freely.
 
 A **testnet** is a Bitcoin network separate from mainnet, used to test software without risking real funds. Coins on it are intended to have no value.

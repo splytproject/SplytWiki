@@ -17,6 +17,8 @@ infobox:
     - Extended public key: xpub
 ---
 
+**Specifications:** [BIP-32](../BIP_index/#bip-32) · [BIP-39](../BIP_index/#bip-39) · [BIP-44](../BIP_index/#bip-44) · [BIP-49](../BIP_index/#bip-49) · [BIP-84](../BIP_index/#bip-84) · [BIP-86](../BIP_index/#bip-86)
+
 > **In plain terms:** Instead of backing up each key separately, a wallet derives all its keys from one secret. That secret is written as 12 or 24 words, your recovery phrase. Anyone with the words can recreate every key.
 
 A **hierarchical deterministic (HD) wallet** generates a tree of keys from a single seed. **BIP-32** defines the tree; **BIP-39** defines how a human-readable word list encodes the seed.

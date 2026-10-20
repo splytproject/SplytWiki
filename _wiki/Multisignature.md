@@ -16,6 +16,8 @@ infobox:
     - Replaced in Tapscript by: OP_CHECKSIGADD
 ---
 
+**Specifications:** [BIP-11](../BIP_index/#bip-11) · [BIP-16](../BIP_index/#bip-16) · [BIP-147](../BIP_index/#bip-147)
+
 > **In plain terms:** Multisig is a shared lock. For example, a "2-of-3" setup needs any two of three keys to approve a spend, so losing one key (or having one stolen) isn't fatal.
 
 **Multisignature** (multisig) lets an output require signatures from *m* of *n* listed public keys. In legacy and SegWit v0 scripts it is implemented with the opcode `OP_CHECKMULTISIG`.

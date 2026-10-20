@@ -13,7 +13,7 @@ A contact address for the {{ site.title }} editors will be published here soon.
 ## Before you write
 
 - **To report an error or suggest an article**, please read [how to contribute](../contribute/) first so we have everything we need.
-- **About an advertisement:** ads are served by [A-ADS](https://a-ads.com). We do not choose individual adverts, but please tell us if you see one that is misleading or a scam, and include the page you saw it on.
+{% if site.ads.enabled %}- **About an advertisement:** ads are served by [A-ADS](https://a-ads.com). We do not choose individual adverts, but please tell us if you see one that is misleading or a scam, and include the page you saw it on.{% endif %}
 - **We can't help with** recovering lost funds, private keys or passwords, investment decisions, or problems with exchanges and wallets. Beware of anyone who contacts you claiming to be from {{ site.title }} and offering to "recover" crypto. That is a common scam, and we will never ask for your seed phrase or private keys.
 
 ## Press and legal

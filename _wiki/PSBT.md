@@ -16,6 +16,8 @@ infobox:
     - Useful RPCs: gettxout, gettxoutsetinfo, dumptxoutset
 ---
 
+**Specifications:** [BIP-174](../BIP_index/#bip-174) · [BIP-370](../BIP_index/#bip-370)
+
 > **Plain language:** Bitcoin does not maintain an account balance for your wallet. It maintains a giant ledger of spendable outputs — unspent transaction outputs. Think of it as a pile of digital coins, each with an amount and a lock on it.
 
 This is the conceptual heart of Bitcoin. The UTXO model is what makes Bitcoin so different from a bank ledger or a database of balances. Instead of "Alice has 2.5 BTC," Bitcoin says: "Here are the outputs that can be spent with Alice's keys, and they sum to 2.5 BTC."

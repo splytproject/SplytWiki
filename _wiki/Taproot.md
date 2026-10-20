@@ -20,6 +20,8 @@ infobox:
     - Script tree depth: Up to 128 levels
 ---
 
+**Specifications:** [BIP-340](../BIP_index/#bip-340) · [BIP-341](../BIP_index/#bip-341) · [BIP-342](../BIP_index/#bip-342) · [BIP-350](../BIP-350/)
+
 > **In plain terms:** A Taproot output looks like a single public key. The owner can spend it with one signature, or by revealing one of several hidden spending scripts. Observers only learn about the script that was actually used.
 
 **Taproot** is a Bitcoin output type, also called **pay-to-Taproot** (P2TR). It is defined as [Segregated Witness](../Segregated_Witness/) version 1 and was added to Bitcoin by a soft fork.[^bip341] Three documents specify it:
