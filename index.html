@@ -6,7 +6,7 @@ is_main: true
 permalink: /
 ---
 {%- assign mp = site.data.mainpage -%}
-{%- assign article_count = site.wiki | size -%}
+{%- assign article_count = site.wiki | where_exp: "d", "d.glossary != true" | size -%}
 {%- assign wiki_href = '/wiki/' | relative_url | prepend: 'href="' -%}
 
 <div id="mp-topbanner">

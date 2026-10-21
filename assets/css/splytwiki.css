@@ -612,3 +612,18 @@ html[data-theme="dark"] .splyt-preview { box-shadow: 0 0 0 1px var(--border-subt
   font-weight: bold; text-decoration: none !important; line-height: 1.4;
 }
 .mw-ui-button:hover, .mw-ui-button:focus { background: var(--link-hover); border-color: var(--link-hover); }
+
+/* Glossary entries (/wiki/glossary/<Term>/), dictionary style */
+.gl-crumbs { font-size: .875em; color: var(--text-subtle); margin: 0 0 .6em; }
+.gl-head { margin: .2em 0 .3em; line-height: 1.3; }
+.gl-pos { font-style: italic; font-size: 1.1em; color: var(--progressive); margin-right: .35em; }
+.gl-label { font-size: .85em; color: var(--text-subtle); border: 1px solid var(--border-subtle); border-radius: 2px; padding: 0 .35em; }
+.gl-expansion { margin: .1em 0 .6em; color: var(--text-subtle); }
+.mw-parser-output ol.gl-senses { margin: .8em 0 1em 1.6em; padding: 0; }
+.mw-parser-output ol.gl-senses.gl-single { list-style: none; margin-left: 0; }
+.gl-senses > li { margin-bottom: .8em; }
+.gl-def { font-size: 1.05em; }
+.mw-parser-output ul.gl-examples { list-style: none; margin: .35em 0 0 .2em; padding: 0; }
+.gl-examples li { font-style: italic; color: var(--text-subtle); margin: .15em 0; padding-left: 1em; position: relative; }
+.gl-examples li::before { content: "•"; position: absolute; left: 0; color: var(--progressive); font-style: normal; }
+.gl-entry h2 { font-size: 1.2em; }

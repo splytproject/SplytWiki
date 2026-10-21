@@ -523,8 +523,10 @@
   /* --------------------------------------------------- random article */
   function randomUrl() {
     if (!PAGES.length) return url('/');
-    var choices = PAGES.filter(function (u) { return url(u) !== slashed(location.pathname); });
-    var list = choices.length ? choices : PAGES;
+    /* Glossary entries are short definitions, so Random article skips them. */
+    var articles = PAGES.filter(function (u) { return u.indexOf('/wiki/glossary/') === -1; });
+    var choices = articles.filter(function (u) { return url(u) !== slashed(location.pathname); });
+    var list = choices.length ? choices : (articles.length ? articles : PAGES);
     return url(list[Math.floor(Math.random() * list.length)]);
   }
   function initRandom() {

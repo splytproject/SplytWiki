@@ -12,7 +12,7 @@ noindex: true
     <button type="submit">Search</button>
   </form>
   <div id="splyt-search-results">
-    <p class="search-info">Type a word or phrase above to search all {{ site.wiki | size }} articles.</p>
+    <p class="search-info">Type a word or phrase above to search all {{ site.wiki | where_exp: "d", "d.glossary != true" | size }} articles and the glossary.</p>
   </div>
   <noscript><p>Search needs JavaScript. You can browse the <a href="{{ '/contents/' | relative_url }}">list of all articles</a> instead.</p></noscript>
 </div>

@@ -1,0 +1,59 @@
+---
+layout: default
+---
+{%- comment -%}
+  Dictionary-style entry for one glossary term, at /wiki/glossary/<Term>/.
+  Front matter: title, pos (part of speech), label, stands_for and senses
+  (a list of {def, examples}). The Markdown body holds the "In detail"
+  note, word origin, see-also links and references.
+{%- endcomment -%}
+{%- include i18n.html -%}
+{%- assign glossary_index = site.wiki | where: "title", "Crypto glossary" | first -%}
+<header class="mw-body-header vector-page-titlebar">
+  <h1 id="firstHeading" class="firstHeading">{{ page.title }}</h1>
+</header>
+<div class="vector-page-toolbar">
+  <ul class="vector-tabs">
+    <li class="selected"><a href="{{ page.url | relative_url }}">Entry</a></li>
+    {%- if glossary_index %}
+    <li><a href="{{ glossary_index.url | relative_url }}">Glossary</a></li>
+    {%- endif %}
+  </ul>
+  <ul class="vector-tabs vector-tabs-right">
+    <li class="selected"><a href="{{ page.url | relative_url }}">{{ t.read }}</a></li>
+    <li><a href="{{ t.prefix | append: '/contribute/' | relative_url }}?page={{ page.title | append: ' (glossary)' | url_encode }}">{{ t.suggest_edit }}</a></li>
+  </ul>
+</div>
+<div id="bodyContent" class="vector-body">
+  <div id="siteSub">From the {{ site.title }} crypto glossary</div>
+  <div class="mw-parser-output gl-entry">
+    {%- if glossary_index %}
+    <p class="gl-crumbs"><a href="{{ glossary_index.url | relative_url }}">Crypto glossary</a> › {{ page.title }}</p>
+    {%- endif %}
+
+    <div class="gl-head">
+      {%- if page.pos %}<span class="gl-pos">{{ page.pos }}</span>{% endif %}
+      {%- if page.label %} <span class="gl-label">{{ page.label }}</span>{% endif %}
+    </div>
+    {%- if page.stands_for %}
+    <p class="gl-expansion">short for <b>{{ page.stands_for }}</b></p>
+    {%- endif %}
+
+    <ol class="gl-senses{% if page.senses.size == 1 %} gl-single{% endif %}">
+      {%- for s in page.senses %}
+      <li>
+        <span class="gl-def">{{ s.def | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+        {%- if s.examples %}
+        <ul class="gl-examples">
+          {%- for e in s.examples %}
+          <li>{{ e | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ol>
+
+    {{ content }}
+  </div>
+</div>
