@@ -63,7 +63,7 @@ The European Union adopted the **Markets in Crypto-Assets Regulation** (MiCA) in
 Cryptocurrencies have been criticised for:
 
 - **Volatility**: prices can rise or fall by large percentages within days, which limits their usefulness as money.
-- **Fraud and theft**: investors have lost large sums to scams, hacks of exchanges and smart contracts, and the collapse of companies such as Mt. Gox (2014) and FTX (2022).
+- **Fraud and theft**: investors have lost large sums to scams, hacks of exchanges and smart contracts, and the collapse of companies such as [Mt. Gox](../Mt_Gox_collapse/) (2014) and [FTX](../FTX_collapse/) (2022).
 - **Illicit use**: cryptocurrencies have been used for ransomware payments, money laundering and darknet markets, although blockchain analysis shows that most activity is legal.
 - **Energy use**: proof-of-work mining, especially for Bitcoin, consumes large amounts of electricity.
 - **Lack of consumer protection**: lost or stolen funds usually cannot be recovered, and many services are lightly regulated.

@@ -1,0 +1,36 @@
+{%- comment -%}
+  Language menu in the header, shown on every page.
+  For each language in site.languages it links to the same page in that
+  language if it exists (e.g. /wiki/Bitcoin/ <-> /de/wiki/Bitcoin/,
+  /about/ <-> /es/about/). Otherwise it links to that language's landing
+  page (/de/, /es/) or, for English, the Main Page.
+{%- endcomment -%}
+{%- include i18n.html -%}
+{%- assign _page_urls = site.pages | map: "url" -%}
+{%- assign _wiki_urls = site.wiki | map: "url" -%}
+{%- assign _known = _page_urls | concat: _wiki_urls -%}
+{%- assign _base_path = page.url -%}
+{%- if t.prefix != "" -%}{%- assign _base_path = page.url | remove_first: t.prefix -%}{%- endif -%}
+<details class="splyt-dropdown lang-switcher">
+  <summary class="lang-button" title="{{ t.languages }}" aria-label="{{ t.languages }}">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M20 18h-1.44a.6.6 0 0 1-.4-.12.8.8 0 0 1-.23-.31L17 15h-5l-1 2.54a.8.8 0 0 1-.22.3.6.6 0 0 1-.4.14H9l4.55-11.47h1.89zm-3.53-4.31L14.89 9.5a12 12 0 0 1-.39-1.24q-.09.37-.19.69l-.19.56-1.58 4.19zm-6.3-1.58a13.4 13.4 0 0 1-2.91-1.41 11.46 11.46 0 0 0 2.81-5.37H12V4H7.31a4 4 0 0 0-.2-.56C6.87 2.79 6.6 2 6.6 2l-1.47.5s.4.89.6 1.5H0v1.33h2.15A11.23 11.23 0 0 0 5 10.7a17.2 17.2 0 0 1-5 2.1q.56.82.87 1.38a23.3 23.3 0 0 0 5.22-2.51 15.6 15.6 0 0 0 3.56 1.77zM3.63 5.33h4.91a8.1 8.1 0 0 1-2.45 4.45 9.1 9.1 0 0 1-2.46-4.45"/></svg>
+    <span class="lang-switcher-label">{{ t.name }}</span>
+  </summary>
+  <div class="dropdown-panel lang-panel">
+    <div class="vector-menu-heading">{{ t.languages }}</div>
+    <ul>
+      {%- for code in site.languages %}
+        {%- assign _l = site.data.i18n[code] -%}
+        {%- assign _candidate = _l.prefix | append: _base_path -%}
+        {%- if _known contains _candidate -%}
+          {%- assign _target = _candidate -%}
+          {%- assign _missing = false -%}
+        {%- else -%}
+          {%- assign _target = _l.prefix | append: "/" -%}
+          {%- assign _missing = true -%}
+        {%- endif %}
+      <li><a href="{{ _target | relative_url }}" lang="{{ code }}" hreflang="{{ code }}"{% if code == lang %} class="selected"{% endif %}>{{ _l.name }}</a>{% if _missing and code != lang %}<small class="lang-missing"> · {{ _l.not_translated }}</small>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</details>

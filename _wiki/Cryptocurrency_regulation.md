@@ -66,7 +66,7 @@ For example, a digital item can have a technical function while its sale include
 
 ### What an investment-product approval means
 
-On **10 January 2024**, the SEC approved the listing and trading of specified spot bitcoin exchange-traded product shares. The accompanying statement distinguished approval of those products from endorsement of bitcoin itself.[^etp]
+On **10 January 2024**, the SEC approved the listing and trading of specified [spot bitcoin exchange-traded product](../Bitcoin_exchange-traded_funds/) shares. The accompanying statement distinguished approval of those products from endorsement of bitcoin itself.[^etp]
 
 This illustrates a broader reading habit: identify precisely what was approved. Permission to list a financial product does not establish that its underlying asset is safe, suitable for every investor or exempt from every other law.
 

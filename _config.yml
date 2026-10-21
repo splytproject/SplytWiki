@@ -14,6 +14,8 @@ description: >-
 url: "https://splytproject.github.io"
 baseurl: "/SplytWiki"
 lang: en
+# Languages offered in the header language menu (see _data/i18n.yml).
+languages: [en, de, es]
 
 # Shown on the Contact page. Leave empty to hide.
 contact_email: ""

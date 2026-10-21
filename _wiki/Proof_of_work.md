@@ -56,6 +56,7 @@ Without a cost to produce blocks, anyone could create alternative histories for 
 
 ## See also
 
+- [Bitcoin mining and difficulty adjustment](../Bitcoin_mining_and_difficulty_adjustment/)
 - [Chain_reorganization](../Chain_reorganization/)
 - [Bitcoin_node](../Bitcoin_node/)
 - [Testnet](../Testnet/)

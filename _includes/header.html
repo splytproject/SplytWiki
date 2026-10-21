@@ -1,3 +1,4 @@
+{%- include i18n.html -%}
 <header class="vector-header" role="banner">
   <div class="vector-header-start">
     <details class="splyt-dropdown vector-main-menu-dropdown">
@@ -33,8 +34,9 @@
     <button type="button" class="icon-button appearance-toggle" title="Appearance" aria-label="Appearance">
       <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1a9 9 0 1 0 0 18 9 9 0 0 0 0-18m0 16V3a7 7 0 0 1 0 14"/></svg>
     </button>
+    {% include lang-switcher.html %}
     <nav class="vector-user-links" aria-label="Personal tools">
-      <a href="{{ '/contribute/' | relative_url }}">Contribute</a>
+      <a href="{{ t.prefix | append: '/contribute/' | relative_url }}">{{ t.contribute }}</a>
     </nav>
   </div>
 </header>

@@ -21,7 +21,7 @@ This article follows selected milestones rather than every project or price move
 | 5 August 2021 | Ethereum London upgrade | Changed Ethereum's transaction-fee mechanism |
 | May 2022 | TerraUSD and Luna collapse | Demonstrated the fragility of a reflexive peg mechanism |
 | 15 September 2022 | Ethereum's Merge | Replaced proof-of-work consensus with proof of stake |
-| November 2022 | FTX bankruptcy | Highlighted custodial and intermediary risk |
+| November 2022 | [FTX bankruptcy](../FTX_collapse/) | Highlighted custodial and intermediary risk |
 | 12 April 2023 | Shanghai/Capella upgrades | Enabled staking withdrawals on Ethereum |
 | 13 March 2024 | Dencun upgrade | Added a dedicated data mechanism used by rollups |
 | 7 May 2025 | Pectra upgrade | Introduced account and validator improvements |

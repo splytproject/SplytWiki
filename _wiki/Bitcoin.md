@@ -49,13 +49,13 @@ Nakamoto continued to work on the software with other volunteers until late 2010
 
 Bitcoin had no market price at first. In October 2009 a service called New Liberty Standard published the first known exchange rate, valuing one US dollar at 1,309.03 bitcoins. On 22 May 2010 the programmer Laszlo Hanyecz paid 10,000 bitcoins for two pizzas, the first widely documented purchase of goods with the currency.[^pizza] The anniversary is celebrated by enthusiasts as "Bitcoin Pizza Day".
 
-In 2011 and 2012 Bitcoin became associated with the Silk Road, an online black market that accepted only bitcoin, until the site was shut down by the FBI in October 2013. The largest early exchange, Mt. Gox, suspended trading and filed for bankruptcy in February 2014 after losing hundreds of thousands of its customers' bitcoins.
+In 2011 and 2012 Bitcoin became associated with the Silk Road, an online black market that accepted only bitcoin, until the site was shut down by the FBI in October 2013. The largest early exchange, [Mt. Gox](../Mt_Gox_collapse/), suspended trading and filed for bankruptcy in February 2014 after losing hundreds of thousands of its customers' bitcoins.
 
 ### Growth and mainstream adoption
 
 The price of bitcoin rose in a series of boom-and-bust cycles: it first passed $1,000 in late 2013, approached $20,000 in December 2017 and passed $60,000 in 2021. In September 2021 El Salvador became the first country to make bitcoin legal tender; in 2025, as part of an agreement with the International Monetary Fund, it amended the law so that businesses were no longer required to accept it.
 
-In January 2024 the US Securities and Exchange Commission approved the first spot bitcoin exchange-traded funds, letting ordinary investors gain exposure through regular brokerage accounts. The price rose above $100,000 for the first time in December 2024. In March 2025 a US executive order created a Strategic Bitcoin Reserve made up of bitcoins previously seized by the government.
+In January 2024 the US Securities and Exchange Commission approved the first spot [bitcoin exchange-traded funds](../Bitcoin_exchange-traded_funds/), letting ordinary investors gain exposure through regular brokerage accounts. The price rose above $100,000 for the first time in December 2024. In March 2025 a US executive order created a Strategic Bitcoin Reserve made up of bitcoins previously seized by the government.
 
 ## Design
 

@@ -27,7 +27,7 @@ Solana was proposed in 2017 by the software engineer Anatoly Yakovenko, who intr
 
 Yakovenko, a former engineer at the chip company Qualcomm, published the Solana white paper in November 2017. He founded the company that became **Solana Labs** with Raj Gokal; it was originally called Loom and was renamed after Solana Beach, California, where the founders had lived and surfed. The non-profit **Solana Foundation**, based in Zug, Switzerland, supports the network's development and ecosystem.
 
-The network's mainnet beta went live on 16 March 2020. Solana grew quickly during the cryptocurrency boom of 2021, attracting DeFi and NFT projects. It was closely associated with the FTX exchange and its affiliated trading firm, Alameda Research, which were prominent investors and users; when FTX collapsed in November 2022, the price of SOL fell sharply and several Solana projects were hit.
+The network's mainnet beta went live on 16 March 2020. Solana grew quickly during the cryptocurrency boom of 2021, attracting DeFi and NFT projects. It was closely associated with the [FTX](../FTX_collapse/) exchange and its affiliated trading firm, Alameda Research, which were prominent investors and users; when FTX collapsed in November 2022, the price of SOL fell sharply and several Solana projects were hit.
 
 Activity on the network recovered in 2023 and 2024, driven partly by a wave of memecoin trading through token-launch platforms such as pump.fun. In 2023 Solana Mobile released *Saga*, an Android phone with built-in cryptocurrency features.
 

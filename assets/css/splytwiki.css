@@ -294,6 +294,10 @@ html.splyt-width-wide .mw-page-container { max-width: none; }
 .lang-panel { left: auto; right: 0; min-width: 11rem; }
 .lang-panel ul { list-style: none; margin: 0; padding: 0; }
 .lang-panel li { padding: .3rem 0; font-size: .875rem; }
+.lang-switcher { flex-shrink: 0; }
+.lang-switcher .lang-button { font-weight: normal; color: var(--text); }
+.lang-switcher .lang-button svg { color: var(--text-subtle); }
+.lang-missing { color: var(--text-muted); font-size: .75rem; }
 .lang-panel a.selected { color: var(--text); font-weight: bold; pointer-events: none; }
 
 #siteSub { font-size: .8125rem; color: var(--text-subtle); margin: .3rem 0 .6rem; }
@@ -577,6 +581,9 @@ html[data-theme="dark"] .splyt-preview { box-shadow: 0 0 0 1px var(--border-subt
   .search-box { display: none; }
   .search-toggle { display: inline-flex; }
   .vector-user-links { display: none; }
+  .lang-switcher-label { display: none; }
+  .lang-switcher .lang-button { padding: 6px; }
+  html.search-open .lang-switcher { display: none; }
   html.search-open .vector-header-start { display: none; }
   html.search-open .search-box { display: flex; margin: 0; flex: 1 1 auto; }
   html.search-open .search-toggle { display: none; }

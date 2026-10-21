@@ -31,7 +31,7 @@ That master secret is usually shown to the user as a **seed phrase** (also calle
 
 ### Custodial and non-custodial
 
-- In a **custodial wallet**, a third party, typically a cryptocurrency exchange, holds the private keys and manages the funds for the user, much like a bank account. This is convenient and allows password recovery, but users depend on the custodian's honesty and solvency. When exchanges such as Mt. Gox (2014) and FTX (2022) collapsed, many customers lost access to their funds. The slogan "**not your keys, not your coins**" expresses this risk.
+- In a **custodial wallet**, a third party, typically a cryptocurrency exchange, holds the private keys and manages the funds for the user, much like a bank account. This is convenient and allows password recovery, but users depend on the custodian's honesty and solvency. When exchanges such as [Mt. Gox](../Mt_Gox_collapse/) (2014) and [FTX](../FTX_collapse/) (2022) collapsed, many customers lost access to their funds. The slogan "**not your keys, not your coins**" expresses this risk.
 - In a **non-custodial** (or *self-custody*) wallet, the user alone holds the keys. This gives full control but also full responsibility: if the keys or seed phrase are lost, nobody can recover the funds.
 
 ### Hot and cold
