@@ -1,296 +1,258 @@
+<div align="center">
+
+<img src="assets/img/logo.svg" alt="SplytWiki logo" width="96" height="96">
+
 # SplytWiki
 
-**SplytWiki, the free crypto encyclopedia.** It's an online encyclopedia about cryptocurrency, blockchain and decentralized finance. It looks and feels like Wikipedia.
+**The free crypto encyclopedia.**
 
-- **Hosting:** GitHub Pages, at `https://splytproject.github.io/SplytWiki/`.
-- **Engine:** Jekyll. GitHub Pages builds the site from the Markdown files every time you push, so there's nothing to install.
-- **Size:** one CSS file, one small JavaScript file, no frameworks and no web fonts.
+Neutral, sourced articles about cryptocurrency, Bitcoin, blockchain technology and decentralized finance, in a familiar encyclopedia layout.
 
-> **Status:** the whole site is written (layouts, design, JavaScript, Main Page, special pages, images and 14 articles). It has not been built or tested yet; the first real build will happen on GitHub Pages. See [Build plan & progress](#build-plan--progress).
+[![Website](https://img.shields.io/badge/website-splytproject.github.io%2FSplytWiki-36c)](https://splytproject.github.io/SplytWiki/)
+[![Content licence: CC BY-SA 4.0](https://img.shields.io/badge/content-CC%20BY--SA%204.0-lightgrey)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![Built with Jekyll](https://img.shields.io/badge/built%20with-Jekyll-c00)](https://jekyllrb.com/)
+[![Hosted on GitHub Pages](https://img.shields.io/badge/hosted%20on-GitHub%20Pages-222)](https://pages.github.com/)
+
+[**Read SplytWiki**](https://splytproject.github.io/SplytWiki/) · [**Contribute**](#contributing) · [**Report an issue**](https://github.com/splytproject/SplytWiki/issues/new)
+
+</div>
 
 ---
 
 ## Contents
-1. [How the site works](#how-the-site-works)
-2. [Folder structure](#folder-structure)
-3. [Writing an article](#writing-an-article)
-4. [Translating an article](#translating-an-article)
-5. [Publishing on GitHub Pages](#publishing-on-github-pages)
-6. [Previewing on your own computer (optional)](#previewing-on-your-own-computer-optional)
-7. [Build plan & progress](#build-plan--progress)
+
+- [About](#about)
+- [What's on the site](#whats-on-the-site)
+- [Features](#features)
+- [Contributing](#contributing)
+- [Writing an article](#writing-an-article)
+- [Translating an article](#translating-an-article)
+- [Project structure](#project-structure)
+- [Running the site locally](#running-the-site-locally)
+- [Deployment](#deployment)
+- [Maintenance scripts](#maintenance-scripts)
+- [Editorial policies](#editorial-policies)
+- [Maintainers and contact](#maintainers-and-contact)
+- [Licence](#licence)
 
 ---
 
-## How the site works
+## About
 
-| Piece | What it does |
+SplytWiki explains crypto the way a good encyclopedia explains any subject: clearly, neutrally and with sources. Every article is written for two readers at once. A short **"In plain terms"** box serves beginners, and the body gives the full detail, down to specifications, court filings and developer notes.
+
+The site is a static [Jekyll](https://jekyllrb.com/) site hosted free on GitHub Pages. It has no database, no user accounts, no tracking and no build step on your computer. Every article is a Markdown file in this repository, so the whole encyclopedia and its edit history are public.
+
+## What's on the site
+
+| | |
 |---|---|
-| `_wiki/*.md` | One Markdown file per article. Each one becomes a page at `/wiki/<File_name>/`. |
-| `_layouts/` | Page templates: the header, sidebars and footer that wrap every page. |
-| `_includes/` | Reusable parts: menu, infobox, footer. |
-| `assets/css/splytwiki.css` | The whole visual design, with light and dark mode. |
-| `assets/js/splytwiki.js` | Search suggestions, table of contents, references, link previews, appearance settings. |
-| `_config.yml` | Site name, web address, ad settings. |
+| **Articles** | 75 in English, in [`_wiki/`](_wiki/) |
+| **Translations** | German and Spanish versions of Bitcoin and Ethereum |
+| **Languages in the interface** | English, Deutsch, Español |
 
-**Look and layout.** The design follows Wikipedia's current desktop design:
-- A header with the ☰ menu, logo and search box.
-- A sticky **Contents** list on the left.
-- The article in the middle, with an infobox and `[1]`-style references.
-- An **Appearance** panel on the right (text size, width, light/dark) with an ad below it.
-- A grey **Categories** box and a "last edited" footer at the bottom.
+**Topics covered**
 
-The logo and wordmark belong to SplytWiki. Wikipedia's puzzle globe and wordmark are not used because they are Wikimedia trademarks.
+- **Foundations:** cryptocurrency, Bitcoin, Ethereum, blockchain, wallets, stablecoins, NFTs, DeFi, DAOs, and a 120-term [glossary](_wiki/Crypto_glossary.md).
+- **Bitcoin protocol:** proof of work and mining, SegWit, Taproot, Schnorr signatures, Script and Miniscript, PSBT, the mempool, AssumeUTXO, BIP-324, compact block filters, covenant proposals, a full BIP index and Bitcoin Core release history.
+- **Layer 2:** the Lightning Network, channels and routing.
+- **Markets and history:** bitcoin ETFs, the halving, cryptocurrency history, and case studies of Mt. Gox, FTX and the Bybit hack.
+- **Security:** seed phrases and self-custody, cryptocurrency scams, quantum computing and Bitcoin.
+- **Regulation and tax:** an overview, plus country guides for India, the United States, the United Kingdom, the European Union, Japan, Singapore and the United Arab Emirates.
 
----
+## Features
 
-## Folder structure
+SplytWiki follows the layout of Wikipedia's current desktop design, built from scratch with one CSS file and one dependency-free JavaScript file.
 
-```
-SplytWiki/
-├─ _config.yml              site settings (name, URL, baseurl)
-├─ _layouts/
-│  ├─ default.html          page shell: header, left column, content, right column, footer
-│  ├─ article.html          article: title, tabs, infobox, body, in-article ad, categories
-│  └─ page.html             project and special pages (About, Contents, Search…)
-├─ _includes/
-│  ├─ head.html             <head>: title, SEO tags, CSS, saved appearance settings
-│  ├─ header.html           menu button, logo, search box
-│  ├─ main-menu.html        Main page, Contents, Categories, Random, About, Contact…
-│  ├─ appearance.html       Text / Width / Color settings panel
-│  ├─ infobox.html          grey summary box built from an article's front matter
-│  ├─ figure.html           image with caption ("thumbnail")
-│  └─ footer.html           last edited, licence, footer links
-├─ _wiki/                   the articles (Bitcoin.md, Ethereum.md, …)
-├─ _data/
-│  ├─ mainpage.yml          featured articles, "Did you know…", featured picture
-│  └─ on_this_day.yml       dated events in crypto history
-├─ assets/
-│  ├─ css/splytwiki.css
-│  ├─ js/splytwiki.js
-│  └─ img/                  logo.svg and article images (SVG)
-├─ index.html               Main Page
-├─ about.md, contribute.md, contact.md, privacy.md, disclaimer.md
-├─ contents.html            all articles A–Z
-├─ categories.html          every category and its articles
-├─ search.html              search results page
-├─ random.html              jumps to a random article
-├─ search.json              search index, generated automatically
-├─ 404.html                 "SplytWiki does not have an article with this exact name"
-└─ Gemfile                  only for previewing locally (GitHub ignores it)
-```
+- **Search** with instant suggestions, a full-text results page and bolded snippets.
+- **Table of contents** in a sticky sidebar, highlighting the section you're reading.
+- **Infoboxes** generated from each article's front matter.
+- **Numbered references** from Markdown footnotes, collected under *References*.
+- **Link previews** that show an article summary on hover.
+- **Red links** for articles that don't exist yet, inviting contributions.
+- **Sortable tables**, random article, categories and an A–Z contents page.
+- **Appearance settings** for text size, width and light or dark mode, saved in the browser.
+- **Language switcher** and `hreflang` tags linking translations.
+- **SEO and sharing:** canonical URLs, Open Graph and Article structured data, a sitemap and a default share image.
+- **Responsive** down to phone width, with print styles.
 
----
+## Contributing
+
+Everyone can help, and you don't need to code.
+
+### Report an error or suggest an article
+
+[Open an issue](https://github.com/splytproject/SplytWiki/issues/new). Include:
+
+1. the article's name, or the article you'd like to see;
+2. what should change, and why;
+3. at least one reliable source.
+
+The **Suggest edit** tab on every article opens the site's [Contribute page](https://splytproject.github.io/SplytWiki/contribute/), which fills in an issue for you.
+
+### Edit an article yourself
+
+1. Open the article's file in [`_wiki/`](_wiki/) and choose **Edit** (the pencil icon). GitHub will fork the repository for you.
+2. Make your change, following the [house style](#house-style) below.
+3. Choose **Propose changes**, then **Create pull request**, and explain what you changed and why.
+
+A maintainer will review your pull request and either merge it or reply with questions.
+
+> **Never post a seed phrase, private key or password** in an issue or pull request. Issues and pull requests are public.
+
+### House style
+
+| Rule | Detail |
+|---|---|
+| **Neutral point of view** | No promotion, price talk, predictions or "not financial advice" filler. Include criticisms and open disputes alongside benefits. |
+| **Sources for every claim** | Prefer primary sources: BIPs and specifications, source code and release notes, mailing-list posts, court filings, regulators' documents, official statistics and peer-reviewed papers. Forum threads are not primary sources. |
+| **Plain English** | Sentences under 25 words. Define jargon on first use and link it to its article. |
+| **Dates** | Mark anything that changes over time with "as of *month year*". |
+| **Structure** | Infobox → "In plain terms" box → lead → sections → "Developer notes" (where relevant) → See also → References. |
 
 ## Writing an article
 
-Create a file in `_wiki/`. Use underscores instead of spaces in the file name, for example `_wiki/Proof_of_stake.md`. The page will be at `/wiki/Proof_of_stake/`.
+Create `_wiki/Article_title.md`, using underscores for spaces. The page appears at `/wiki/Article_title/`.
 
 ```markdown
 ---
-title: Bitcoin
-description: First decentralized cryptocurrency
-categories: [Cryptocurrencies, Bitcoin]
-updated: 2026-10-11
-hatnote: "For the unit of currency, see [Bitcoin (unit)](../Bitcoin_(unit)/)."
+title: Bitcoin halving
+description: One-line summary used in search, link previews and Google results
+aliases: [Halving, Halvening]
+categories: [Bitcoin, Monetary policy]
+updated: 2026-10-21
+last_modified: 2026-10-21
 infobox:
   image: bitcoin.svg
-  caption: Bitcoin logo
+  caption: Bitcoin halving
   rows:
-    - header: Denominations
-    - Symbol: "₿, BTC"
-    - Smallest unit: satoshi
-    - header: Development
-    - Original author: "[Satoshi Nakamoto](../Satoshi_Nakamoto/)"
+    - header: Overview
+    - Interval: "Every 210,000 blocks"
+    - Next halving: "Block 1,050,000 (expected 2028)"
 ---
-**Bitcoin** (₿) is the first decentralized cryptocurrency.[^whitepaper]
+
+> **In plain terms:** Two or three sentences a beginner can follow.
+
+The **Bitcoin halving** is the scheduled cut in the block subsidy…[^bip42]
 
 ## History
-Text of the section…
 
-{% include figure.html image="blockchain-diagram.svg" caption="How blocks are linked" width="300" %}
-
-Main article: [Bitcoin halving](../Bitcoin_halving/)
-{: .hatnote}
+Text with a link to another article: [Proof of work](../Proof_of_work/).
 
 ## See also
-- [Ethereum](../Ethereum/)
+
+- [Bitcoin](../Bitcoin/)
 
 ## References
 
-[^whitepaper]: Nakamoto, Satoshi (2008). ["Bitcoin: A Peer-to-Peer Electronic Cash System"](https://bitcoin.org/bitcoin.pdf).
+[^bip42]: Wuille, Pieter (2014). ["BIP 42: A finite monetary supply for Bitcoin"](https://github.com/bitcoin/bips/blob/master/bip-0042.mediawiki). *Bitcoin Improvement Proposals*.
 ```
 
-**Front matter fields** (the part between the `---` lines):
+**Front-matter fields**
 
 | Field | Purpose |
 |---|---|
-| `title` | Article title, shown as the page heading. |
-| `description` | One-line summary. Used in search suggestions, link previews and Google results. |
-| `categories` | Shown in the Categories box and listed on the Categories page. |
-| `updated` | Date shown as "This page was last edited on…". |
-| `hatnote` | Optional italic note above the article. |
-| `infobox` | Optional grey summary box. `header:` rows start a section, other rows are `Label: Value`. |
+| `title` | Page heading. |
+| `description` | Summary for search suggestions, link previews and search engines. |
+| `aliases` | Other names that should find this article in search. |
+| `categories` | Shown in the categories box and on the Categories page. |
+| `updated` / `last_modified` | Date shown as "This page was last edited on…". |
+| `infobox` | Optional summary box. `header:` rows start a section; other rows are `Label: value`. |
+| `hatnote` | Optional italic note above the article, such as "For other uses, see…". |
+| `seo_title` | Optional search-engine title, if it should differ from `title`. |
 
-**Writing rules:**
-- **Links to other articles** are relative: `[Ethereum](../Ethereum/)`. If the linked article doesn't exist yet, it shows red, like on Wikipedia.
-- **References** use footnotes: put `[^name]` in the text and `[^name]: source…` at the bottom. They display as `[1]`, `[2]`… and are listed under the `## References` heading.
-- **Headings:** `##` is a section and `###` is a subsection. Both appear in the Contents sidebar automatically.
-- **Tables:** normal Markdown tables are styled like Wikipedia tables.
-- **Images** go in `assets/img/`. Place them in the text with `{% include figure.html … %}`.
-- **The in-article ad** goes in automatically before the article's second section. You don't add it yourself.
+**Formatting tips**
 
----
+- Link to other articles with relative links: `[Ethereum](../Ethereum/)`.
+- Add references as footnotes: `[^name]` in the text and `[^name]: source` under `## References`.
+- `##` headings are sections and `###` are subsections; both appear in the table of contents.
+- Add `{: .sortable}` on the line after a table to make it sortable.
+- Put images in [`assets/img/`](assets/img/) and place them with `{% include figure.html image="file.svg" caption="…" %}`.
 
 ## Translating an article
 
-Translations live in `de/wiki/` (German) and `es/wiki/` (Spanish). The file name must match the English one, for example `de/wiki/Bitcoin.md` for `_wiki/Bitcoin.md`, and the page appears at `/de/wiki/Bitcoin/`.
+Translations live in [`de/wiki/`](de/wiki/) (German) and [`es/wiki/`](es/wiki/) (Spanish), with the same file name as the English article.
 
-1. Copy the English file into `de/wiki/` or `es/wiki/`.
-2. Add `ref:` to the front matter, set to the **English article's title**, for example `ref: Bitcoin`. This is what links the language versions together.
-3. Translate the `description`, `hatnote`, infobox rows and the article text. Keep `categories` in English: they are translated automatically using `_data/i18n.yml`.
-4. Use `## Einzelnachweise` (German) or `## Referencias` (Spanish) as the references heading, and translate "See also" / "External links".
+1. Copy the English file into the language folder.
+2. Add `ref:` to the front matter, set to the English article's title. This links the language versions.
+3. Translate the text, description and infobox rows. Keep `categories` in English; they are translated automatically from [`_data/i18n.yml`](_data/i18n.yml).
+4. Use the translated headings: `## Einzelnachweise` (German) or `## Referencias` (Spanish) for references.
 
-Once a translation exists, the article shows a **Languages** button next to its title, and Google is told about the other versions. Links inside a translation to articles that aren't translated yet go to the English page automatically. Interface text for each language, such as the tabs, footer and dates, is in `_data/i18n.yml`.
+Interface text such as tab names, dates and the footer is in [`_data/i18n.yml`](_data/i18n.yml). Languages shown in the header menu are listed under `languages:` in [`_config.yml`](_config.yml).
 
-Translated so far: **Bitcoin** and **Ethereum** (German and Spanish).
+## Project structure
 
----
+```
+SplytWiki/
+├── _config.yml           Site settings: title, URL, repository, languages, plugins
+├── _wiki/                English articles (one Markdown file each)
+├── de/, es/              Translated articles and project pages
+├── _layouts/             Page templates: default, article, page
+├── _includes/            Header, footer, infobox, figures, SEO tags, language switcher
+├── _data/                Main Page content, "On this day" events, interface translations
+├── assets/
+│   ├── css/splytwiki.css The entire visual design, light and dark
+│   ├── js/splytwiki.js   Search, contents, references, previews, appearance, sorting
+│   └── img/              Logo, article images, social share image
+├── index.html            Main Page
+├── about.md, contribute.md, contact.md, privacy.md, disclaimer.md
+├── contents.html         All articles A–Z
+├── categories.html       Articles by category
+├── search.html           Search results page
+├── search.json           Search index, generated at build time
+├── random.html           Random article
+├── 404.html              "SplytWiki does not have an article with this exact name"
+├── reports/              Maintenance scripts and audits (not published)
+└── Gemfile               Only needed for local preview
+```
 
-## Publishing on GitHub Pages
+## Running the site locally
 
-*(We'll do this once the website is finished.)*
+GitHub Pages builds the site automatically, so local preview is optional.
 
-1. Create a GitHub repository named exactly **`SplytWiki`**. It must match `baseurl: "/SplytWiki"` in `_config.yml`.
-2. In `_config.yml`, replace `USERNAME` in `url:` with your GitHub username.
-3. Push this folder to the repository's `main` branch.
-4. On GitHub, open the repo, go to **Settings → Pages**, and under "Build and deployment" choose **Deploy from a branch**, branch `main`, folder `/ (root)`.
-5. After a minute or two the site is live at `https://splytproject.github.io/SplytWiki/`. The **Actions** tab shows each build.
+1. Install [Ruby](https://www.ruby-lang.org/) with its development kit (on Windows, use [RubyInstaller](https://rubyinstaller.org/) "with Devkit").
+2. From the repository folder, run:
 
-**Custom domain later** (for example `splytwiki.com`): set `baseurl: ""` and `url: "https://splytwiki.com"` in `_config.yml`, add a file called `CNAME` containing the domain, and point your domain's DNS at GitHub Pages.
-
----
-
-## Previewing on your own computer (optional)
-
-GitHub builds the site for you, so this step is optional. To preview before pushing you need Ruby:
-
-1. Install Ruby from [rubyinstaller.org](https://rubyinstaller.org/), choosing the "with Devkit" version.
-2. In this folder, run:
-   ```
+   ```bash
    bundle install
    bundle exec jekyll serve
    ```
-3. Open `http://localhost:4000/SplytWiki/`.
 
-Docker is another option, but on this computer it needs WSL (Windows Subsystem for Linux), which isn't installed.
+3. Open <http://localhost:4000/SplytWiki/>.
 
----
+The [`Gemfile`](Gemfile) uses the `github-pages` gem, so local builds match the live site's Jekyll version and plugins.
 
-## Build plan & progress
+## Deployment
 
-### Goal
-The goal is a lightweight Wikipedia-style crypto encyclopedia on GitHub Pages, with around 14 well-sourced starter articles. Adding a new article should only take one Markdown file.
+Every push to `main` triggers GitHub Pages to rebuild and publish the site at <https://splytproject.github.io/SplytWiki/>. Build status appears in the repository's **Actions** tab.
 
-### 1. Foundation ✅ done
-- [x] `_config.yml`: site name, tagline, `baseurl: /SplytWiki`, `wiki` collection at `/wiki/<name>/`, footnote settings, ad settings, `jekyll-seo-tag` + `jekyll-sitemap` plugins
-- [x] `Gemfile` for optional local preview
+To move to a custom domain later, set `url` to the domain and `baseurl` to `""` in [`_config.yml`](_config.yml), add a `CNAME` file, and point the domain's DNS at GitHub Pages. All internal links use `relative_url`, so nothing else needs to change.
 
-### 2. Layouts & shared parts ✅ done
-- [x] `_layouts/default.html`: three-column page shell (Contents/menu · content · Appearance + sidebar ad), top ad, footer
-- [x] `_layouts/article.html`: title, Article/Read/Suggest edit tabs, "From SplytWiki…", hatnote, infobox, Categories box
-- [x] `_layouts/page.html`: project and special pages
-- [x] `_includes/`: `head`, `header` (menu, logo, search), `main-menu`, `appearance`, `footer`, `infobox`, `figure`
+## Maintenance scripts
 
-### 3. Visual design ✅ done
-- [x] `assets/css/splytwiki.css`:
-  - Wikipedia colours and type (serif headings, `#36c` links, grey infobox)
-  - Header, search box and suggestions
-  - Sticky contents list, Appearance panel
-  - Article content, infobox, thumbnails, tables, `[1]` references, category box
-  - Footer, link-preview cards
-  - Main Page boxes (green, blue, purple), search results, Contents and Categories lists
-  - Dark mode
-  - Responsive breakpoints at 1200, 1000 and 720px, plus print styles
+These scripts in [`reports/`](reports/) are not part of the website. Run them with Python 3.
 
-### 4. JavaScript ✅ done
-`assets/js/splytwiki.js`, plain JavaScript with no libraries:
-- [x] Appearance settings: text size, width and light/dark, saved in the browser
-- [x] Header buttons on small screens: search, appearance, contents (with overlay)
-- [x] Search suggestions while typing, from `search.json`: title, description, thumbnail, "Search for pages containing…"
-- [x] Search results page: full-text match, bold snippets, "Results 1 – N of N"
-- [x] Contents sidebar built from the `##`/`###` headings, highlighting the current section while scrolling
-- [x] References: move the footnote list under "References", with `^` back-links at the front like Wikipedia
-- [x] Red links for articles that don't exist yet; external-link icon on outside links
-- [x] Hover link previews (excerpt and image), turned off on touch screens
-- [x] Random article
-- [x] Main Page: featured article of the day, "On this day" events for the visitor's date
-- [x] Contribute page reads `?page=` / `?new=`; 404 page shows the missing title
+| Script | What it does |
+|---|---|
+| `audit.py` | Checks every article, including translations, for uncited claims, broken or unused footnotes, broken internal links and anchors, forum threads used as sources, empty sections, leftover editor notes and broken external links. It writes the results to a CSV file. Usage: `python -I reports/audit.py . reports/article-audit.csv` |
+| `build_bip_index.py` | Rebuilds [`_wiki/BIP_index.md`](_wiki/BIP_index.md) from a local checkout of [bitcoin/bips](https://github.com/bitcoin/bips). |
 
-### 5. Main Page & special pages ✅ done
-- [x] `index.html` Main Page:
-  - Welcome banner ("…the free crypto encyclopedia that anyone can read. *N* articles")
-  - Green box: **From today's featured article** + **Did you know…**
-  - Blue box: **Crypto basics** + **On this day**
-  - Purple box: **Today's featured picture**
-  - **Browse by category** and **Other areas of SplytWiki**
-- [x] `_data/mainpage.yml` and `_data/on_this_day.yml`
-- [x] `contents.html` (all pages A–Z), `categories.html` (each category with its articles), `search.html`, `random.html`, `404.html`
-- [x] `search.json`: index generated automatically from all articles
-- [x] Article list embedded in each page, used for red links and Random
+## Editorial policies
 
-### 6. Project pages ✅ done
-- [x] About SplytWiki
-- [x] Contribute (how to suggest edits and new articles)
-- [x] Contact
-- [x] Privacy policy
-- [x] General disclaimer (not financial advice)
+- **Neutrality.** Articles describe; they don't promote. Significant criticism is always included.
+- **No paid content.** Projects can't pay to be covered, change an article or remove criticism. Suggestions written on behalf of a project must say so.
+- **No live prices.** Prices and market capitalisations go out of date within hours, so articles avoid them.
+- **Not advice.** SplytWiki is an educational reference. Nothing on it is financial, investment, legal or tax advice. See the [general disclaimer](https://splytproject.github.io/SplytWiki/disclaimer/).
+- **Privacy.** The site sets no tracking or advertising cookies; appearance settings stay in your browser. See the [privacy policy](https://splytproject.github.io/SplytWiki/privacy/).
 
-### 7. Images ✅ done
-Original SVGs in `assets/img/`:
-- [x] `logo.svg`: grey "split coin" logo, also used as the favicon
-- [x] `bitcoin.svg`, `ethereum.svg`
-- [x] `blockchain-diagram.svg` (also the featured picture)
-- [x] `wallet-keys.svg` (private key → public key → address)
+## Maintainers and contact
 
-### 8. Starter articles ✅ done
-14 articles, each with an infobox where it fits, sections, references to primary sources (whitepapers, ethereum.org, BIPs/EIPs, academic papers) and categories. They contain no live prices or market caps, because those go out of date quickly.
+SplytWiki is run by a small team of maintainers. The way to reach them is [**GitHub Issues**](https://github.com/splytproject/SplytWiki/issues). Use an issue for corrections, article requests, questions, and press or legal enquiries (start the title with "Press" or "Legal").
 
-- [x] Cryptocurrency
-- [x] Bitcoin
-- [x] Ethereum
-- [x] Blockchain
-- [x] Satoshi Nakamoto
-- [x] Proof of work
-- [x] Proof of stake
-- [x] Smart contract
-- [x] Stablecoin
-- [x] Decentralized finance
-- [x] Non-fungible token
-- [x] Cryptocurrency wallet
-- [x] Bitcoin halving
-- [x] Solana
-
-### Add Translations
-in Nigerian Pidgin, Dutch, Turkish, Arabic, Spanish, and German.
-
-### 9. Testing ⏳ to do
-- [ ] Build the site, either with Ruby/Jekyll locally or by pushing to GitHub Pages, and fix any errors
-- [ ] Check the Main Page, an article, Contents, Categories, Search, the About page and a 404 under `/SplytWiki/`, with no broken links or images
-- [ ] Features:
-  - Typing "eth" suggests Ethereum
-  - Searching "halving" lists results
-  - Random works
-  - The contents list highlights the current section while scrolling
-  - Link previews appear
-  - Light/dark and text size persist after a reload
-- [ ] Screen widths 1400, 1100, 800 and 375px: no sideways scrolling, and the small-screen buttons work
-- [ ] CSS + JS total stays under about 30 KB
-
-### 10. Publish ⏳ after the site is finished
-- [ ] Create the GitHub repo, push, turn on Pages (see [Publishing on GitHub Pages](#publishing-on-github-pages))
-
----
+The maintainers will never ask for your seed phrase, private keys or money. Anyone claiming to be from SplytWiki and offering to "recover" crypto is running a scam.
 
 ## Licence
 
-Article text is published under the [Creative Commons Attribution-ShareAlike 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/). Nothing on SplytWiki is financial or investment advice.
+Article text is available under the [Creative Commons Attribution-ShareAlike 4.0 International licence](https://creativecommons.org/licenses/by-sa/4.0/). You may share and adapt it, including commercially, if you credit SplytWiki and share your changes under the same licence.
+
+The SplytWiki name and logo are not covered by that licence. SplytWiki is an independent project and is not affiliated with Wikipedia or the Wikimedia Foundation.

@@ -66,6 +66,7 @@ Before HD wallets, every key needed its own backup. One seed now backs up an unl
 
 ## See also
 
+- [Seed phrases and self-custody security](../Seed_phrases_and_self-custody_security/)
 - [ECDSA](../ECDSA/)
 - [PSBT](../PSBT/)
 - [Silent_payments](../Silent_payments/)

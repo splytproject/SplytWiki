@@ -25,4 +25,4 @@ Every article on {{ site.title }} follows a few simple principles:
 
 ## Get involved
 
-Spotted an error, an out-of-date fact or a missing topic? See [how to contribute](../contribute/) or [contact us](../contact/).
+{{ site.title }} is maintained in the open. Every article lives in the public GitHub repository [{{ site.repository }}](https://github.com/{{ site.repository }}), where anyone can propose a change. Spotted an error, an out-of-date fact or a missing topic? See [how to contribute](../contribute/), or reach the maintainers through [GitHub Issues](https://github.com/{{ site.repository }}/issues).

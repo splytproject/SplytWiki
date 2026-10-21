@@ -27,4 +27,4 @@ Los enlaces a sitios web externos se ofrecen como referencia. {{ site.title }} n
 
 ## Sin responsabilidad
 
-{{ site.title }} y sus editores no aceptan ninguna responsabilidad por pérdidas o daños derivados del uso de la información de este sitio. El uso de {{ site.title }} es bajo tu propia responsabilidad.
+{{ site.title }} y sus mantenedores no aceptan ninguna responsabilidad por pérdidas o daños derivados del uso de la información de este sitio. El uso de {{ site.title }} es bajo tu propia responsabilidad.

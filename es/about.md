@@ -26,4 +26,4 @@ Todos los artículos de {{ site.title }} siguen unos principios sencillos:
 
 ## Participa
 
-¿Has detectado un error, un dato desactualizado o un tema que falta? Consulta [cómo contribuir](../contribute/) o [contáctanos](../contact/).
+{{ site.title }} se mantiene de forma abierta. Todos los artículos están en el repositorio público de GitHub [{{ site.repository }}](https://github.com/{{ site.repository }}), donde cualquiera puede proponer cambios. ¿Has detectado un error, un dato desactualizado o un tema que falta? Consulta [cómo contribuir](../contribute/) o contacta con los mantenedores a través de [GitHub Issues](https://github.com/{{ site.repository }}/issues).

@@ -581,6 +581,15 @@
         box.hidden = false;
       }
     }
+    /* Pre-fill the GitHub issue link with the article being discussed. */
+    var issue = $('#splyt-issue-link');
+    if (issue && (pg || nw)) {
+      var subject = nw ? 'New article: ' + nw : 'Edit suggestion: ' + pg;
+      var body = '**Article:** ' + (nw || pg) + '\n\n**What should change, and why:**\n\n\n' +
+        '**Reliable source(s):**\n\n';
+      issue.href = issue.href.split('?')[0] + '?title=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+    }
     var missing = $('#splyt-missing-title');
     if (missing) {
       var title = titleFromPath(location.pathname);

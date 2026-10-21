@@ -17,7 +17,11 @@ lang: en
 # Languages offered in the header language menu (see _data/i18n.yml).
 languages: [en, de, es]
 
-# Shown on the Contact page. Leave empty to hide.
+# Source code and issue tracker on GitHub. Contributions are made through
+# this repository, and readers reach the maintainers through GitHub Issues.
+repository: splytproject/SplytWiki
+
+# Optional email address for the maintainers. Leave empty to use GitHub Issues only.
 contact_email: ""
 
 license:

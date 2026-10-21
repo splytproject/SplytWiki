@@ -32,7 +32,7 @@ For a first reading, start with *blockchain*, *wallet*, *private key*, *transact
 | **Dump** | Heavy selling or a rapid price decline | Context is needed to identify the cause |
 | **Shill** | Promote an asset enthusiastically, often with an undisclosed interest | Check incentives and supporting evidence |
 | **Degen** | A participant embracing unusually speculative activity | A community label, not a measure of expertise |
-| **Rug pull** | Project insiders extract value or abandon a promoted venture to holders' detriment | Removing liquidity is one possible form; a falling price alone does not prove fraud.[^rug] |
+| **[Rug pull](../Cryptocurrency_scams/)** | Project insiders extract value or abandon a promoted venture to holders' detriment | Removing liquidity is one possible form; a falling price alone does not prove fraud.[^rug] |
 
 ## Assets and ownership
 
@@ -116,7 +116,7 @@ See [blockchain scaling](../Blockchain_scaling/) for tradeoffs that these short 
 | **Address** | An identifier used to receive assets or interact with an account |
 | **Public key** | Cryptographic information used to verify signatures |
 | **Private key** | A secret enabling transaction authorization in a basic key-controlled account |
-| **[Seed phrase](../HD_wallets_and_seed_phrases/)** | Recovery words that can derive a wallet's underlying secrets; never share them |
+| **[Seed phrase](../HD_wallets_and_seed_phrases/)** | Recovery words that can derive a wallet's underlying secrets; never share them (see [Seed phrases and self-custody security](../Seed_phrases_and_self-custody_security/)) |
 | **Signature** | Cryptographic authorization of a message or transaction |
 | **Custody** | Control and safekeeping of assets or their signing authority |
 | **Self-custody** | An arrangement in which the user controls authorization rather than relying on a custodian |
@@ -125,9 +125,9 @@ See [blockchain scaling](../Blockchain_scaling/) for tradeoffs that these short 
 | **[Hardware wallet](../Cryptocurrency_wallet/)** | A dedicated device designed to protect keys and sign internally |
 | **[Multisig](../Multisignature/)** | An authorization scheme requiring several signatures |
 | **Approval** | Permission for a specified contract or party to spend tokens under defined conditions |
-| **Phishing** | Deception intended to obtain secrets or harmful authorization |
-| **Pig butchering** | A long-con scam in which a fraudster builds a friendship or romance, then steers the victim into a fake crypto investment platform[^fincen] |
-| **Address poisoning** | Planting a lookalike address in records to encourage a mistaken transfer |
+| **[Phishing](../Cryptocurrency_scams/)** | Deception intended to obtain secrets or harmful authorization |
+| **[Pig butchering](../Cryptocurrency_scams/)** | A long-con scam in which a fraudster builds a friendship or romance, then steers the victim into a fake crypto investment platform[^fincen] |
+| **[Address poisoning](../Cryptocurrency_scams/)** | Planting a lookalike address in records to encourage a mistaken transfer |
 
 Scams often combine these techniques; the US Federal Trade Commission lists common warning signs, such as guaranteed returns and demands to pay in crypto.[^ftc] A wallet password, device PIN and seed phrase serve different purposes. A password reset cannot ordinarily replace a missing self-custody recovery secret. See [wallet security](../Cryptocurrency_wallet/).
 

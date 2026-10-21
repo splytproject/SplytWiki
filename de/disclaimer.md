@@ -27,4 +27,4 @@ Links zu externen Websites dienen als Referenz. {{ site.title }} hat keinen Einf
 
 ## Keine Haftung
 
-{{ site.title }} und seine Redaktion übernehmen keine Haftung für Verluste oder Schäden, die aus der Nutzung der Informationen auf dieser Website entstehen. Die Nutzung von {{ site.title }} erfolgt auf eigenes Risiko.
+{{ site.title }} und seine Maintainer übernehmen keine Haftung für Verluste oder Schäden, die aus der Nutzung der Informationen auf dieser Website entstehen. Die Nutzung von {{ site.title }} erfolgt auf eigenes Risiko.

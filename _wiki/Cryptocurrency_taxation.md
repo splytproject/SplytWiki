@@ -140,6 +140,7 @@ A tax software report is best treated as a calculation requiring review. Incorre
 ## See also
 
 - [Cryptocurrency regulation](../Cryptocurrency_regulation/)
+- Country guides: [India](../Cryptocurrency_regulation_and_tax_in_India/), [United States](../Cryptocurrency_regulation_and_tax_in_the_United_States/), [United Kingdom](../Cryptocurrency_regulation_and_tax_in_the_United_Kingdom/), [European Union](../Cryptocurrency_regulation_and_tax_in_the_European_Union/), [Japan](../Cryptocurrency_regulation_and_tax_in_Japan/), [Singapore](../Cryptocurrency_regulation_and_tax_in_Singapore/), [United Arab Emirates](../Cryptocurrency_regulation_and_tax_in_the_United_Arab_Emirates/)
 - [KYC and AML](../KYC_and_AML/)
 - [Smart contract](../Smart_contract/)
 

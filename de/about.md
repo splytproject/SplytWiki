@@ -26,4 +26,4 @@ Jeder Artikel auf {{ site.title }} folgt einigen einfachen Grundsätzen:
 
 ## Mitmachen
 
-Einen Fehler, eine veraltete Angabe oder ein fehlendes Thema entdeckt? Lesen Sie, [wie Sie beitragen können](../contribute/), oder [nehmen Sie Kontakt mit uns auf](../contact/).
+{{ site.title }} wird öffentlich gepflegt. Alle Artikel liegen im öffentlichen GitHub-Repository [{{ site.repository }}](https://github.com/{{ site.repository }}), wo jeder Änderungen vorschlagen kann. Einen Fehler, eine veraltete Angabe oder ein fehlendes Thema entdeckt? Lesen Sie, [wie Sie mitwirken können](../contribute/), oder erreichen Sie das Maintainer-Team über [GitHub Issues](https://github.com/{{ site.repository }}/issues).

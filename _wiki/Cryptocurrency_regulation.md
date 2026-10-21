@@ -119,6 +119,8 @@ Separately, the customer may owe tax on transactions and may need to provide ide
 ## See also
 
 - [Cryptocurrency taxation](../Cryptocurrency_taxation/)
+- Country guides: [India](../Cryptocurrency_regulation_and_tax_in_India/), [United States](../Cryptocurrency_regulation_and_tax_in_the_United_States/), [United Kingdom](../Cryptocurrency_regulation_and_tax_in_the_United_Kingdom/), [European Union](../Cryptocurrency_regulation_and_tax_in_the_European_Union/), [Japan](../Cryptocurrency_regulation_and_tax_in_Japan/), [Singapore](../Cryptocurrency_regulation_and_tax_in_Singapore/), [United Arab Emirates](../Cryptocurrency_regulation_and_tax_in_the_United_Arab_Emirates/)
+- [Cryptocurrency scams](../Cryptocurrency_scams/)
 - [KYC and AML](../KYC_and_AML/)
 - [Decentralized autonomous organization](../Decentralized_autonomous_organization/)
 - [Smart contract](../Smart_contract/)

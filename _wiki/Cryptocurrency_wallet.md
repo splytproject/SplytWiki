@@ -57,6 +57,8 @@ Recommended practices include keeping the seed phrase offline and private, using
 
 ## See also
 
+- [Seed phrases and self-custody security](../Seed_phrases_and_self-custody_security/)
+- [Cryptocurrency scams](../Cryptocurrency_scams/)
 - [Cryptocurrency](../Cryptocurrency/)
 - [Bitcoin](../Bitcoin/)
 - [Blockchain](../Blockchain/)

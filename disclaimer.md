@@ -26,4 +26,4 @@ Links to outside websites are provided for reference. {{ site.title }} has no co
 
 ## No liability
 
-{{ site.title }} and its editors accept no liability for any loss or damage resulting from the use of information on this site. Your use of {{ site.title }} is at your own risk.
+{{ site.title }} and its maintainers accept no liability for any loss or damage resulting from the use of information on this site. Your use of {{ site.title }} is at your own risk.
