@@ -1,6 +1,0 @@
-{%- comment -%}
-  Sets "lang" and "t" (interface text from _data/i18n.yml) for the current page.
-  Include it at the top of any layout or include that shows interface text.
-{%- endcomment -%}
-{%- assign lang = page.lang | default: site.lang | default: "en" -%}
-{%- assign t = site.data.i18n[lang] | default: site.data.i18n.en -%}
