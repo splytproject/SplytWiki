@@ -3,7 +3,8 @@ title: Ethereum
 description: Decentralized blockchain platform for smart contracts, with its own currency, ether
 aliases: [ETH, Ether]
 categories: [Cryptocurrencies, Ethereum, Smart contract platforms, Proof-of-stake cryptocurrencies]
-updated: 2026-10-12
+updated: 2026-10-22
+last_modified: 2026-10-22
 infobox:
   image: ethereum.svg
   image_width: 90
@@ -16,15 +17,21 @@ infobox:
     - Smallest unit: "wei (10⁻¹⁸ ETH)"
     - Other units: "gwei (10⁻⁹ ETH)"
     - header: Development
-    - Proposed by: Vitalik Buterin
+    - Founders: "Vitalik Buterin, Gavin Wood, Joseph Lubin and others"
     - White paper: 2013–2014
-    - Mainnet launch: 30 July 2015
+    - Launch date: 30 July 2015
     - Developer: "Ethereum Foundation and community"
     - header: Ledger
     - Consensus: "[Proof of stake](../Proof_of_stake/) (since September 2022)"
     - Previous consensus: "[Proof of work](../Proof_of_work/) (2015–2022)"
     - Block time: "12 seconds (one slot)"
     - Supply limit: "None (fee burning offsets issuance)"
+    - header: Software
+    - Written in: "Several clients, e.g. Go (Geth), Rust, Java and C#"
+    - License: "LGPL-3.0 (Geth library code); varies by client"
+    - header: Links
+    - Website: "[ethereum.org](https://ethereum.org/)"
+    - Repository: "[ethereum/go-ethereum](https://github.com/ethereum/go-ethereum)"
 ---
 **Ethereum** is a decentralized [blockchain](../Blockchain/) platform that lets anyone create and run programs called [smart contracts](../Smart_contract/). Its native currency is **ether** (ticker **ETH**, symbol **Ξ**), which is used to pay for computation on the network and is the second-largest [cryptocurrency](../Cryptocurrency/) after [Bitcoin](../Bitcoin/).
 
@@ -87,9 +94,20 @@ To handle more transactions without making it too expensive to run a node, Ether
 | Dencun | 13 March 2024 | Blob data for rollups (EIP-4844) |
 | Pectra | 7 May 2025 | Staking and account improvements |
 
-## Criticism
+## Controversies and criticism
 
 Critics have pointed to Ethereum's high transaction fees during busy periods, the complexity of its upgrade path, and the security risks of smart contracts, which have lost users billions of dollars through bugs and exploits. Some argue that staking concentrates influence among large holders and staking services. Supporters reply that the network has run continuously since 2015 and that layer-2 systems have brought fees down substantially.
+
+## Governance
+
+Ethereum has no on-chain voting. Changes are proposed as **Ethereum Improvement Proposals** (EIPs) and discussed in public developer calls.[^eip1] An upgrade happens when the independent client teams ship it and node operators and validators run the new software.[^eip1] The Ethereum Foundation funds research and development but does not control the network.[^history]
+
+## Regulatory actions
+
+| Date | Action |
+|---|---|
+| 23 May 2024 | SEC approves the listing of spot ether exchange-traded products.[^sec-eth-etp] |
+| 17 Mar 2026 | SEC and CFTC interpretation names ETH a "digital commodity".[^sec-2026][^lowenstein] |
 
 ## See also
 
@@ -100,6 +118,11 @@ Critics have pointed to Ethereum's high transaction fees during busy periods, th
 - [Solana](../Solana/)
 
 ## References
+
+[^eip1]: ["EIP-1: EIP Purpose and Guidelines"](https://eips.ethereum.org/EIPS/eip-1). *Ethereum Improvement Proposals*.
+[^sec-eth-etp]: U.S. Securities and Exchange Commission (23 May 2024). [Order approving ether-based exchange-traded products](https://www.sec.gov/files/rules/sro/nysearca/2024/34-100224.pdf) (PDF). Release No. 34-100224.
+[^sec-2026]: U.S. Securities and Exchange Commission (17 March 2026). ["SEC Clarifies the Application of Federal Securities Laws to Crypto Assets"](https://www.sec.gov/newsroom/press-releases/2026-30-sec-clarifies-application-federal-securities-laws-crypto-assets). Press release 2026-30; Release No. 33-11412.
+[^lowenstein]: ["SEC Issues Interpretive Framework for Crypto Asset Classification"](https://www.lowenstein.com/news-insights/publications/client-alerts/sec-issues-interpretive-framework-for-crypto-asset-classification-fctm). *Lowenstein Sandler*. March 2026.
 
 [^history]: ["The history of Ethereum"](https://ethereum.org/en/history/). *ethereum.org*.
 [^energy]: ["Ethereum energy consumption"](https://ethereum.org/en/energy-consumption/). *ethereum.org*.

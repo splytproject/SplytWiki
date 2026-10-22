@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <title>Monero emblem</title>
+  <defs><clipPath id="c"><circle cx="100" cy="100" r="96"/></clipPath></defs>
+  <g clip-path="url(#c)">
+    <rect width="200" height="200" fill="#ff6600"/>
+    <rect y="132" width="200" height="68" fill="#4c4c4c"/>
+    <path d="M42 132 V60 L100 112 L158 60 V132 H136 V100 L100 134 L64 100 V132 Z" fill="#fff"/>
+  </g>
+</svg>

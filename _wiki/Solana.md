@@ -3,21 +3,31 @@ title: Solana
 description: High-throughput proof-of-stake blockchain and its cryptocurrency, SOL
 aliases: [SOL]
 categories: [Cryptocurrencies, Smart contract platforms, Proof-of-stake cryptocurrencies]
-updated: 2026-10-12
+updated: 2026-10-22
+last_modified: 2026-10-22
 infobox:
+  image: solana.svg
+  caption: Solana emblem (SplytWiki illustration)
   rows:
     - header: Denominations
     - Currency: SOL
     - Smallest unit: "lamport (10⁻⁹ SOL)"
     - header: Development
-    - Created by: Anatoly Yakovenko, Raj Gokal
+    - Founders: Anatoly Yakovenko, Raj Gokal
     - White paper: November 2017
-    - Mainnet beta: 16 March 2020
+    - Launch date: "16 March 2020 (mainnet beta)"
     - Developers: "Solana Labs, Anza, Jump Crypto and others"
     - Programs written in: "Rust (also C and C++)"
     - header: Ledger
     - Consensus: "[Proof of stake](../Proof_of_stake/) with proof of history"
     - Slot time: About 400 milliseconds
+    - Supply policy: "No cap; inflation started at 8% a year and falls 15% a year toward 1.5%"
+    - header: Software
+    - Written in: "Rust (Agave); C (Firedancer)"
+    - License: "Apache 2.0 (Agave)"
+    - header: Links
+    - Website: "[solana.com](https://solana.com/)"
+    - Repository: "[anza-xyz/agave](https://github.com/anza-xyz/agave)"
 ---
 **Solana** is a public [blockchain](../Blockchain/) platform designed for high transaction speed and low fees. Its native [cryptocurrency](../Cryptocurrency/) is **SOL**, which is used to pay transaction fees and to secure the network through [proof of stake](../Proof_of_stake/). Like [Ethereum](../Ethereum/), Solana supports [smart contracts](../Smart_contract/), called *programs* on Solana, and it hosts [decentralized finance](../Decentralized_finance/) applications, [stablecoins](../Stablecoin/), [NFTs](../Non-fungible_token/) and large numbers of memecoins.
 
@@ -53,9 +63,22 @@ Solana was originally run almost entirely on one software client written by Sola
 
 Solana suffered several major outages in its first years of operation. In September 2021 the network stopped producing blocks for about 17 hours after being flooded with transactions during a token launch, and it went down several more times in 2022, often due to spam from automated trading bots. Each time, validators had to coordinate a restart. A further outage of about five hours occurred in February 2024. Developers responded with changes to how transactions are prioritised and how the network handles congestion.
 
-## Criticism
+## Controversies and criticism
 
 Critics argue that Solana is less decentralized than networks such as Bitcoin or Ethereum, because running a validator requires powerful and expensive hardware and because a large share of its token supply was initially held by insiders and early investors. Its history of outages has also raised questions about reliability. Supporters counter that the network's performance makes it practical for uses, such as high-frequency trading and payments, that are too slow or costly on other blockchains.
+
+## Governance
+
+Protocol changes are proposed as **Solana Improvement Documents** (SIMDs).[^simd] Some, such as changes to economics, are put to votes in which validators signal support with their stake. Others are adopted when validator clients enable new features.[^simd] The Solana Foundation supports development, and client teams such as Anza and Jump's Firedancer team write the software.
+
+## Regulatory actions
+
+| Date | Action |
+|---|---|
+| Jun 2023 | SEC complaints against Binance and Coinbase describe SOL as a security.[^sec-coinbase] |
+| 2025 | SEC drops those cases.[^sec-dismiss] |
+| 28 Oct 2025 | Bitwise's BSOL, the first US spot Solana exchange-traded product with full SOL exposure, begins trading.[^bsol] |
+| 17 Mar 2026 | SEC and CFTC interpretation names SOL a "digital commodity".[^sec-2026][^lowenstein] |
 
 ## See also
 
@@ -65,6 +88,13 @@ Critics argue that Solana is less decentralized than networks such as Bitcoin or
 - [Decentralized finance](../Decentralized_finance/)
 
 ## References
+
+[^simd]: ["Solana Improvement Documents"](https://github.com/solana-foundation/solana-improvement-documents). *Solana Foundation*, GitHub.
+[^sec-coinbase]: U.S. Securities and Exchange Commission (6 June 2023). ["SEC Charges Coinbase for Operating as an Unregistered Securities Exchange, Broker, and Clearing Agency"](https://www.sec.gov/news/press-release/2023-102). Press release 2023-102.
+[^sec-dismiss]: ["Binance calls SEC dismissal of lawsuit against crypto exchange 'landmark moment'"](https://cybernews.com/crypto/us-sec-binance-civil-lawsuit-dismissed-crypto-exchange/). *Cybernews*. May 2025.
+[^bsol]: Bitwise (October 2025). ["Bitwise Launches BSOL, First Spot Solana ETP in U.S."](https://bitwiseinvestments.com/newsroom/bitwise-launches-bsol-first-spot-solana-etp-in-us/). Press release.
+[^sec-2026]: U.S. Securities and Exchange Commission (17 March 2026). ["SEC Clarifies the Application of Federal Securities Laws to Crypto Assets"](https://www.sec.gov/newsroom/press-releases/2026-30-sec-clarifies-application-federal-securities-laws-crypto-assets). Press release 2026-30; Release No. 33-11412.
+[^lowenstein]: ["SEC Issues Interpretive Framework for Crypto Asset Classification"](https://www.lowenstein.com/news-insights/publications/client-alerts/sec-issues-interpretive-framework-for-crypto-asset-classification-fctm). *Lowenstein Sandler*. March 2026.
 
 [^whitepaper]: Yakovenko, Anatoly (2017). ["Solana: A new architecture for a high performance blockchain"](https://solana.com/solana-whitepaper.pdf) (PDF). *solana.com*.
 [^docs]: ["Solana Documentation"](https://solana.com/docs). *solana.com*.

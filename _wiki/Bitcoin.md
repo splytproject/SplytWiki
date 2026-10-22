@@ -3,7 +3,8 @@ title: Bitcoin
 description: First decentralized cryptocurrency, launched in 2009
 aliases: [BTC, XBT]
 categories: [Cryptocurrencies, Bitcoin, Proof-of-work cryptocurrencies]
-updated: 2026-10-12
+updated: 2026-10-22
+last_modified: 2026-10-22
 hatnote: "This article is about the cryptocurrency. For the technology underlying it, see [Blockchain](../Blockchain/)."
 infobox:
   image: bitcoin.svg
@@ -22,12 +23,15 @@ infobox:
     - Written in: C++
     - License: MIT License
     - header: Ledger
-    - Ledger start: 3 January 2009
-    - Timestamping: "[Proof of work](../Proof_of_work/)"
+    - Launch date: "3 January 2009 (genesis block)"
+    - Consensus: "[Proof of work](../Proof_of_work/)"
     - Hash function: "SHA-256 (applied twice)"
     - Block time: About 10 minutes
     - Block reward: "₿3.125 (since April 2024)"
     - Supply limit: "₿21,000,000"
+    - header: Links
+    - Website: "[bitcoin.org](https://bitcoin.org/)"
+    - Repository: "[bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)"
 ---
 **Bitcoin** (abbreviation: **BTC**; sign: **₿**) is the first decentralized [cryptocurrency](../Cryptocurrency/). It was described in a 2008 white paper by a person or group using the pseudonym [Satoshi Nakamoto](../Satoshi_Nakamoto/), and the network began operating in January 2009.[^whitepaper] Bitcoin allows people to send value directly to one another over the internet without relying on a bank, payment company or any other trusted intermediary.
 
@@ -92,11 +96,27 @@ Disagreements over how to scale the network led to a split in August 2017, when 
 
 The **Lightning Network** is a "layer-2" system built on top of Bitcoin. It lets users open payment channels and exchange many small, fast payments off-chain, settling only the final balance on the main blockchain.[^lightning]
 
-## Reception
+## Controversies and criticism
 
 Supporters argue that Bitcoin's fixed supply makes it a hedge against inflation, sometimes calling it "digital gold", and that it gives people who are excluded from the banking system, or who live under repressive governments, a way to store and send value.
 
 Critics point to its extreme price volatility, its limited use for everyday purchases and the energy used by proof-of-work mining, which is comparable to that of a medium-sized country according to the Cambridge Bitcoin Electricity Consumption Index.[^cbeci] Bitcoin has also been used for ransomware payments and other crimes, although blockchain analysis firms report that illicit activity makes up a small share of total transaction volume.
+
+## Governance
+
+Bitcoin has no on-chain voting or central developer. Changes are proposed as **Bitcoin Improvement Proposals** (BIPs), discussed publicly and implemented in software such as Bitcoin Core.[^bips] A rule change takes effect only if node operators choose to run it; soft forks have usually been activated through miner signalling.[^bips] Disputes over this process led to the 2017 split that created [Bitcoin Cash](../Bitcoin_Cash/).
+
+## Regulatory actions
+
+| Date | Action |
+|---|---|
+| Mar 2013 | US FinCEN guidance treats businesses exchanging bitcoin as money transmitters.[^fincen-2013] |
+| Mar 2014 | US IRS Notice 2014-21: bitcoin is property for tax purposes.[^irs-2014] |
+| Sep 2015 | US CFTC treats bitcoin as a commodity in the *Coinflip* order.[^cftc-2015] |
+| 10 Jan 2024 | SEC approves US spot bitcoin exchange-traded products.[^sec-etp] |
+| 17 Mar 2026 | SEC and CFTC interpretation names BTC a "digital commodity".[^sec-2026][^lowenstein] |
+
+See [Cryptocurrency regulation](../Cryptocurrency_regulation/) and the country guides for wider rules.
 
 ## See also
 
@@ -107,6 +127,14 @@ Critics point to its extreme price volatility, its limited use for everyday purc
 - [Satoshi Nakamoto](../Satoshi_Nakamoto/)
 
 ## References
+
+[^bips]: ["Bitcoin Improvement Proposals"](https://github.com/bitcoin/bips/blob/master/README.mediawiki). *bitcoin/bips*, GitHub.
+[^fincen-2013]: Financial Crimes Enforcement Network (18 March 2013). ["Application of FinCEN's Regulations to Persons Administering, Exchanging, or Using Virtual Currencies"](https://www.fincen.gov/resources/statutes-regulations/guidance/application-fincens-regulations-persons-administering). FIN-2013-G001.
+[^irs-2014]: Internal Revenue Service (25 March 2014). ["Notice 2014-21"](https://www.irs.gov/irb/2014-16_IRB#NOT-2014-21). *Internal Revenue Bulletin* 2014-16.
+[^cftc-2015]: Commodity Futures Trading Commission (17 September 2015). ["In the Matter of Coinflip, Inc."](https://www.cftc.gov/sites/default/files/idc/groups/public/@lrenforcementactions/documents/legalpleading/enfcoinfliprorder09172015.pdf) (PDF).
+[^sec-etp]: U.S. Securities and Exchange Commission (10 January 2024). [Order approving spot bitcoin exchange-traded products](https://www.sec.gov/files/rules/sro/nysearca/2024/34-99306.pdf) (PDF). Release No. 34-99306.
+[^sec-2026]: U.S. Securities and Exchange Commission (17 March 2026). ["SEC Clarifies the Application of Federal Securities Laws to Crypto Assets"](https://www.sec.gov/newsroom/press-releases/2026-30-sec-clarifies-application-federal-securities-laws-crypto-assets). Press release 2026-30; Release No. 33-11412.
+[^lowenstein]: ["SEC Issues Interpretive Framework for Crypto Asset Classification"](https://www.lowenstein.com/news-insights/publications/client-alerts/sec-issues-interpretive-framework-for-crypto-asset-classification-fctm). *Lowenstein Sandler*. March 2026.
 
 [^whitepaper]: Nakamoto, Satoshi (31 October 2008). ["Bitcoin: A Peer-to-Peer Electronic Cash System"](https://bitcoin.org/bitcoin.pdf) (PDF). *bitcoin.org*.
 [^mailing-list]: Nakamoto, Satoshi (31 October 2008). ["Bitcoin P2P e-cash paper"](https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html). *The Cryptography Mailing List*.
