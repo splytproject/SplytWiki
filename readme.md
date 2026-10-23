@@ -174,6 +174,7 @@ Text with a link to another article: [Proof of work](../Proof_of_work/).
 - Add references as footnotes: `[^name]` in the text and `[^name]: source` under `## References`.
 - `##` headings are sections and `###` are subsections; both appear in the table of contents.
 - Add `{: .sortable}` on the line after a table to make it sortable.
+- Maths, highlighted source excerpts, Mermaid diagrams and callout boxes are documented in [`docs/COMPONENTS.md`](docs/COMPONENTS.md).
 - Put images in [`assets/img/`](assets/img/) and place them with `{% include figure.html image="file.svg" caption="…" %}`.
 
 ## Translating an article
@@ -211,7 +212,7 @@ SplytWiki/
 ├── 404.html              "SplytWiki does not have an article with this exact name"
 ├── reports/              Maintenance scripts (not published)
 ├── _audit/               Article audit, rebuild backlog and fact-checks (not published)
-├── docs/STYLE.md         The deep-article standard (not published)
+├── docs/                The deep-article standard and component guide (not published)
 ├── _templates/           Copy-ready article template (not published)
 ├── CLAUDE.md             Editorial rules for AI-assisted editing sessions (not published)
 └── Gemfile               Only needed for local preview

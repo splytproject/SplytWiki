@@ -1,0 +1,16 @@
+{%- comment -%}
+  Header bar for a pinned source-code excerpt. Put it directly above a fenced code block:
+
+  {% include source-code.html repo="bitcoin/bitcoin" path="src/validation.cpp" lines="1843-1854" ref="v31.1" license="MIT" %}
+
+  ```cpp
+  …excerpt copied from the fetched file…
+  ```
+
+  ref must be a tag or commit hash, never a branch name. See docs/COMPONENTS.md.
+{%- endcomment -%}
+{%- assign sc_lines = include.lines | split: "-" -%}
+{%- capture sc_anchor -%}{% if sc_lines.size > 1 %}#L{{ sc_lines[0] }}-L{{ sc_lines[1] }}{% elsif sc_lines.size == 1 %}#L{{ sc_lines[0] }}{% endif %}{%- endcapture -%}
+{%- assign sc_host = include.host | default: "https://github.com" -%}
+{%- capture sc_url -%}{{ sc_host }}/{{ include.repo }}/blob/{{ include.ref }}/{{ include.path }}{{ sc_anchor }}{%- endcapture -%}
+<div class="source-header" data-permalink="{{ sc_url }}"><svg class="source-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.7 4.3 2 8l3.7 3.7 1-1L4 8l2.7-2.7zm4.6 0-1 1L12 8l-2.7 2.7 1 1L14 8z"/></svg><a class="source-repo" href="{{ sc_host }}/{{ include.repo }}/tree/{{ include.ref }}">{{ include.repo }}</a><span class="source-sep">·</span><a class="source-path" href="{{ sc_url }}"><code>{{ include.path }}</code></a>{% if include.lines %}<span class="source-sep">·</span><span class="source-lines">lines {{ include.lines | replace: "-", "–" }}</span>{% endif %}<span class="source-sep">·</span><span class="source-ref" title="Pinned tag or commit">{{ include.ref | truncate: 12, "" }}</span>{% if include.license %}<span class="source-sep">·</span><span class="source-license">{{ include.license }}</span>{% endif %}</div>

@@ -18,6 +18,10 @@ This policy explains what information is collected when you visit {{ site.title 
 
 {{ site.title }} is hosted on **GitHub Pages**, a service of GitHub, Inc. Like any web host, GitHub may log technical information about visits, such as IP addresses, for security and to keep the service running. See the [GitHub General Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
+## Scripts from jsDelivr
+
+Some technical articles show mathematical formulas or diagrams. Only on those pages, your browser loads the open-source libraries KaTeX and Mermaid from **jsDelivr**, a public content delivery network. jsDelivr receives the usual technical information any web server sees, such as your IP address. It sets no cookies. See the [jsDelivr privacy policy](https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net).
+
 ## External links
 
 Articles link to outside sources such as white papers and news sites. Those sites have their own privacy policies.

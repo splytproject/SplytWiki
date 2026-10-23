@@ -49,6 +49,11 @@ def check(path):
     for line in prose.split("\n"):
         if line.startswith(("|", "#", "    ")):
             continue
+        if line.lstrip().startswith("{%"):  # Liquid include: check only its prose content
+            m = re.search(r'content="([^"]*)"', line)
+            if not m:
+                continue
+            line = m.group(1)
         line = re.sub(r"\[\^[\w.-]+\]", "", line)
         line = re.sub(r"\]\([^)]*\)", "]", line)
         for sent in re.split(r'(?<=[.!?])\**\s+(?=[A-Z"*\[`])', line):

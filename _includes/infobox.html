@@ -29,6 +29,25 @@
         {%- endif %}
       {%- endfor %}
     {%- endfor %}
+    {%- comment -%}
+      Optional protocol field set:
+      protocol:
+        spec: "[BIP-341](…)"           reference_implementation: "…"
+        other_implementations: "…"     activated: "Block 709,632 (14 Nov 2021)"
+        superseded_by: "…"
+    {%- endcomment -%}
+    {%- assign proto = box.protocol -%}
+    {%- if proto %}
+    <tr><th colspan="2" class="infobox-header">{{ proto.header | default: "Protocol" }}</th></tr>
+      {%- assign proto_fields = "spec|Spec,reference_implementation|Reference implementation,other_implementations|Other implementations,activated|Activated,superseded_by|Superseded by" | split: "," -%}
+      {%- for f in proto_fields %}
+        {%- assign kv = f | split: "|" -%}
+        {%- assign val = proto[kv[0]] -%}
+        {%- if val %}
+    <tr><th scope="row" class="infobox-label">{{ kv[1] }}</th><td class="infobox-data">{{ val | markdownify | remove: '<p>' | remove: '</p>' | strip }}</td></tr>
+        {%- endif %}
+      {%- endfor %}
+    {%- endif %}
   </tbody>
 </table>
 {%- endif -%}

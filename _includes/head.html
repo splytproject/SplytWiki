@@ -10,6 +10,9 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="{{ '/assets/img/logo.svg' | relative_url }}" type="image/svg+xml">
 <link rel="stylesheet" href="{{ '/assets/css/splytwiki.css' | relative_url }}">
+{%- if page.math %}
+{% include math.html %}
+{%- endif %}
 <script>
 /* Apply saved appearance settings before the page paints. */
 (function () {

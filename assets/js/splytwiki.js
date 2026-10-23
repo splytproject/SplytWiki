@@ -636,6 +636,122 @@
     });
   }
 
+  /* ------------------------------- technical components (COMPONENTS.md) */
+  // Hover ¶ links on every H2/H3, for deep-linking sections.
+  function initHeadingAnchors() {
+    $$('.mw-parser-output h2[id], .mw-parser-output h3[id]').forEach(function (h) {
+      if (h.closest('.infobox') || $('.heading-anchor', h)) return;
+      var a = doc.createElement('a');
+      a.className = 'heading-anchor';
+      a.href = '#' + h.id;
+      a.textContent = '¶';
+      a.setAttribute('aria-label', 'Link to section: ' + h.textContent.trim());
+      h.appendChild(a);
+    });
+  }
+
+  // Copy button on highlighted code blocks.
+  function initCodeCopy() {
+    if (!navigator.clipboard) return;
+    $$('.mw-parser-output div.highlighter-rouge').forEach(function (block) {
+      if (block.classList.contains('language-mermaid')) return;
+      var code = $('code', block) || $('pre', block);
+      if (!code) return;
+      var btn = doc.createElement('button');
+      btn.type = 'button';
+      btn.className = 'code-copy';
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', function () {
+        navigator.clipboard.writeText(code.textContent.replace(/\n$/, '')).then(function () {
+          btn.textContent = 'Copied';
+          setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+        });
+      });
+      block.appendChild(btn);
+    });
+  }
+
+  // "Verified against" badge: re-check the 12-month age against today's date.
+  function initVerifiedBadge() {
+    var badge = $('.verified-badge[data-verified]');
+    if (!badge) return;
+    var then = Date.parse(badge.getAttribute('data-verified') + 'T00:00:00Z');
+    if (isNaN(then)) return;
+    badge.classList.toggle('is-stale', Date.now() - then > 365 * 864e5);
+  }
+
+  // Mermaid: loaded from a CDN only when a ```mermaid block is on the page
+  // and about to scroll into view. Re-rendered when the colour theme changes.
+  // The ES-module build fetches only the chunks a diagram type needs (~80 KB core,
+  // against ~760 KB for the single-file build).
+  var MERMAID_SRC = 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs';
+  var mermaidBoxes = [];
+  var mermaidPromise = null;
+  function isDark() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t === 'dark';
+    return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }
+  function loadMermaid() {
+    if (!mermaidPromise) {
+      try {
+        // Wrapped so browsers without dynamic import() can still parse this file.
+        mermaidPromise = new Function('u', 'return import(u)')(MERMAID_SRC)
+          .then(function (m) { return m.default; });
+      } catch (e) {
+        mermaidPromise = Promise.reject(e);
+      }
+    }
+    return mermaidPromise;
+  }
+  function renderMermaid() {
+    var boxes = mermaidBoxes.filter(function (b) { return b.getAttribute('data-wanted') === '1'; });
+    if (!boxes.length) return;
+    loadMermaid().then(function (mermaid) {
+      mermaid.initialize({ startOnLoad: false, securityLevel: 'strict', theme: isDark() ? 'dark' : 'neutral',
+        fontFamily: getComputedStyle(doc.body).fontFamily });
+      boxes.forEach(function (b, i) {
+        var id = 'mmd-' + mermaidBoxes.indexOf(b) + '-' + Date.now();
+        mermaid.render(id, b.getAttribute('data-src')).then(function (r) {
+          b.innerHTML = r.svg;
+          b.classList.remove('is-loading');
+        }).catch(function () { b.classList.remove('is-loading'); });
+      });
+    }).catch(function () { /* offline: the source text stays visible */ });
+  }
+  function initMermaid() {
+    $$('.mw-parser-output .language-mermaid').forEach(function (block) {
+      var box = doc.createElement('div');
+      box.className = 'mermaid-diagram is-loading';
+      box.setAttribute('data-src', block.textContent.trim());
+      box.setAttribute('role', 'img');
+      box.textContent = block.textContent.trim();
+      block.parentNode.replaceChild(box, block);
+      mermaidBoxes.push(box);
+    });
+    if (!mermaidBoxes.length) return;
+    var want = function (b) { b.setAttribute('data-wanted', '1'); };
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        var any = false;
+        entries.forEach(function (e) {
+          if (e.isIntersecting && e.target.getAttribute('data-wanted') !== '1') { want(e.target); io.unobserve(e.target); any = true; }
+        });
+        if (any) renderMermaid();
+      }, { rootMargin: '400px 0px' });
+      mermaidBoxes.forEach(function (b) { io.observe(b); });
+    } else {
+      mermaidBoxes.forEach(want);
+      renderMermaid();
+    }
+    // Re-render in the new colours when the reader switches theme.
+    new MutationObserver(renderMermaid).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      if (mq.addEventListener) mq.addEventListener('change', renderMermaid);
+    }
+  }
+
   /* ------------------------------------------------------------ start */
   initAppearance();
   initHeader();
@@ -649,4 +765,8 @@
   initMainPage();
   initRequestNotice();
   initSortable();
+  initHeadingAnchors();
+  initCodeCopy();
+  initVerifiedBadge();
+  initMermaid();
 })();

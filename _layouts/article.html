@@ -20,6 +20,7 @@ layout: default
 </div>
 <div id="bodyContent" class="vector-body">
   <div id="siteSub">{{ t.site_sub }}</div>
+  {% include article-meta.html %}
   <div class="mw-parser-output">
     {%- if page.hatnote %}
     <div class="hatnote">{{ page.hatnote | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>

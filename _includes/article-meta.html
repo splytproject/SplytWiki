@@ -1,0 +1,49 @@
+{%- comment -%}
+  Under the article title: "Verified against" badge, difficulty pill and prerequisites.
+  Driven by the front-matter fields verified_against, last_verified, difficulty and
+  prerequisites (docs/STYLE.md). Renders nothing when they are empty.
+  The badge turns amber when last_verified is more than 12 months before the build;
+  splytwiki.js re-checks the age against the reader's date.
+{%- endcomment -%}
+{%- assign am_has_verified = false -%}
+{%- if page.verified_against != "" and page.verified_against -%}{%- assign am_has_verified = true -%}{%- endif -%}
+{%- if page.last_verified != "" and page.last_verified -%}{%- assign am_has_verified = true -%}{%- endif -%}
+{%- assign am_has_prereq = false -%}
+{%- if page.prerequisites and page.prerequisites.size > 0 -%}{%- assign am_has_prereq = true -%}{%- endif -%}
+{%- assign am_has_diff = false -%}
+{%- if page.difficulty != "" and page.difficulty -%}{%- assign am_has_diff = true -%}{%- endif -%}
+{%- assign am_show = false -%}
+{%- if am_has_verified -%}{%- assign am_show = true -%}{%- endif -%}
+{%- if am_has_diff -%}{%- assign am_show = true -%}{%- endif -%}
+{%- if am_has_prereq -%}{%- assign am_show = true -%}{%- endif -%}
+{%- if am_show -%}
+<div class="article-meta">
+  {%- if am_has_verified %}
+  {%- assign am_stale = false -%}
+  {%- if page.last_verified != "" and page.last_verified -%}
+    {%- assign am_then = page.last_verified | date: "%s" | plus: 0 -%}
+    {%- assign am_now = site.time | date: "%s" | plus: 0 -%}
+    {%- assign am_age = am_now | minus: am_then -%}
+    {%- if am_age > 31536000 -%}{%- assign am_stale = true -%}{%- endif -%}
+  {%- endif %}
+  <span class="verified-badge{% if am_stale %} is-stale{% endif %}"{% if page.last_verified != "" and page.last_verified %} data-verified="{{ page.last_verified | date: '%Y-%m-%d' }}"{% endif %}>
+    <svg class="verified-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1 2 3.5V8c0 3.3 2.6 6.3 6 7 3.4-.7 6-3.7 6-7V3.5zm-1 10L4 8l1.1-1.1L7 8.8l3.9-3.9L12 6z"/></svg>
+    <span>{% if page.verified_against != "" and page.verified_against %}Verified against <strong>{{ page.verified_against }}</strong>{% else %}Last verified{% endif %}{% if page.last_verified != "" and page.last_verified %} on {% include date.html date=page.last_verified %}{% endif %}</span>
+    <span class="verified-stale-note">· may be outdated</span>
+  </span>
+  {%- endif %}
+  {%- if am_has_diff %}
+  {%- assign am_level = page.difficulty | downcase -%}
+  <span class="difficulty-pill difficulty-{{ am_level }}" title="Difficulty">{{ am_level | capitalize }}</span>
+  {%- endif %}
+  {%- if am_has_prereq %}
+  <span class="prerequisites"><span class="prerequisites-label">Prerequisites:</span>
+    {%- for am_slug in page.prerequisites -%}
+      {%- assign am_url = "/wiki/" | append: am_slug | append: "/" -%}
+      {%- assign am_doc = site.wiki | where: "url", am_url | first -%}
+      {% if am_doc %}<a href="{{ am_url | relative_url }}">{{ am_doc.title }}</a>{% else %}<a class="new" href="{{ am_url | relative_url }}">{{ am_slug | replace: "_", " " }}</a>{% endif %}{% unless forloop.last %}, {% endunless %}
+    {%- endfor -%}
+  </span>
+  {%- endif %}
+</div>
+{%- endif -%}
