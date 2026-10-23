@@ -25,6 +25,8 @@ def check(path):
     body = parts[2] if len(parts) == 3 else text
     problems = []
 
+    if re.search(r"[\x00-\x08\x0b\x0c\x0e-\x1f]|\r(?!\n)", body):
+        problems.append("control character in text (often a mangled LaTeX command such as \\frac or \\right)")
     if re.search(r"\[\^\s*\n", body):
         problems.append("footnote marker broken across a line break")
     for k in sorted(set(re.findall(r"\[\^([^\]\s]*[^\w\]\s-][^\]\s]*)\]", body))):

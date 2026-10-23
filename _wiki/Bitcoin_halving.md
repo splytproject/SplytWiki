@@ -66,9 +66,7 @@ timeline
 
 Because the subsidy halves again and again, the total number of bitcoins that will ever be created forms a shrinking series:
 
-$$S = 210\,000 	imes \sum_{i=0}^{32} \left\lfloor rac{50 	imes 10^{8}}{2^{i}} 
-ight
-floor = 2\,099\,999\,997\,690\,000 	ext{ satoshis}$$
+$$S = 210\,000 \times \sum_{i=0}^{32} \left\lfloor \frac{50 \times 10^{8}}{2^{i}} \right\rfloor = 2\,099\,999\,997\,690\,000 \text{ satoshis}$$
 
 Here $$S$$ is the total subsidy ever issued and $i$ is the halving era, starting at 0. Each era lasts 210,000 blocks. The sum approaches, but never quite reaches, 21 million. Since bitcoin amounts are recorded in whole **satoshis** (hundred-millionths of a bitcoin), the subsidy eventually rounds down to zero. This is expected around the year 2140, at block 6,930,000, after 33 halvings. By then the total supply will be about 20,999,999.9769 bitcoins.[^supply]
 
