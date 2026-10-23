@@ -27,6 +27,8 @@ def check(path):
 
     if re.search(r"\[\^\s*\n", body):
         problems.append("footnote marker broken across a line break")
+    for k in sorted(set(re.findall(r"\[\^([^\]\s]*[^\w\]\s-][^\]\s]*)\]", body))):
+        problems.append(f"footnote name [^{k}] has characters kramdown rejects (use letters, digits, - and _)")
     used = set(re.findall(r"\[\^([\w.-]+)\](?!:)", body))
     defined = set(re.findall(r"^\[\^([\w.-]+)\]:", body, re.M))
     for k in sorted(used - defined):

@@ -3,8 +3,8 @@ title: OP_RETURN policy dispute (2025–2026)
 description: Dated, sourced account of the 2025–2026 dispute over Bitcoin Core's OP_RETURN relay limit, Bitcoin Knots' response, BIP-110 and the August 2026 chain split
 aliases: [OP_RETURN debate, Datacarrier dispute, BIP-110 chain split, Core vs Knots]
 categories: [Bitcoin, Policy, Debates, Software, History]
-updated: 2026-10-20
-last_modified: 2026-10-20
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: OP_RETURN policy dispute
@@ -29,7 +29,7 @@ This article records what each side proposed, what changed in each software rele
 
 ### OP_RETURN and relay policy
 
-An **OP_RETURN output** is a transaction output that can never be spent, so nodes need not keep it in the set of unspent coins. Bitcoin Core 0.9.0 (2014) began relaying such outputs. Its release notes said this was "not an endorsement of storing data in the blockchain". They described it as a less harmful alternative to data stored in unspendable ordinary outputs.[^rn-0.9.0]
+An **OP_RETURN output** is a transaction output that can never be spent, so nodes need not keep it in the set of unspent coins. Bitcoin Core 0.9.0 (2014) began relaying such outputs. Its release notes said this was "not an endorsement of storing data in the blockchain". They described it as a less harmful alternative to data stored in unspendable ordinary outputs.[^rn-0-9-0]
 
 The size limit is **policy**, not consensus. It controls what a node relays and mines by default. Blocks containing larger OP_RETURN outputs were always valid.[^poinsot-1] See [Mempool](../Mempool/) for the distinction.
 
@@ -61,7 +61,7 @@ The statement also said that "knowingly refusing to relay transactions that mine
 
 ### Bitcoin Core 30.0 (10 October 2025)
 
-Bitcoin Core 30.0 shipped the change:[^rn-30.0]
+Bitcoin Core 30.0 shipped the change:[^rn-30-0]
 
 - `-datacarriersize` defaults to 100,000 bytes, which "effectively uncaps the limit".
 - Multiple OP_RETURN outputs per transaction are allowed. The size limit applies to their combined size.
@@ -69,12 +69,12 @@ Bitcoin Core 30.0 shipped the change:[^rn-30.0]
 
 ## Bitcoin Knots' response
 
-**Bitcoin Knots** is a node implementation maintained by Luke Dashjr, based on Bitcoin Core with additional options and stricter default filters.[^knots-29.1]
+**Bitcoin Knots** is a node implementation maintained by Luke Dashjr, based on Bitcoin Core with additional options and stricter default filters.[^knots-29-1]
 
 ### Filter releases (2025)
 
-- **29.1.knots20250903** (September 2025) added a `-permitbaredatacarrier` option, off by default, and updated filters to detect a format it calls "OLGA" spam.[^knots-29.1]
-- **29.2.knots20251110** (November 2025) raised Knots' default `-datacarriersize` to 83 bytes. Its notes said this was "not ideal", but avoided breaking legacy protocols "as Knots adoption grows".[^knots-29.2]
+- **29.1.knots20250903** (September 2025) added a `-permitbaredatacarrier` option, off by default, and updated filters to detect a format it calls "OLGA" spam.[^knots-29-1]
+- **29.2.knots20251110** (November 2025) raised Knots' default `-datacarriersize` to 83 bytes. Its notes said this was "not ideal", but avoided breaking legacy protocols "as Knots adoption grows".[^knots-29-2]
 
 ### BIP-110: Reduced Data Temporary Softfork
 
@@ -86,7 +86,7 @@ BIP-110, by Dathon Ohm, was assigned on 3 December 2025. It credits Luke Dashjr 
 
 Coins created before activation are exempt from all the rules.[^bip110] Activation used miner signalling with a 55% threshold, and a **mandatory signalling** period. During that period, nodes enforcing BIP-110 would reject blocks that did not signal.[^bip110]
 
-Knots 29.3 shipped in two builds in May 2026. The 20260507 build did not include BIP-110.[^knots-29.3a] The 20260508 build did, and required the setting `consensusrules=rdts` to confirm.[^knots-29.3b]
+Knots 29.3 shipped in two builds in May 2026. The 20260507 build did not include BIP-110.[^knots-29-3a] The 20260508 build did, and required the setting `consensusrules=rdts` to confirm.[^knots-29-3b]
 
 ### The August 2026 chain split
 
@@ -98,18 +98,18 @@ On 9 August, Jon Atack proposed marking BIP-110 Closed. He wrote that it "split 
 
 ### Knots hard fork to BLAKE2b (September 2026)
 
-On 2 September 2026, Knots 29.4.1 shipped what its notes call "a backward-incompatible protocol change".[^knots-29.4.1] The changes include:[^knots-29.4.1]
+On 2 September 2026, Knots 29.4.1 shipped what its notes call "a backward-incompatible protocol change".[^knots-29-4-1] The changes include:[^knots-29-4-1]
 
 - A **BLAKE2b proof-of-work algorithm**, replacing SHA-256d.
 - Activation of BIP-110 at the hard fork, and removal of its consent setting.
 - A temporary 800,000-weight-unit block limit.
 - A new opt-in signature format, `SIGHASH_UNIFIED`, which can be used to separate coins between the chains.
 
-Knots 29.4.2 (21 September 2026) extended the waiting period before newly mined coins can be spent from 100 blocks to 45 days.[^knots-29.4.2]
+Knots 29.4.2 (21 September 2026) extended the waiting period before newly mined coins can be spent from 100 blocks to 45 days.[^knots-29-4-2]
 
-The two sides describe the result differently. Knots' release notes say that on 8 August "most former miners abandoned Bitcoin en masse". They call the chain followed by Bitcoin Core "a new altcoin". They describe the events as "the biggest attack on the Bitcoin network to date".[^knots-29.4.1] The BIPs repository and Bitcoin Optech describe the BIP-110 chain as the one that split off.[^pr-2245][^optech-418]
+The two sides describe the result differently. Knots' release notes say that on 8 August "most former miners abandoned Bitcoin en masse". They call the chain followed by Bitcoin Core "a new altcoin". They describe the events as "the biggest attack on the Bitcoin network to date".[^knots-29-4-1] The BIPs repository and Bitcoin Optech describe the BIP-110 chain as the one that split off.[^pr-2245][^optech-418]
 
-As of October 2026, nodes running Bitcoin Core and SHA-256 miners follow one chain. Nodes running Knots 29.4.1 or later follow the BLAKE2b chain.[^knots-29.4.1]
+As of October 2026, nodes running Bitcoin Core and SHA-256 miners follow one chain. Nodes running Knots 29.4.1 or later follow the BLAKE2b chain.[^knots-29-4-1]
 
 ## Arguments
 
@@ -164,14 +164,14 @@ His crawler counted 5,468 listening nodes, far fewer than Bitnodes' reachable co
 
 | Release | Date | Change |
 |---|---|---|
-| Bitcoin Core 30.0 | 10 Oct 2025 | `-datacarriersize` default 100,000; multiple OP_RETURN outputs allowed; `-datacarrier*` options deprecated.[^rn-30.0][^pr-32406] |
-| Knots 29.1.knots20250903 | 4 Sep 2025 | `-permitbaredatacarrier` (default off); filters updated for "OLGA".[^knots-29.1] |
-| Knots 29.2.knots20251110 | 10 Nov 2025 | Default `-datacarriersize` raised to 83 bytes.[^knots-29.2] |
-| Knots 29.3.knots20260507 | 8 May 2026 | New filters; datacarrier options match a newer data format; no BIP-110.[^knots-29.3a] |
-| Knots 29.3.knots20260508 | 9 May 2026 | As above, plus BIP-110 enforcement after `consensusrules=rdts` is set.[^knots-29.3b] |
-| Knots 29.4.knots20260508 | 7 Aug 2026 | Detects chainstate corruption from running node software that does not enforce BIP-110.[^knots-29.4] |
-| Knots 29.4.1.knots20260508 | 2 Sep 2026 | Hard fork: BLAKE2b proof of work, BIP-110 activated at the fork, 800,000 WU block limit, `SIGHASH_UNIFIED`; `-rejecttokens` on by default.[^knots-29.4.1] |
-| Knots 29.4.2.knots20260508 | 21 Sep 2026 | Coinbase maturity extended to 45 days; `getdifficulty` RPC removed and a `difficulty_blake2b` field added.[^knots-29.4.2] |
+| Bitcoin Core 30.0 | 10 Oct 2025 | `-datacarriersize` default 100,000; multiple OP_RETURN outputs allowed; `-datacarrier*` options deprecated.[^rn-30-0][^pr-32406] |
+| Knots 29.1.knots20250903 | 4 Sep 2025 | `-permitbaredatacarrier` (default off); filters updated for "OLGA".[^knots-29-1] |
+| Knots 29.2.knots20251110 | 10 Nov 2025 | Default `-datacarriersize` raised to 83 bytes.[^knots-29-2] |
+| Knots 29.3.knots20260507 | 8 May 2026 | New filters; datacarrier options match a newer data format; no BIP-110.[^knots-29-3a] |
+| Knots 29.3.knots20260508 | 9 May 2026 | As above, plus BIP-110 enforcement after `consensusrules=rdts` is set.[^knots-29-3b] |
+| Knots 29.4.knots20260508 | 7 Aug 2026 | Detects chainstate corruption from running node software that does not enforce BIP-110.[^knots-29-4] |
+| Knots 29.4.1.knots20260508 | 2 Sep 2026 | Hard fork: BLAKE2b proof of work, BIP-110 activated at the fork, 800,000 WU block limit, `SIGHASH_UNIFIED`; `-rejecttokens` on by default.[^knots-29-4-1] |
+| Knots 29.4.2.knots20260508 | 21 Sep 2026 | Coinbase maturity extended to 45 days; `getdifficulty` RPC removed and a `difficulty_blake2b` field added.[^knots-29-4-2] |
 
 ## Timeline
 
@@ -184,16 +184,16 @@ His crawler counted 5,468 listening nodes, far fewer than Bitnodes' reachable co
 | 12 May 2025 | PR #32359 closed without merging.[^pr-32359] |
 | 6 Jun 2025 | Contributors' statement on relay policy published.[^statement] |
 | 9 Jun 2025 | PR #32406 merged.[^pr-32406] |
-| 4 Sep 2025 | Knots 29.1 released with new filters.[^knots-29.1] |
-| 10 Oct 2025 | Bitcoin Core 30.0 released.[^rn-30.0] |
-| 10 Nov 2025 | Knots raises default `-datacarriersize` to 83 bytes.[^knots-29.2] |
+| 4 Sep 2025 | Knots 29.1 released with new filters.[^knots-29-1] |
+| 10 Oct 2025 | Bitcoin Core 30.0 released.[^rn-30-0] |
+| 10 Nov 2025 | Knots raises default `-datacarriersize` to 83 bytes.[^knots-29-2] |
 | 3 Dec 2025 | BIP-110 assigned.[^bip110] |
-| 9 May 2026 | Knots ships a build enforcing BIP-110.[^knots-29.3b] |
+| 9 May 2026 | Knots ships a build enforcing BIP-110.[^knots-29-3b] |
 | 4 Aug 2026 | Signalling hashrate reported as under 3%.[^optech-416] |
 | 8 Aug 2026 | Mandatory signalling begins; BIP-110 chain splits and stalls.[^pr-2245] |
 | 10 Aug 2026 | BIP-110 marked Closed.[^bip110] |
-| 2 Sep 2026 | Knots 29.4.1 hard-forks to BLAKE2b proof of work.[^knots-29.4.1] |
-| 21 Sep 2026 | Knots 29.4.2 extends coinbase maturity to 45 days.[^knots-29.4.2] |
+| 2 Sep 2026 | Knots 29.4.1 hard-forks to BLAKE2b proof of work.[^knots-29-4-1] |
+| 21 Sep 2026 | Knots 29.4.2 extends coinbase maturity to 45 days.[^knots-29-4-2] |
 
 ## See also
 
@@ -205,26 +205,26 @@ His crawler counted 5,468 listening nodes, far fewer than Bitnodes' reachable co
 
 ## References
 
-[^rn-0.9.0]: ["Bitcoin Core 0.9.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.9.0.md). *Bitcoin Core* repository. March 2014.
+[^rn-0-9-0]: ["Bitcoin Core 0.9.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.9.0.md). *Bitcoin Core* repository. March 2014.
 [^poinsot-1]: Poinsot, Antoine (17 April 2025). ["Relax OP_RETURN standardness restrictions"](https://mirror.b10c.me/lists/bitcoindev/rhfyCHr4RfaEalbfGejVdolYCVWIyf84PT2062DQbs5-eU8BPYty5sGyvI3hKeRZQtVC7rn_ugjUWFnWCymz9e9Chbn7FjWJePllFhZRKYk=@protonmail.com/). *bitcoindev mailing list*.
 [^thread]: ["Relax OP_RETURN standardness restrictions" (thread)](https://groups.google.com/g/bitcoindev/c/d6ZO7gXGYbQ). *bitcoindev mailing list*. 17 April – 25 May 2025.
 [^pr-32359]: Todd, Peter (27 April 2025). ["Remove arbitrary limits on OP_Return (datacarrier) outputs" (PR #32359)](https://github.com/bitcoin/bitcoin/pull/32359). *Bitcoin Core* GitHub. Closed 12 May 2025.
 [^pr-32406]: Sanders, Greg (2 May 2025). ["policy: uncap datacarrier by default" (PR #32406)](https://github.com/bitcoin/bitcoin/pull/32406). *Bitcoin Core* GitHub. Merged 9 June 2025.
 [^statement]: ["Bitcoin Core development and transaction relay policy"](https://bitcoincore.org/en/2025/06/06/relay-statement/). *bitcoincore.org*. 6 June 2025.
-[^rn-30.0]: ["Bitcoin Core 30.0 released"](https://bitcoincore.org/en/releases/30.0/). *bitcoincore.org*. 10 October 2025.
+[^rn-30-0]: ["Bitcoin Core 30.0 released"](https://bitcoincore.org/en/releases/30.0/). *bitcoincore.org*. 10 October 2025.
 [^dashjr-1]: Dashjr, Luke (26 April 2025). [Reply in "Relax OP_RETURN standardness restrictions"](https://mirror.b10c.me/lists/bitcoindev/03be4934-f0ff-4b58-880d-861d63a4f970@dashjr.org/). *bitcoindev mailing list*.
 [^dashjr-2]: Dashjr, Luke (26 April 2025). [Second reply in the same thread](https://mirror.b10c.me/lists/bitcoindev/d18b4149-5523-44bd-8332-2b7962f4b674@dashjr.org/). *bitcoindev mailing list*.
 [^guida]: Guida, Chris (30 April 2025). [Reply in "Relax OP_RETURN standardness restrictions"](https://mirror.b10c.me/lists/bitcoindev/CAAANnUy08NBOq3B++80Rpna2qkD6NJV9RdV9v0Oi8c3G8eq_4g@mail.gmail.com/). *bitcoindev mailing list*.
 [^hughes]: Hughes, Jason (28 April 2025). [Reply in "Relax OP_RETURN standardness restrictions"](https://mirror.b10c.me/lists/bitcoindev/f4f6831a-d6b8-4f32-8a4e-c0669cc0a7b8n@googlegroups.com/). *bitcoindev mailing list*.
 [^wuille]: Wuille, Pieter (26 April 2025). [Reply in "Relax OP_RETURN standardness restrictions"](https://mirror.b10c.me/lists/bitcoindev/QMywWcEgJgWmiQzASR17Dt42oLGgG-t3bkf0vzGemDVNVnvVaD64eM34nOQHlBLv8nDmeBEyTXvBUkM2hZEfjwMTrzzoLl1_62MYPz8ZThs=@wuille.net/). *bitcoindev mailing list*.
 [^maxwell]: Maxwell, Greg (2 May 2025). [Reply in "Relax OP_RETURN standardness restrictions"](https://mirror.b10c.me/lists/bitcoindev/9c50244f-0ca0-40a5-8b76-01ba0d67ec1bn@googlegroups.com/). *bitcoindev mailing list*.
-[^knots-29.1]: ["Bitcoin Knots v29.1.knots20250903"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.1.knots20250903). *Bitcoin Knots* GitHub release notes. 4 September 2025.
-[^knots-29.2]: ["Bitcoin Knots v29.2.knots20251110"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.2.knots20251110). *Bitcoin Knots* GitHub release notes. 10 November 2025.
-[^knots-29.3a]: ["Bitcoin Knots v29.3.knots20260507"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.3.knots20260507). *Bitcoin Knots* GitHub release notes. 8 May 2026.
-[^knots-29.3b]: ["Bitcoin Knots v29.3.knots20260508"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.3.knots20260508). *Bitcoin Knots* GitHub release notes. 9 May 2026.
-[^knots-29.4]: ["Bitcoin Knots v29.4.knots20260508"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.4.knots20260508). *Bitcoin Knots* GitHub release notes. 7 August 2026.
-[^knots-29.4.1]: ["Bitcoin Knots v29.4.1.knots20260508"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.4.1.knots20260508). *Bitcoin Knots* GitHub release notes. 2 September 2026.
-[^knots-29.4.2]: ["Bitcoin Knots v29.4.2.knots20260508"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.4.2.knots20260508). *Bitcoin Knots* GitHub release notes. 21 September 2026.
+[^knots-29-1]: ["Bitcoin Knots v29.1.knots20250903"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.1.knots20250903). *Bitcoin Knots* GitHub release notes. 4 September 2025.
+[^knots-29-2]: ["Bitcoin Knots v29.2.knots20251110"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.2.knots20251110). *Bitcoin Knots* GitHub release notes. 10 November 2025.
+[^knots-29-3a]: ["Bitcoin Knots v29.3.knots20260507"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.3.knots20260507). *Bitcoin Knots* GitHub release notes. 8 May 2026.
+[^knots-29-3b]: ["Bitcoin Knots v29.3.knots20260508"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.3.knots20260508). *Bitcoin Knots* GitHub release notes. 9 May 2026.
+[^knots-29-4]: ["Bitcoin Knots v29.4.knots20260508"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.4.knots20260508). *Bitcoin Knots* GitHub release notes. 7 August 2026.
+[^knots-29-4-1]: ["Bitcoin Knots v29.4.1.knots20260508"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.4.1.knots20260508). *Bitcoin Knots* GitHub release notes. 2 September 2026.
+[^knots-29-4-2]: ["Bitcoin Knots v29.4.2.knots20260508"](https://github.com/bitcoinknots/bitcoin/releases/tag/v29.4.2.knots20260508). *Bitcoin Knots* GitHub release notes. 21 September 2026.
 [^bip110]: Ohm, Dathon. ["BIP 110: Reduced Data Temporary Softfork"](https://github.com/bitcoin/bips/blob/master/bip-0110.mediawiki). *Bitcoin Improvement Proposals*. Assigned 3 December 2025; status Closed (version 1.0.1, 9 August 2026).
 [^pr-2245]: Atack, Jon (9 August 2026). ["BIP 110: update status to Closed" (PR #2245)](https://github.com/bitcoin/bips/pull/2245). *bitcoin/bips* GitHub. Merged 10 August 2026.
 [^optech-416]: ["Bitcoin Optech Newsletter #416 Recap Podcast"](https://bitcoinops.org/en/podcast/2026/08/04/). *Bitcoin Optech*. 4 August 2026.

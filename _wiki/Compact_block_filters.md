@@ -3,8 +3,8 @@ title: Compact block filters
 description: BIP-157 and BIP-158 compact block filters — how light clients find their transactions without revealing their addresses, the Neutrino client, the trust model, and deployment in Bitcoin Core as of October 2026
 aliases: [BIP-157, BIP-158, Neutrino, Client-side block filtering, Golomb-coded sets]
 categories: [Bitcoin, Protocol, Light clients, Privacy]
-updated: 2026-10-20
-last_modified: 2026-10-20
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: Compact block filters
@@ -94,13 +94,13 @@ The protocol is sometimes called "Neutrino" after this library. Optech notes tha
 
 | Release | Date | Change |
 |---|---|---|
-| 0.19.0 | Nov 2019 | `-blockfilterindex` builds BIP-158 filters; `getblockfilter` RPC returns them (#14121).[^rn-0.19] |
-| 0.21.0 | Jan 2021 | `-peerblockfilters` serves filters to peers over BIP-157 (#16442).[^rn-0.21] |
+| 0.19.0 | Nov 2019 | `-blockfilterindex` builds BIP-158 filters; `getblockfilter` RPC returns them (#14121).[^rn-0-19] |
+| 0.21.0 | Jan 2021 | `-peerblockfilters` serves filters to peers over BIP-157 (#16442).[^rn-0-21] |
 | — | 2021 | Pruned nodes may retain filters (#15946).[^optech-cbf] |
 | — | 2022 | REST endpoint for filters (#17631); wallet rescans use local filters (#25957).[^optech-cbf] |
 | 25.0 | May 2023 | `scanblocks` RPC finds blocks matching descriptors using the local filter index (#23549).[^rn-25] |
 
-Serving filters is off by default. Both `-blockfilterindex=1` and `-peerblockfilters=1` must be set.[^rn-0.21]
+Serving filters is off by default. Both `-blockfilterindex=1` and `-peerblockfilters=1` must be set.[^rn-0-21]
 
 As of 20 October 2026, 7,922 of 25,649 reachable nodes in a Bitnodes snapshot advertised `NODE_COMPACT_FILTERS`, about 31%.[^bitnodes]
 
@@ -122,7 +122,7 @@ bitcoin-cli scanblocks start '["addr(bc1q...)"]'
 curl http://127.0.0.1:8332/rest/blockfilter/basic/<blockhash>.json
 ```
 
-`getblockfilter` returns the filter and its header for one block.[^rn-0.19] `scanblocks` returns the hashes of blocks whose filters match a set of [descriptors](../Miniscript_and_output_descriptors/).[^rn-25]
+`getblockfilter` returns the filter and its header for one block.[^rn-0-19] `scanblocks` returns the hashes of blocks whose filters match a set of [descriptors](../Miniscript_and_output_descriptors/).[^rn-25]
 
 ### Source files
 
@@ -152,8 +152,8 @@ curl http://127.0.0.1:8332/rest/blockfilter/basic/<blockhash>.json
 [^bip158]: Osuntokun, Olaoluwa. ["BIP 158: Compact Block Filters for Light Clients"](https://github.com/bitcoin/bips/blob/master/bip-0158.mediawiki). *Bitcoin Improvement Proposals*. Status: Deployed (as of October 2026).
 [^optech-cbf]: ["Compact block filters"](https://bitcoinops.org/en/topics/compact-block-filters/). *Bitcoin Optech* topics. Retrieved October 2026.
 [^neutrino]: ["Neutrino: Privacy-Preserving Bitcoin Light Client" (README)](https://github.com/lightninglabs/neutrino). *Lightning Labs*, GitHub.
-[^rn-0.19]: ["Bitcoin Core 0.19.0.1 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.19.0.1.md). *Bitcoin Core*. November 2019.
-[^rn-0.21]: ["Bitcoin Core 0.21.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.0.md). *Bitcoin Core*. January 2021.
+[^rn-0-19]: ["Bitcoin Core 0.19.0.1 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.19.0.1.md). *Bitcoin Core*. November 2019.
+[^rn-0-21]: ["Bitcoin Core 0.21.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.0.md). *Bitcoin Core*. January 2021.
 [^rn-25]: ["Bitcoin Core 25.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-25.0.md). *Bitcoin Core*. May 2023.
 [^protocol-h]: ["src/protocol.h"](https://github.com/bitcoin/bitcoin/blob/master/src/protocol.h). *Bitcoin Core* source code.
 [^core-blockfilter]: ["src/blockfilter.cpp"](https://github.com/bitcoin/bitcoin/blob/master/src/blockfilter.cpp). *Bitcoin Core* source code.

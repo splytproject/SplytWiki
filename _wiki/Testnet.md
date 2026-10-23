@@ -39,7 +39,7 @@ No single design satisfies every need. A developer debugging a wallet wants inst
 
 Its consensus parameters are relaxed. The proof-of-work target is set so that almost any hash qualifies, and difficulty never retargets.[^chainparams] The block subsidy halves every 150 blocks rather than every 210,000, so a developer can reach later subsidy eras in minutes.[^chainparams]
 
-Blocks are created with RPCs. The `generatetoaddress` RPC mines to an address, and `generatetodescriptor` mines to an [output descriptor](../Miniscript_and_output_descriptors/) (0.20.0).[^rn-0.20] The `generateblock` RPC builds a block from a chosen set of transactions (0.21.0).[^rn-0.21] Bitcoin Core's own functional test suite runs on regtest.[^test-framework]
+Blocks are created with RPCs. The `generatetoaddress` RPC mines to an address, and `generatetodescriptor` mines to an [output descriptor](../Miniscript_and_output_descriptors/) (0.20.0).[^rn-0-20] The `generateblock` RPC builds a block from a chosen set of transactions (0.21.0).[^rn-0-21] Bitcoin Core's own functional test suite runs on regtest.[^test-framework]
 
 Since Bitcoin Core 29.0, the BIP-94 timewarp rule is off by default on regtest, so tests can create blocks with arbitrary timestamps.[^rn-29]
 
@@ -61,7 +61,7 @@ All signets share one genesis block. Each is told apart by its network magic, de
 
 ### Deployment
 
-Bitcoin Core 0.21.0 (January 2021) added signet support. One public signet, selected with `-signet`, is maintained by the project. Custom signets use `-signetchallenge` and `-signetseednode`.[^rn-0.21] Taproot's rules were active on the default signet before mainnet activation, so it served as the first place to test them.[^rn-0.21]
+Bitcoin Core 0.21.0 (January 2021) added signet support. One public signet, selected with `-signet`, is maintained by the project. Custom signets use `-signetchallenge` and `-signetseednode`.[^rn-0-21] Taproot's rules were active on the default signet before mainnet activation, so it served as the first place to test them.[^rn-0-21]
 
 The default signet is also where **Bitcoin Inquisition**, a fork of Bitcoin Core, deploys proposed soft forks for testing. As of October 2026, those include CTV, OP_CAT, CSFS and OP_TEMPLATEHASH.[^inq] See [Covenant proposals](../Covenant_proposals/).
 
@@ -125,7 +125,7 @@ bitcoind -testnet4 -daemon
 bitcoind -testnet -daemon                   # testnet3, deprecated
 ```
 
-`bitcoin-cli getblockchaininfo` reports the active chain in its `chain` field. Regtest-only RPCs include `generatetoaddress`, `generatetodescriptor` and `generateblock`.[^rn-0.20][^rn-0.21]
+`bitcoin-cli getblockchaininfo` reports the active chain in its `chain` field. Regtest-only RPCs include `generatetoaddress`, `generatetodescriptor` and `generateblock`.[^rn-0-20][^rn-0-21]
 
 ### Source files
 
@@ -137,7 +137,7 @@ bitcoind -testnet -daemon                   # testnet3, deprecated
 
 ### Specifications and reference implementation
 
-- BIP-325 (signet): [bip-0325.mediawiki](https://github.com/bitcoin/bips/blob/master/bip-0325.mediawiki); reference implementation in Bitcoin Core #18267.[^rn-0.21]
+- BIP-325 (signet): [bip-0325.mediawiki](https://github.com/bitcoin/bips/blob/master/bip-0325.mediawiki); reference implementation in Bitcoin Core #18267.[^rn-0-21]
 - BIP-94 (testnet4): [bip-0094.mediawiki](https://github.com/bitcoin/bips/blob/master/bip-0094.mediawiki); reference implementation in Bitcoin Core #29775.[^rn-28]
 
 ## See also
@@ -153,8 +153,8 @@ bitcoind -testnet -daemon                   # testnet3, deprecated
 
 [^bip325]: Alm, Karl-Johan. ["BIP 325: Signet"](https://github.com/bitcoin/bips/blob/master/bip-0325.mediawiki). *Bitcoin Improvement Proposals*. Status: Complete (as of October 2026).
 [^bip94]: Jahr, Fabian. ["BIP 94: Testnet 4"](https://github.com/bitcoin/bips/blob/master/bip-0094.mediawiki). *Bitcoin Improvement Proposals*. Status: Deployed (as of October 2026).
-[^rn-0.20]: ["Bitcoin Core 0.20.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.20.0.md). *Bitcoin Core*. June 2020.
-[^rn-0.21]: ["Bitcoin Core 0.21.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.0.md). *Bitcoin Core*. January 2021.
+[^rn-0-20]: ["Bitcoin Core 0.20.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.20.0.md). *Bitcoin Core*. June 2020.
+[^rn-0-21]: ["Bitcoin Core 0.21.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.0.md). *Bitcoin Core*. January 2021.
 [^rn-28]: ["Bitcoin Core 28.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-28.0.md). *Bitcoin Core*. October 2024.
 [^rn-29]: ["Bitcoin Core 29.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-29.0.md). *Bitcoin Core*. April 2025.
 [^chainparams]: ["src/kernel/chainparams.cpp"](https://github.com/bitcoin/bitcoin/blob/master/src/kernel/chainparams.cpp). *Bitcoin Core* source code, as of October 2026.

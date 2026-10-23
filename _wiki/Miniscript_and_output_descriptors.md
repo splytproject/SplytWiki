@@ -3,8 +3,8 @@ title: Miniscript and output descriptors
 description: Output script descriptors (BIP-380 to BIP-386) and Miniscript (BIP-379) — how wallets describe what they can spend, how Miniscript makes Bitcoin Script analysable, the policy compiler, and Bitcoin Core's descriptor wallets as of October 2026
 aliases: [Output descriptors, Descriptors, Miniscript, Descriptor wallets, BIP-380, BIP-379]
 categories: [Bitcoin, Protocol, Wallets, Scripting]
-updated: 2026-10-20
-last_modified: 2026-10-20
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: Descriptors and Miniscript
@@ -63,7 +63,7 @@ For example, `wsh(sortedmulti(2,KEY1,KEY2,KEY3))` describes 2-of-3 [multisignatu
 
 ### Import and export
 
-A descriptor with public keys is a complete watch-only backup. A descriptor with private keys is a complete spending backup. Bitcoin Core's `importdescriptors` RPC loads descriptors into a wallet, and `listdescriptors` exports them, optionally with private keys.[^rn-22][^rn-0.21] Other wallets that read descriptors include Bitcoin Dev Kit, Specter, Coldcard and BTCPay Server.[^optech-desc]
+A descriptor with public keys is a complete watch-only backup. A descriptor with private keys is a complete spending backup. Bitcoin Core's `importdescriptors` RPC loads descriptors into a wallet, and `listdescriptors` exports them, optionally with private keys.[^rn-22][^rn-0-21] Other wallets that read descriptors include Bitcoin Dev Kit, Specter, Coldcard and BTCPay Server.[^optech-desc]
 
 ## Miniscript
 
@@ -97,9 +97,9 @@ Bitcoin Core's documentation gives a "decaying" multisignature: a 4-of-4 that be
 
 | Release | Date | Change |
 |---|---|---|
-| 0.17.0 | Oct 2018 | Descriptors introduced, first used by `scantxoutset`.[^rn-0.17] |
-| 0.18.0 | May 2019 | `getdescriptorinfo` and `deriveaddresses` RPCs.[^rn-0.18] |
-| 0.21.0 | Jan 2021 | Experimental **descriptor wallets**, stored in SQLite, created with `createwallet ... descriptors=true`; `importdescriptors`.[^rn-0.21] |
+| 0.17.0 | Oct 2018 | Descriptors introduced, first used by `scantxoutset`.[^rn-0-17] |
+| 0.18.0 | May 2019 | `getdescriptorinfo` and `deriveaddresses` RPCs.[^rn-0-18] |
+| 0.21.0 | Jan 2021 | Experimental **descriptor wallets**, stored in SQLite, created with `createwallet ... descriptors=true`; `importdescriptors`.[^rn-0-21] |
 | 22.0 | Sep 2021 | `listdescriptors` RPC; `tr()` import after Taproot activation.[^rn-22] |
 | 23.0 | Apr 2022 | Descriptor wallets become the default; new wallets include a `tr()` descriptor.[^rn-23] |
 | 24.0.1 | Dec 2022 | Miniscript in `wsh()` for watch-only wallets (#24148); experimental `migratewallet` RPC.[^rn-24] |
@@ -166,9 +166,9 @@ bitcoin-cli migratewallet oldwallet                         # legacy -> descript
 [^optech-ms]: ["Miniscript"](https://bitcoinops.org/en/topics/miniscript/). *Bitcoin Optech* topics. Retrieved October 2026.
 [^optech-desc]: ["Output script descriptors"](https://bitcoinops.org/en/topics/output-script-descriptors/). *Bitcoin Optech* topics. Retrieved October 2026.
 [^core-desc]: ["Support for Output Descriptors in Bitcoin Core" (doc/descriptors.md)](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md). *Bitcoin Core* repository, as of October 2026.
-[^rn-0.17]: ["Bitcoin Core 0.17.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.17.0.md). *Bitcoin Core*. October 2018.
-[^rn-0.18]: ["Bitcoin Core 0.18.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.18.0.md). *Bitcoin Core*. May 2019.
-[^rn-0.21]: ["Bitcoin Core 0.21.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.0.md). *Bitcoin Core*. January 2021.
+[^rn-0-17]: ["Bitcoin Core 0.17.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.17.0.md). *Bitcoin Core*. October 2018.
+[^rn-0-18]: ["Bitcoin Core 0.18.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.18.0.md). *Bitcoin Core*. May 2019.
+[^rn-0-21]: ["Bitcoin Core 0.21.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.0.md). *Bitcoin Core*. January 2021.
 [^rn-22]: ["Bitcoin Core 22.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-22.0.md). *Bitcoin Core*. September 2021.
 [^rn-23]: ["Bitcoin Core 23.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-23.0.md). *Bitcoin Core*. April 2022.
 [^rn-24]: ["Bitcoin Core 24.0.1 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-24.0.1.md). *Bitcoin Core*. December 2022.

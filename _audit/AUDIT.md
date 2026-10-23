@@ -133,6 +133,8 @@ Stale-fact flags are leads to check against sources, not confirmed errors.
 - **Merge `9f40fcd`** ("Merge branch 'main' into protocol-deep-dive", 21 Oct 2026) resolved conflicts in favour of older `main` text in 22 articles. It erased most of the deep-dive work on [Mempool](../_wiki/Mempool.md) (3,383 → 449 words), [Taproot](../_wiki/Taproot.md) (2,826 → 784) and [Bitcoin institutionalization debate](../_wiki/Bitcoin_institutionalization_debate.md) (2,361 → 655). It also deleted all 13 reference definitions from [Testnet](../_wiki/Testnet.md), and the live page showed raw `[^bip325]` markers. Elsewhere it re-added "(Add sourcing where appropriate…)" placeholders and links to non-existent pages. All 22 files were restored to the deep-dive versions; later edits to two of them were re-applied.
 - **[PSBT](../_wiki/PSBT.md)** had contained a copy of the UTXO article since commit `c96d085`, an API upload written to the wrong path. The original PSBT article was restored from `4fe2fd3`. It is still thin.
 
+- **Footnote names with dots** (`[^rn-0.21]`, `[^knots-29.4.1]` …) are rejected by kramdown, which allows only letters, digits, `-` and `_`. 49 such references in six articles (AssumeUTXO, Bitcoin Core release history, Compact block filters, Miniscript and output descriptors, OP_RETURN policy dispute, Testnet) rendered as raw text. They were renamed with hyphens, and `reports/check_style.py` now flags the pattern.
+
 ### Duplicate or overlapping articles
 
 | Articles | Overlap | Recommendation |

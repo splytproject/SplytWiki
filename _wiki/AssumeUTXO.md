@@ -3,8 +3,8 @@ title: AssumeUTXO
 description: AssumeUTXO in Bitcoin Core — starting a node from a UTXO snapshot whose hash is hard-coded in the software, the loadtxoutset RPC, background validation, snapshot heights per release, and the trust model, as of October 2026
 aliases: [Assume UTXO, UTXO snapshot, loadtxoutset, dumptxoutset]
 categories: [Bitcoin, Protocol, Bitcoin Core, Node operation]
-updated: 2026-10-20
-last_modified: 2026-10-20
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: AssumeUTXO
@@ -35,7 +35,7 @@ AssumeUTXO goes further. It lets the node "postpone verifying old block chain hi
 
 ### Snapshots
 
-A snapshot is a serialized copy of the UTXO set at one block, the **base block**. The `dumptxoutset` RPC, added in Bitcoin Core 0.20.0, writes one.[^rn-0.20] The hash used to identify a snapshot is a **MuHash**, a hash of the whole set that can be updated incrementally. It was added in 2021 (#19055) in preparation for this feature.[^optech]
+A snapshot is a serialized copy of the UTXO set at one block, the **base block**. The `dumptxoutset` RPC, added in Bitcoin Core 0.20.0, writes one.[^rn-0-20] The hash used to identify a snapshot is a **MuHash**, a hash of the whole set that can be updated incrementally. It was added in 2021 (#19055) in preparation for this feature.[^optech]
 
 Each release of Bitcoin Core carries a short list of accepted snapshots in `src/kernel/chainparams.cpp`. Each entry gives a block height, the block hash, the expected UTXO set hash and the number of coins.[^chainparams] A snapshot loads only if its contents hash to the hard-coded value.[^usage]
 
@@ -55,7 +55,7 @@ The snapshot chainstate lives in a `chainstate_snapshot` directory with a `base_
 
 | Release | Date | Change |
 |---|---|---|
-| 0.20.0 | Jun 2020 | `dumptxoutset` RPC writes a UTXO snapshot.[^rn-0.20] |
+| 0.20.0 | Jun 2020 | `dumptxoutset` RPC writes a UTXO snapshot.[^rn-0-20] |
 | 26.0 | Dec 2023 | `loadtxoutset` RPC; snapshot chainstate and background validation (#27596). Parameters for signet and testnet only.[^rn-26][^optech] |
 | 28.0 | Oct 2024 | First mainnet parameters, at height 840,000 (#28553). New `dumptxoutset` format.[^rn-28] |
 | 29.0 | Apr 2025 | Mainnet height 880,000 added.[^chainparams-29] |
@@ -127,7 +127,7 @@ There is no BIP. The design is documented in the proposal linked from #15606 and
 [^usage]: ["Assumeutxo Usage" (doc/assumeutxo.md)](https://github.com/bitcoin/bitcoin/blob/master/doc/assumeutxo.md). *Bitcoin Core* repository.
 [^optech]: ["Assumeutxo"](https://bitcoinops.org/en/topics/assumeutxo/). *Bitcoin Optech* topics. Retrieved October 2026.
 [^pr15606]: O'Beirne, James (15 March 2019). ["assumeutxo" (PR #15606)](https://github.com/bitcoin/bitcoin/pull/15606). *Bitcoin Core* GitHub. Tracking pull request, closed after its parts were merged.
-[^rn-0.20]: ["Bitcoin Core 0.20.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.20.0.md). *Bitcoin Core*. June 2020.
+[^rn-0-20]: ["Bitcoin Core 0.20.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.20.0.md). *Bitcoin Core*. June 2020.
 [^rn-26]: ["Bitcoin Core 26.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-26.0.md). *Bitcoin Core*. December 2023.
 [^rn-28]: ["Bitcoin Core 28.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-28.0.md). *Bitcoin Core*. October 2024.
 [^chainparams]: ["src/kernel/chainparams.cpp"](https://github.com/bitcoin/bitcoin/blob/master/src/kernel/chainparams.cpp). *Bitcoin Core* source code, master branch, as of October 2026.
