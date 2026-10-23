@@ -112,6 +112,8 @@ A maintainer will review your pull request and either merge it or reply with que
 
 ## Writing an article
 
+Technical deep dives follow the section skeleton and checklist in [`docs/STYLE.md`](docs/STYLE.md); start from [`_templates/deep-article.md`](_templates/deep-article.md). The rules in [`CLAUDE.md`](CLAUDE.md) apply to every edit, whether made by hand or with an AI assistant.
+
 Create `_wiki/Article_title.md`, using underscores for spaces. The page appears at `/wiki/Article_title/`.
 
 ```markdown
@@ -160,6 +162,11 @@ Text with a link to another article: [Proof of work](../Proof_of_work/).
 | `infobox` | Optional summary box. `header:` rows start a section; other rows are `Label: value`. |
 | `hatnote` | Optional italic note above the article, such as "For other uses, see…". |
 | `seo_title` | Optional search-engine title, if it should differ from `title`. |
+| `verified_against` | Deep articles: the software or spec version the facts were checked against, for example `Bitcoin Core v30.0`. |
+| `last_verified` | Deep articles: the date of that check. |
+| `difficulty` | Deep articles: `intro`, `intermediate` or `advanced`. |
+| `prerequisites` | Deep articles: slugs of articles to read first. |
+| `source_repos` | Deep articles: GitHub `owner/repo` names the article explains. |
 
 **Formatting tips**
 
@@ -202,7 +209,11 @@ SplytWiki/
 ├── search.json           Search index, generated at build time
 ├── random.html           Random article
 ├── 404.html              "SplytWiki does not have an article with this exact name"
-├── reports/              Maintenance scripts and audits (not published)
+├── reports/              Maintenance scripts (not published)
+├── _audit/               Article audit, rebuild backlog and fact-checks (not published)
+├── docs/STYLE.md         The deep-article standard (not published)
+├── _templates/           Copy-ready article template (not published)
+├── CLAUDE.md             Editorial rules for AI-assisted editing sessions (not published)
 └── Gemfile               Only needed for local preview
 ```
 
@@ -235,6 +246,7 @@ These scripts in [`reports/`](reports/) are not part of the website. Run them wi
 | Script | What it does |
 |---|---|
 | `audit.py` | Checks every article, including translations, for uncited claims, broken or unused footnotes, broken internal links and anchors, forum threads used as sources, empty sections, leftover editor notes and broken external links. It writes the results to a CSV file. Usage: `python -I reports/audit.py . reports/article-audit.csv` |
+| `check_style.py` | Checks footnotes (defined, used, valid names), internal links and the 25-word sentence rule. Usage: `python -I reports/check_style.py [files]` (no files = every English article). |
 | `build_bip_index.py` | Rebuilds [`_wiki/BIP_index.md`](_wiki/BIP_index.md) from a local checkout of [bitcoin/bips](https://github.com/bitcoin/bips). |
 
 ## Editorial policies

@@ -56,6 +56,14 @@ defaults:
       layout: article
       has_toc: true
       namespace: article
+      # Deep-article fields (docs/STYLE.md). Empty by default so older
+      # articles render unchanged.
+      verified_against: ""
+      last_verified: ""
+      difficulty: ""
+      prerequisites: []
+      source_repos: []
+      math: false
   - scope:
       path: ""
       type: pages
@@ -102,3 +110,8 @@ exclude:
   - research_notes
   # Article audit and fact-check reports (Prompt 0 / Prompt 8)
   - _audit
+  # Editorial standard, article template and agent instructions
+  - docs
+  - _templates
+  - CLAUDE.md
+  - AGENTS.md
