@@ -100,3 +100,5 @@ exclude:
   - config
   - reports
   - research_notes
+  # Article audit and fact-check reports (Prompt 0 / Prompt 8)
+  - _audit
