@@ -3,7 +3,8 @@ title: "Blockchain gaming (GameFi)"
 description: Beginner-friendly guide to play-to-earn models, tokenized game assets, digital ownership and virtual land economies
 aliases: [GameFi, Blockchain Gaming, Play-to-earn, Play to earn, P2E, Web3 gaming, NFT gaming, Virtual land economies]
 categories: [Blockchain gaming, Non-fungible tokens, Blockchain technology]
-updated: 2026-10-13
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   title: Blockchain gaming
   rows:
@@ -16,7 +17,7 @@ infobox:
 ---
 **Blockchain gaming** is the use of [blockchain](../Blockchain/) technology in video games and virtual worlds to record assets, transfers or selected game operations. **GameFi**, a combination of *game* and *finance*, commonly describes projects that connect gameplay with tradable tokens, player-owned assets or financial incentives. A blockchain game can use these features without offering earnings, and the term GameFi has no single technical specification.
 
-Three central concepts are **play-to-earn models**, which distribute rewards for participation; **in-game assets**, which may be represented by [non-fungible tokens](../Non-fungible_token/) (NFTs) or interchangeable tokens; and **virtual land economies**, in which users create, exchange or rent spaces within a digital world. Examples include Axie Infinity's token-based game economy and the creator and land systems of Decentraland and The Sandbox.[^axieeconomy][^dclland][^sandboxearn]
+Three central concepts are **play-to-earn models**, **in-game assets** and **virtual land economies**. Play-to-earn models distribute rewards for participation. In-game assets may be represented by [non-fungible tokens](../Non-fungible_token/) (NFTs) or interchangeable tokens. In virtual land economies, users create, exchange or rent spaces within a digital world. Examples include Axie Infinity's token-based game economy and the creator and land systems of Decentraland and The Sandbox.[^axieeconomy][^dclland][^sandboxearn]
 
 The practical value of these systems depends on the game, its community and its rules. Holding a token does not guarantee income, permanent access to a game or a buyer when the holder wishes to sell.
 
@@ -76,7 +77,7 @@ Some games provide embedded wallets or sponsor transaction fees to simplify this
 
 A blockchain transaction may require a **gas fee**, a payment for processing work on the network. Games can choose networks or scaling systems intended to reduce costs and waiting times. This choice also affects which wallets, marketplaces and security assumptions apply.
 
-Moving assets between networks may require a **bridge**. A bridge introduces an additional system that must be trusted or verified; it is not simply the same as moving an item between two addresses on one chain.
+Moving assets between networks may require a **bridge**. A bridge introduces an additional system that must be trusted or verified. It is not simply the same as moving an item between two addresses on one chain.
 
 ## Play-to-earn models
 
@@ -123,7 +124,7 @@ This example assumes the entire reward sells at the stated price. It excludes eq
 
 Rewards can be funded through newly issued tokens, an existing treasury, player purchases, sponsorship or other revenue. These sources have different implications. Distributing newly created tokens increases balances but does not automatically create demand for them.
 
-If a fictional game awards 10,000 tokens each day while players spend or retire only 2,000, the circulating quantity can grow by 8,000 tokens, assuming no other changes. Whether the price falls depends on demand and market conditions; the imbalance alone is not a precise price forecast.
+Suppose a fictional game awards 10,000 tokens each day while players spend or retire only 2,000. Assuming no other changes, the circulating quantity can grow by 8,000 tokens. Whether the price falls depends on demand and market conditions; the imbalance alone is not a precise price forecast.
 
 ## Token economies and sustainability
 
@@ -145,7 +146,7 @@ A payment is not necessarily a sink. If the treasury can later spend received to
 
 ### Demand for useful gameplay
 
-An economic design is more resilient when participants want its experiences, assets or services for their use, rather than solely because they expect to resell them at a higher price. This is an analytical principle, not a guarantee of success.
+An economic design is more resilient when participants want its experiences, assets or services for their use. It is less so when they want them solely because they expect to resell them at a higher price. This is an analytical principle, not a guarantee of success.
 
 For example, a player may purchase an appearance item because they enjoy using it. A creator may rent a venue because it attracts visitors. These purchases have a purpose independent of anticipated resale gains. By contrast, an economy heavily dependent on new buyers funding existing players' exits is vulnerable when new demand slows.
 
@@ -234,7 +235,7 @@ These examples illustrate mechanisms rather than recommend purchases. Reward eli
 
 ### Axie Infinity
 
-Axie Infinity combines collectible creatures with game systems and a token economy. Its economic documentation describes the use of SLP and AXS in breeding.[^axieeconomy] Sky Mavis support documentation also describes using in-game SLP to craft runes and charms, and distinguishes in-game balances from tokens claimed and minted on the blockchain.[^slp]
+Axie Infinity combines collectible creatures with game systems and a token economy. Its economic documentation describes the use of SLP and AXS in breeding.[^axieeconomy] Sky Mavis support documentation also describes using in-game SLP to craft runes and charms. It distinguishes in-game balances from tokens claimed and minted on the blockchain.[^slp]
 
 This illustrates the connection between a gameplay reward, a resource use and a market. Receiving a resource does not ensure that its market price or the cost of participating will remain constant.
 
@@ -268,7 +269,7 @@ Token prices can fluctuate, reward rules can change and buyers can disappear. En
 
 ### Security and infrastructure
 
-Players can face malicious links, counterfeit assets, deceptive signatures, contract bugs and compromised accounts. Bridges add their own risks. Ronin's official account of its 2022 bridge incident describes drained assets, reimbursement and subsequent security changes, illustrating that infrastructure supporting a game can fail independently of gameplay.[^ronin]
+Players can face malicious links, counterfeit assets, deceptive signatures, contract bugs and compromised accounts. Bridges add their own risks. Ronin's official account of its 2022 bridge incident describes drained assets, reimbursement and subsequent security changes.[^ronin] The incident illustrates that infrastructure supporting a game can fail independently of gameplay.
 
 An audit helps assess specified code at a point in time. It does not guarantee that every connected system, future upgrade or account is secure.
 
@@ -278,7 +279,7 @@ A token can continue to exist after a game closes, but its original utility may 
 
 ### Fairness and accessibility
 
-Financial rewards can change player incentives. Designers must consider whether the game remains enjoyable when participants optimize solely for returns, whether bots displace people and whether new players can compete without high spending.
+Financial rewards can change player incentives. Designers must consider whether the game remains enjoyable when participants optimize solely for returns. They must also consider whether bots displace people and whether new players can compete without high spending.
 
 Wallet complexity, fees and technical requirements can also exclude users. Improving onboarding should be evaluated alongside the transparency of custody and permissions.
 

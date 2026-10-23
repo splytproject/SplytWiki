@@ -3,7 +3,8 @@ title: Cryptocurrency history and milestones
 description: A beginner's timeline of Bitcoin, token sales, network upgrades and cryptocurrency market crises
 aliases: [Crypto history, Cryptocurrency timeline, ICO boom, The Merge, Crypto crash]
 categories: [Cryptocurrencies, History, Blockchain technology]
-updated: 2026-10-13
+updated: 2026-10-23
+last_modified: 2026-10-23
 ---
 **Cryptocurrency history** combines developments in computer networks, monetary design, online communities and financial markets. Technical progress and rising prices do not always occur together. A blockchain can continue processing transactions while an exchange fails, and a useful software upgrade can arrive during a falling market.
 
@@ -41,7 +42,7 @@ It is useful to separate *launch* from *adoption*. Creating a network does not i
 
 Ethereum broadened the idea of a blockchain from a payment ledger to a platform for shared programs. Its 2015 launch made it possible to develop applications whose rules and balances were maintained through smart contracts. Tokens, decentralized exchanges and collectible assets subsequently used that infrastructure.
 
-The 2016 DAO episode exposed a different question: how should a community respond when software behaves according to its code but produces an outcome participants consider unacceptable? Ethereum's fork changed state to address the incident; another chain continued without that intervention. The episode illustrates that decentralized systems still involve people making decisions about which software and history to recognize.
+The 2016 DAO episode exposed a different question. How should a community respond when software behaves according to its code but produces an outcome participants consider unacceptable? Ethereum's fork changed state to address the incident; another chain continued without that intervention. The episode illustrates that decentralized systems still involve people making decisions about which software and history to recognize.
 
 This distinction remains relevant to [community governance](../Decentralized_autonomous_organization/). A protocol's rules can be precise while the social process for changing those rules remains disputed.
 
@@ -59,13 +60,13 @@ A **network upgrade** changes protocol rules. Some upgrades change transaction p
 
 Ethereum's **Merge** joined its execution history to proof-of-stake consensus in September 2022. Existing transaction history continued, while validators replaced mining as the consensus mechanism. Ethereum estimates an approximately 99.95% reduction in energy consumption. The Merge itself did not substantially reduce transaction fees.[^merge]
 
-Later improvements addressed different constraints. Staking withdrawals, rollup data and validator operations are separate capabilities. For a beginner, the best way to interpret an upgrade announcement is to ask which constraint it changes and who benefits directly: ordinary users, rollup operators, validators or application developers. [Scaling and Layer 2 networks](../Blockchain_scaling/) explains why a base-layer upgrade can help another network reduce costs without making every base-layer transaction cheap.
+Later improvements addressed different constraints. Staking withdrawals, rollup data and validator operations are separate capabilities. For a beginner, the best way to interpret an upgrade announcement is to ask which constraint it changes and who benefits directly. Possible beneficiaries include ordinary users, rollup operators, validators or application developers. [Scaling and Layer 2 networks](../Blockchain_scaling/) explains why a base-layer upgrade can help another network reduce costs without making every base-layer transaction cheap.
 
 ## The 2022 crises involved different failures
 
 TerraUSD attempted to maintain its dollar peg through conversion involving Luna. When confidence and demand deteriorated, the mechanism helped create a destructive feedback loop. A peg failure is a failure to maintain a target value; it is not the same thing as every transaction on a chain stopping.
 
-FTX's bankruptcy later in 2022 was an intermediary crisis. Customers depended on a business to safeguard and return assets. That dependence differs from directly controlling a blockchain account. BIS research examining the 2022 shocks found substantial losses among retail participants in its studied data, although that finding does not establish the outcome for every individual.[^bis]
+FTX's bankruptcy later in 2022 was an intermediary crisis. Customers depended on a business to safeguard and return assets. That dependence differs from directly controlling a blockchain account. BIS research examining the 2022 shocks found substantial losses among retail participants in its studied data.[^bis] That finding does not establish the outcome for every individual.
 
 | Failure type | Central question | What continued operation cannot prove |
 |---|---|---|

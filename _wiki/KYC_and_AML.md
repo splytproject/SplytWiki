@@ -3,7 +3,8 @@ title: KYC and AML
 description: Beginner guide to customer verification, anti-money laundering controls and the crypto Travel Rule
 aliases: [Know Your Customer, Anti-Money Laundering, Crypto KYC, Travel Rule]
 categories: [Cryptocurrency, Regulation, Security]
-updated: 2026-10-13
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   title: KYC and AML
   rows:
@@ -17,7 +18,7 @@ infobox:
 
 In cryptocurrency services, these controls can involve verifying an exchange customer, understanding the purpose of an account, monitoring transactions and reporting suspicious activity. Requirements depend on the jurisdiction, business model and applicable law. The Financial Action Task Force's standards provide an international framework that countries implement through their own systems.[^fatf]
 
-A beginner may encounter KYC when a service requests identification before allowing trading or withdrawals. The request should be understood in the context of the provider's legal obligations and privacy practices, rather than as proof that the service or every available investment is safe.
+A beginner may encounter KYC when a service requests identification before allowing trading or withdrawals. The request should be understood in the context of the provider's legal obligations and privacy practices. It is not proof that the service or every available investment is safe.
 
 ## The core concepts
 

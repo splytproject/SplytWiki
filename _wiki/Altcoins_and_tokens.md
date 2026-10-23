@@ -3,7 +3,8 @@ title: Altcoins and tokens
 description: How alternative cryptocurrencies, governance tokens, utility tokens and meme coins work
 aliases: [Altcoin, Altcoins, Utility token, Governance token, Meme coin, Tokenomics]
 categories: [Cryptocurrencies, Tokens, Economics]
-updated: 2026-10-13
+updated: 2026-10-23
+last_modified: 2026-10-23
 ---
 An **altcoin** is a cryptocurrency other than [Bitcoin](../Bitcoin/). A **token** is a digital asset recorded on a blockchain, often through a [smart contract](../Smart_contract/). These words describe different things: *altcoin* compares an asset with Bitcoin, while *token* describes how an asset is represented. Neither word establishes whether an asset is useful, safe, decentralized or legally classified as a security.
 
@@ -44,15 +45,15 @@ Suppose a fictional protocol has 1,000 eligible voting units and requires 200 pa
 
 A **utility token** has a specified function within a service. That function might involve paying for data, accessing computing resources or supplying collateral for a network role. LINK, for example, is associated with Chainlink oracle service payments and security incentives.[^link] An **oracle** supplies information that a smart contract cannot independently obtain from the outside world.
 
-The useful question is what a user can actually do with the token today. A promised future product is different from an operating service. A functioning service is also different from a service that genuinely needs a freely traded token: some applications could accept conventional payments without changing their basic purpose.
+The useful question is what a user can actually do with the token today. A promised future product is different from an operating service. A functioning service is also different from a service that genuinely needs a freely traded token. Some applications could accept conventional payments without changing their basic purpose.
 
-A token's usefulness does not determine its market price on its own. Supply, competition, transaction frequency, incentives and market expectations also matter. If users buy a token immediately before using it and providers sell it immediately afterward, a growing service does not automatically produce a proportionate increase in long-term token holdings.
+A token's usefulness does not determine its market price on its own. Supply, competition, transaction frequency, incentives and market expectations also matter. Users may buy a token immediately before using it, and providers may sell it immediately afterward. In that case, a growing service does not automatically produce a proportionate increase in long-term token holdings.
 
 ## Meme coins
 
 **Meme coins** typically develop around jokes, personalities, internet culture or community identity. Their appeal can include entertainment, social participation and collecting, while their trading value often depends heavily on attention and expectations of future demand. Some acquire additional features, but those features should be assessed individually.
 
-A February 2025 SEC staff statement discussed typical meme coins as assets whose value arises largely from market demand and speculation. The statement is a staff view without independent legal force, concerns the circumstances it describes, and does not create a worldwide exemption from law or fraud liability.[^meme]
+A February 2025 SEC staff statement discussed typical meme coins as assets whose value arises largely from market demand and speculation. The statement is a staff view without independent legal force and concerns the circumstances it describes. It does not create a worldwide exemption from law or fraud liability.[^meme]
 
 Low unit prices can be misleading. A fictional token priced at 0.001 currency units with one trillion circulating units has a market capitalization of one billion currency units. It is not necessarily cheaper, in valuation terms, than a token with a much higher price and a much smaller supply.
 

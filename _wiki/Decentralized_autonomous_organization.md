@@ -3,7 +3,8 @@ title: Decentralized autonomous organization
 description: Beginner-friendly guide to DAOs, voting, proposals, treasury management, delegation and community governance
 aliases: [DAO, DAOs, Decentralized Autonomous Organizations, Decentralised autonomous organisation, DAO governance, DAO treasury management]
 categories: [Decentralized autonomous organizations, Blockchain technology, Smart contracts]
-updated: 2026-10-13
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   title: Decentralized autonomous organization
   rows:
@@ -100,7 +101,7 @@ This model is straightforward to measure but can concentrate influence among lar
 
 A membership model can assign equal weight to approved members. A contribution-based model can use reputation or another record of participation. Each approach needs clear rules for admitting members, assigning weight and resolving disputes.
 
-Snapshot voting strategies illustrate this flexibility: they calculate voting power using defined conditions, which can include token balances or other on-chain data such as NFT holdings.[^snapshotstrategy]
+Snapshot voting strategies illustrate this flexibility. They calculate voting power using defined conditions, which can include token balances or other on-chain data such as NFT holdings.[^snapshotstrategy]
 
 **One address, one vote** is different from **one person, one vote**. A person can control multiple addresses. Preventing this form of duplicate influence requires additional membership or identity protections, with privacy and access tradeoffs.
 
@@ -171,7 +172,7 @@ An off-chain result does not inherently move treasury funds. Authorized signers 
 
 A DAO can use a discussion forum, an off-chain poll and an on-chain execution step together. This can reduce the cost of deliberation while retaining contract-based controls over selected actions.
 
-The key question is where the final authority resides. If treasury signers can spend without a successful community vote, the poll and treasury permissions are separate controls even if a policy says signers should follow the result.
+The key question is where the final authority resides. Treasury signers may be able to spend without a successful community vote. In that case, the poll and treasury permissions are separate controls even if a policy says signers should follow the result.
 
 ## Treasury management
 

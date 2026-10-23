@@ -3,11 +3,12 @@ title: Blockchain scaling and Layer 2 networks
 description: How Layer 1 networks, rollups, sidechains and high-throughput blockchains increase capacity
 aliases: [Layer 1, Layer 2, L1, L2, Rollup, Rollups, Sidechain, Blockchain scalability]
 categories: [Blockchain technology, Ethereum, Scaling]
-updated: 2026-10-13
+updated: 2026-10-23
+last_modified: 2026-10-23
 ---
 **Blockchain scaling** means increasing a network's useful capacity while managing costs and security tradeoffs. A **Layer 1**, or L1, is a base blockchain such as Bitcoin or Ethereum. A **Layer 2**, or L2, processes activity through an additional system with a defined relationship to the base layer's settlement and security.
 
-Lower fees alone do not make a network an L2. An independent chain can also be inexpensive. To understand a scaling design, ask where transactions execute, how their correctness is checked, where their data is available and how users can recover their assets.
+Lower fees alone do not make a network an L2. An independent chain can also be inexpensive. To understand a scaling design, ask where transactions execute and how their correctness is checked. Also ask where their data is available and how users can recover their assets.
 
 ## Why capacity becomes scarce
 
@@ -37,7 +38,7 @@ A **rollup** executes multiple transactions away from the base layer and submits
 
 A **sequencer** orders transactions. Quick sequencer acknowledgments can improve the user experience, but an acknowledgment is not necessarily the same as final settlement on the base chain. A sequencer outage can affect availability even where the design provides mechanisms for eventual recovery.
 
-The relevant question is therefore not simply whether a system “uses Ethereum.” Readers should examine the proof or challenge system, operator powers, upgrade controls and exit arrangements.
+The relevant question is therefore not simply whether a system “uses Ethereum”. Readers should examine the proof or challenge system, operator powers, upgrade controls and exit arrangements.
 
 ## Optimistic rollups
 
@@ -73,7 +74,7 @@ User experience depends on more than transactions per second. Reliability, fee p
 
 ## Three meanings of a fast transaction
 
-A fictional rollup wallet might show an accepted transaction almost immediately, record its batch on an L1 later, and permit a canonical withdrawal after a further process. These are three milestones: local acknowledgment, base-layer settlement and exit availability. The exact timing depends on the implementation.
+A fictional rollup wallet might show an accepted transaction almost immediately and record its batch on an L1 later. It might then permit a canonical withdrawal after a further process. These are three milestones: local acknowledgment, base-layer settlement and exit availability. The exact timing depends on the implementation.
 
 This distinction matters for a merchant accepting payment, an exchange crediting a deposit and a user moving funds out of the system. Each may require a different level of assurance before acting.
 
@@ -81,7 +82,7 @@ This distinction matters for a merchant accepting payment, an exchange crediting
 
 Before sending an asset, verify that the receiving service supports the exact network and token representation. The same address format does not guarantee that a service monitors every chain using that format. Also identify which asset pays fees on the destination, so funds do not arrive in an account that cannot make its next transaction.
 
-When assessing a scaling system, check who can upgrade its contracts, what happens if operators disappear, whether ordinary users can submit transactions or exit independently, and what information is published for verification. These questions make the tradeoffs understandable without requiring a reader to become a cryptographer.
+When assessing a scaling system, check who can upgrade its contracts and what happens if operators disappear. Also check whether ordinary users can submit transactions or exit independently, and what information is published for verification. These questions make the tradeoffs understandable without requiring a reader to become a cryptographer.
 
 ## See also
 

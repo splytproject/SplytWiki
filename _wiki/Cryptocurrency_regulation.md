@@ -3,7 +3,8 @@ title: Cryptocurrency regulation
 description: A beginner guide to global cryptocurrency laws, regulators, licensing and regulatory decisions
 aliases: [Global crypto regulations, Crypto regulation, Cryptocurrency laws]
 categories: [Cryptocurrency, Regulation]
-updated: 2026-10-13
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   title: Cryptocurrency regulation
   rows:
@@ -12,7 +13,7 @@ infobox:
     - Related areas: Taxation and financial crime prevention
     - Review date: 13 October 2026
 ---
-**Cryptocurrency regulation** is the collection of laws, rules and supervisory practices that apply to cryptoassets and activities involving them. It can govern how a token is sold, how an exchange safeguards customer assets, what information an advertisement must disclose and how suspicious transactions are reported. Rules vary by jurisdiction and by the activity involved.
+**Cryptocurrency regulation** is the collection of laws, rules and supervisory practices that apply to cryptoassets and activities involving them. It can govern how a token is sold, how an exchange safeguards customer assets and what information an advertisement must disclose. It can also govern how suspicious transactions are reported. Rules vary by jurisdiction and by the activity involved.
 
 For a beginner, the most useful starting point is that regulation concerns several separate questions. Permission to operate an exchange does not decide a customer's [tax liability](../Cryptocurrency_taxation/). A token's technical design does not establish its legal classification. A licence also does not guarantee an investment's value.
 
@@ -82,7 +83,7 @@ The EU is not a single worldwide tax jurisdiction. MiCA market rules should not 
 
 ## United Kingdom
 
-The UK illustrates why commencement dates matter. The FCA's page updated on **30 September 2026** describes applications for the new cryptoasset regime as open, while the regime is expected to commence on **25 October 2027**. It also identifies final rules and guidance published in June 2026.[^fca]
+The UK illustrates why commencement dates matter. The FCA's page updated on **30 September 2026** describes applications for the new cryptoasset regime as open. It states that the regime is expected to commence on **25 October 2027**. It also identifies final rules and guidance published in June 2026.[^fca]
 
 An article written in October 2026 should therefore distinguish preparations for the future framework from requirements already applying to a business. The existence of published rules does not mean every provision is already in force.
 

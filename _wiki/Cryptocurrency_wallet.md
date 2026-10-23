@@ -3,11 +3,12 @@ title: Cryptocurrency wallet
 description: Software or device that stores the keys used to send and receive cryptocurrency
 aliases: [Wallet, Crypto wallet, Hardware wallet, Seed phrase, Private key]
 categories: [Cryptocurrency wallets, Cryptography, Security]
-updated: 2026-10-12
+updated: 2026-10-23
+last_modified: 2026-10-23
 ---
-A **cryptocurrency wallet** is a piece of software, a physical device or a service that stores the cryptographic **keys** needed to use [cryptocurrency](../Cryptocurrency/). Despite the name, a wallet does not actually contain coins. The coins exist only as entries on a [blockchain](../Blockchain/); what the wallet holds is the **private key** that proves ownership of them and is used to authorise, or *sign*, transactions.[^bip32]
+A **cryptocurrency wallet** is a piece of software, a physical device or a service that stores the cryptographic **keys** needed to use [cryptocurrency](../Cryptocurrency/). Despite the name, a wallet does not actually contain coins. The coins exist only as entries on a [blockchain](../Blockchain/). What the wallet holds is the **private key** that proves ownership of them and is used to authorise, or *sign*, transactions.[^bip32]
 
-Wallets range from apps on a phone or browser, to dedicated **hardware wallets**, to accounts at exchanges that hold keys on the customer's behalf. Choosing and securing a wallet is one of the most important practical decisions for a cryptocurrency user, because transactions cannot be reversed and lost or stolen keys usually mean the funds are gone for good.
+Wallets range from apps on a phone or browser, to dedicated **hardware wallets**, to accounts at exchanges that hold keys on the customer's behalf. Choosing and securing a wallet is one of the most important practical decisions for a cryptocurrency user. This is because transactions cannot be reversed and lost or stolen keys usually mean the funds are gone for good.
 
 ## Keys and addresses
 
@@ -23,25 +24,25 @@ To send funds, the wallet creates a transaction and signs it with the private ke
 
 ### Seed phrases
 
-Most modern wallets are **hierarchical deterministic** (HD) wallets, a design introduced for Bitcoin in 2012. Instead of storing many unrelated keys, an HD wallet generates all of its keys from a single master secret, so one backup covers every address the wallet will ever use.[^bip32]
+Most modern wallets are **hierarchical deterministic** (HD) wallets, a design introduced for Bitcoin in 2012. Instead of storing many unrelated keys, an HD wallet generates all of its keys from a single master secret. As a result, one backup covers every address the wallet will ever use.[^bip32]
 
-That master secret is usually shown to the user as a **seed phrase** (also called a *recovery phrase* or *mnemonic*) of 12 or 24 ordinary words taken from a standard list of 2,048 words.[^bip39] Anyone who has the seed phrase can recreate the whole wallet on another device, which makes it both the user's backup and their greatest security risk. Legitimate services never ask users to reveal their seed phrase.
+That master secret is usually shown to the user as a **seed phrase** (also called a *recovery phrase* or *mnemonic*). The phrase consists of 12 or 24 ordinary words taken from a standard list of 2,048 words.[^bip39] Anyone who has the seed phrase can recreate the whole wallet on another device. This makes it both the user's backup and their greatest security risk. Legitimate services never ask users to reveal their seed phrase.
 
 ## Types of wallet
 
 ### Custodial and non-custodial
 
-- In a **custodial wallet**, a third party, typically a cryptocurrency exchange, holds the private keys and manages the funds for the user, much like a bank account. This is convenient and allows password recovery, but users depend on the custodian's honesty and solvency. When exchanges such as [Mt. Gox](../Mt_Gox_collapse/) (2014) and [FTX](../FTX_collapse/) (2022) collapsed, many customers lost access to their funds. The slogan "**not your keys, not your coins**" expresses this risk.
+- In a **custodial wallet**, a third party holds the private keys and manages the funds for the user, much like a bank account. The third party is typically a cryptocurrency exchange. This is convenient and allows password recovery, but users depend on the custodian's honesty and solvency. When exchanges such as [Mt. Gox](../Mt_Gox_collapse/) (2014) and [FTX](../FTX_collapse/) (2022) collapsed, many customers lost access to their funds. The slogan "**not your keys, not your coins**" expresses this risk.
 - In a **non-custodial** (or *self-custody*) wallet, the user alone holds the keys. This gives full control but also full responsibility: if the keys or seed phrase are lost, nobody can recover the funds.
 
 ### Hot and cold
 
 - **Hot wallets** are connected to the internet, such as mobile apps, desktop programs and browser extensions. They are convenient for frequent use but more exposed to malware and phishing.
-- **Cold wallets** keep private keys offline. The most common are **hardware wallets**, small dedicated devices, first sold in 2014, that store keys in secure chips and sign transactions internally, so the keys never touch an internet-connected computer. *Paper wallets*, with keys printed on paper, were once popular but are now generally discouraged.
+- **Cold wallets** keep private keys offline. The most common are **hardware wallets**, small dedicated devices, first sold in 2014, that store keys in secure chips and sign transactions internally. As a result, the keys never touch an internet-connected computer. *Paper wallets*, with keys printed on paper, were once popular but are now generally discouraged.
 
 ### Multi-signature and smart-contract wallets
 
-A **multi-signature** (multisig) wallet requires several keys to approve a transaction, for example any two out of three. This protects against the loss or theft of a single key and is common among businesses and organisations. On Ethereum, **smart-contract wallets** use programmable rules for features such as spending limits, social recovery through trusted contacts, and paying fees in tokens other than ether.
+A **multi-signature** (multisig) wallet requires several keys to approve a transaction, for example any two out of three. This protects against the loss or theft of a single key and is common among businesses and organisations. On Ethereum, **smart-contract wallets** use programmable rules for extra features. Examples include spending limits, social recovery through trusted contacts, and paying fees in tokens other than ether.
 
 ## Security
 
@@ -53,7 +54,7 @@ Common threats to wallet users include:
 - **Loss**: forgetting passwords, losing devices or discarding backups. Large amounts of bitcoin are believed to have been lost permanently in this way.
 - **Physical coercion**: threats or violence against people known to hold large amounts of cryptocurrency.
 
-Recommended practices include keeping the seed phrase offline and private, using a hardware wallet for significant amounts, checking addresses carefully, and being sceptical of any unsolicited offer of help.
+Recommended practices include keeping the seed phrase offline and private, and using a hardware wallet for significant amounts. Other recommended practices are checking addresses carefully and being sceptical of any unsolicited offer of help.
 
 ## See also
 

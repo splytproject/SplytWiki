@@ -3,7 +3,8 @@ title: Cryptocurrency taxation
 description: Beginner guide to crypto taxes, disposals, income, cost basis, records and jurisdiction differences
 aliases: [Crypto taxes, Cryptocurrency tax, Digital asset taxation]
 categories: [Cryptocurrency, Taxation, Regulation]
-updated: 2026-10-13
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   title: Cryptocurrency taxation
   rows:
@@ -38,9 +39,9 @@ A transaction record should allow a reader to determine what happened, when it h
 
 **Income** generally refers to value received through an activity such as work or a reward, subject to the applicable rules. A **capital gain** concerns an increase realized when an asset is disposed of relative to its recognized basis. Some activities may instead be treated as business trading.
 
-The United States IRS treats digital assets as property for federal tax purposes and identifies multiple reportable situations, including sales and receipts as rewards or payment. The absence of a broker information form does not by itself remove the taxpayer's reporting responsibilities.[^irs]
+The United States IRS treats digital assets as property for federal tax purposes. It identifies multiple reportable situations, including sales and receipts as rewards or payment. The absence of a broker information form does not by itself remove the taxpayer's reporting responsibilities.[^irs]
 
-The distinction matters because a single asset can feature in more than one event. Receiving a token for work and later selling it are separate transactions. An accurate calculation must avoid treating the entire sale value as a new gain when an acquisition basis has already been established under the applicable law.
+The distinction matters because a single asset can feature in more than one event. Receiving a token for work and later selling it are separate transactions. An accurate calculation must avoid treating the entire sale value as a new gain. This applies when an acquisition basis has already been established under the applicable law.
 
 ### An illustrative two-stage example
 
@@ -69,7 +70,7 @@ A transfer label in an application is not enough to classify the event. An excha
 
 **Cost basis** is the recognized acquisition value used in a later calculation. It is not necessarily identical to the current token price, the amount deposited into an exchange or the figure displayed in a portfolio application.
 
-For example, buying ten tokens for 100 units and selling four for 60 does not mean the entire original 100 is deducted from that partial sale. The appropriate basis must be assigned to the units sold under local rules.
+For example, suppose a person buys ten tokens for 100 units and sells four for 60. That does not mean the entire original 100 is deducted from that partial sale. The appropriate basis must be assigned to the units sold under local rules.
 
 Where several purchases occurred at different prices, the method for identifying sold units becomes important. Jurisdictions may prescribe identification, matching or pooling methods. A taxpayer should not assume that a convenient method in a software menu is legally available.
 
@@ -97,7 +98,7 @@ HMRC maintains separate guidance for receiving cryptoassets and more detailed te
 
 ### India
 
-The Income Tax Department's Schedule VDA guidance, updated in May 2026, describes income from transfers of virtual digital assets as taxable at **30% plus applicable surcharge and cess**. It permits acquisition cost in the calculation while excluding other expenditure, allowances and loss set-offs under the described framework.[^india]
+The Income Tax Department's Schedule VDA guidance was updated in May 2026. It describes income from transfers of virtual digital assets as taxable at **30% plus applicable surcharge and cess**. It permits acquisition cost in the calculation while excluding other expenditure, allowances and loss set-offs under the described framework.[^india]
 
 This is a jurisdiction-specific treatment. It should not be generalized into a worldwide rule, nor should a loss-relief method from another country be imported into an Indian calculation. Applicable withholding and reporting requirements must be checked separately for the transaction and tax year.
 

@@ -3,11 +3,12 @@ title: Decentralized application
 description: How DApps combine user interfaces with blockchain programs and shared network state
 aliases: [DApp, DApps, Decentralized apps, Decentralized applications]
 categories: [Blockchain technology, Smart contracts, Applications]
-updated: 2026-10-13
+updated: 2026-10-23
+last_modified: 2026-10-23
 ---
 A **decentralized application**, usually shortened to **DApp**, uses backend logic maintained through a decentralized network rather than relying entirely on one operator's server. Many DApps combine an ordinary website or mobile interface with [smart contracts](../Smart_contract/) on a blockchain. The interface makes the application usable, while the contracts maintain shared rules and state.[^dapps]
 
-Decentralization is a matter of architecture and control. An application can settle transactions through a distributed network while depending on a centrally hosted website, a single data provider or an administrator with powerful upgrade permissions. Calling an application a DApp does not establish that every component is decentralized.
+Decentralization is a matter of architecture and control. An application can settle transactions through a distributed network. At the same time, it can depend on a centrally hosted website, a single data provider or an administrator with powerful upgrade permissions. Calling an application a DApp does not establish that every component is decentralized.
 
 ## From an ordinary app to a DApp
 
