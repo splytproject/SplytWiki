@@ -3,7 +3,8 @@ title: Bitcoin node
 description: Overview of what a Bitcoin full node does, how it syncs, and the main node modes
 aliases: [Full node, Bitcoin Core, Node software, Pruned node, Initial block download]
 categories: [Bitcoin, Protocol, Nodes, Development]
-updated: 2026-10-18
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: Bitcoin node
@@ -48,7 +49,7 @@ Pruning has a minimum target of 550 MiB of block files in Bitcoin Core.
 
 ## Why run one
 
-A wallet connected to your own node does not have to trust a third party's view of the chain, and does not leak which addresses it cares about to someone else's server.
+A wallet connected to your own node does not have to trust a third party's view of the chain. It also does not leak which addresses it cares about to someone else's server.
 
 ## Developer notes
 
@@ -60,12 +61,10 @@ A wallet connected to your own node does not have to trust a third party's view 
 ## See also
 
 - [UTXO](../UTXO/)
-- [Partial_UTXO_set](../Partial_UTXO_set/)
-- [Chain_reorganization](../Chain_reorganization/)
-- [How_to_contribute_to_Bitcoin](../how-to-contribute-to-bitcoin/)
+- [Partial UTXO set](../Partial_UTXO_set/)
+- [Chain reorganization](../Chain_reorganization/)
+- [How to contribute to Bitcoin](../how-to-contribute-to-bitcoin/)
 
 ## Notes and further reading
 
-- Based on standard Bitcoin Core behaviour and documentation.
-- Forum discussions touching on node trade-offs: [Can a Bitcoin node build a partial UTXO set from recent N blocks?](https://bitcointalk.org/index.php?topic=5593895.0); the board also has a thread on hardware requirements for a full node: [Hardware requirements for running a full node with the official client](https://bitcointalk.org/index.php?topic=5593377.0) (linked, not summarized here).
-- (Add sourcing where appropriate: current storage and sync-time benchmarks for the latest Bitcoin Core release.)
+- Forum discussions touching on node trade-offs: [Can a Bitcoin node build a partial UTXO set from recent N blocks?](https://bitcointalk.org/index.php?topic=5593895.0). The board also has a thread on hardware requirements for a full node: [Hardware requirements for running a full node with the official client](https://bitcointalk.org/index.php?topic=5593377.0).

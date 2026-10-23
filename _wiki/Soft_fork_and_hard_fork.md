@@ -3,7 +3,8 @@ title: Soft fork and hard fork
 description: Overview of the two kinds of Bitcoin consensus rule changes and how developers choose between them
 aliases: [Soft fork, Hard fork, Bitcoin forks, Soft_fork, Hard_fork]
 categories: [Bitcoin, Protocol, Consensus, Governance]
-updated: 2026-10-18
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: Soft fork and hard fork
@@ -15,7 +16,7 @@ infobox:
     - Hard fork: Loosens or changes rules; old nodes reject new blocks
 ---
 
-In Bitcoin, a **soft fork** and a **hard fork** are the two kinds of change to the network's consensus rules. A soft fork restricts the set of valid blocks and remains compatible with nodes that have not upgraded, while a hard fork changes the rules in a way that is incompatible with older software and can split the network if not everyone upgrades.
+In Bitcoin, a **soft fork** and a **hard fork** are the two kinds of change to the network's consensus rules. A soft fork restricts the set of valid blocks and remains compatible with nodes that have not upgraded. A hard fork, by contrast, changes the rules in a way that is incompatible with older software. It can split the network if not everyone upgrades.
 
 ## Definitions
 
@@ -36,7 +37,7 @@ Developers generally prefer the least disruptive route that achieves a goal, rou
 2. **Soft fork.** Requires broad agreement and an activation process, and may fail if support is insufficient.
 3. **Hard fork.** Requires all participants to move together. A hard fork pursued without broad agreement can result in a minority chain, which is how several alternative cryptocurrencies originated.
 
-The choice is also influenced by technical and risk trade-offs. For example, SegWit could arguably have been implemented more cleanly as a hard fork, but proponents judged the coordination risks of a hard fork to be considerably greater, so it was deployed as a soft fork.
+The choice is also influenced by technical and risk trade-offs. For example, SegWit could arguably have been implemented more cleanly as a hard fork. However, proponents judged the coordination risks of a hard fork to be considerably greater, so it was deployed as a soft fork.
 
 ## Why hard forks are difficult
 
@@ -49,11 +50,9 @@ Classifying a change is the comparatively simple step. Most of the effort lies i
 ## See also
 
 - [Taproot](../Taproot/)
-- [Segregated_Witness](../Segregated_Witness/)
-- [Chain_reorganization](../Chain_reorganization/)
-- [Bitcoin_Improvement_Proposal](../Bitcoin_Improvement_Proposal/)
+- [Segregated Witness](../Segregated_Witness/)
+- [Chain reorganization](../Chain_reorganization/)
 
 ## Notes and further reading
 
 - ["How do developers decide whether a Bitcoin upgrade will be a soft or hard fork?" discussion thread](https://bitcointalk.org/index.php?topic=5596302.0), Bitcoin Forum, October 2026
-- (Add sourcing where appropriate: activation mechanisms such as BIP-9 signalling, a timeline of past soft forks including P2SH, CLTV, CSV, SegWit and Taproot, and accounts of historical chain splits.)

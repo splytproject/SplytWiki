@@ -3,7 +3,8 @@ title: Chain reorganization
 description: Overview of block reorganizations in Bitcoin, why they occur, how frequent they are, and their relevance to confirmations
 aliases: [Reorg, Blockchain reorganization, Block reorganization, Stale block, Orphan block]
 categories: [Bitcoin, Protocol, Consensus, Mining]
-updated: 2026-10-18
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: Chain reorganization
@@ -33,19 +34,19 @@ Alice broadcasts a transaction and sees it included in block A. Bob, elsewhere o
 ## Frequency and depth
 
 - Most reorganizations are simple, depth‑1 events: a single later block replaces a competing tip. These happen occasionally because of network propagation delay.
-- Deeper reorganizations (2 or more blocks) are rare on Bitcoin mainnet; anything beyond a few blocks is unusual and typically the result of a miner reorg (an actor withholding blocks) or a significant consensus split.
+- Deeper reorganizations (2 or more blocks) are rare on Bitcoin mainnet. Anything beyond a few blocks is unusual and typically the result of a miner reorg (an actor withholding blocks) or a significant consensus split.
 
 ## Practical guidance for developers
 
 - Confirmations: pick a confirmation policy that matches your threat model. For retail values 1–2 confirmations may be acceptable; for exchanges or large transfers consider 6 or more.
-- Idempotency: make your block-handling idempotent. When a reorg happens, transactions you thought were confirmed may vanish — ensure your system can roll back state or re-check tx presence via `getrawtransaction`/`gettxout` and mempool queries.
+- Idempotency: make your block-handling idempotent. When a reorg happens, transactions you thought were confirmed may vanish. Ensure your system can roll back state or re-check tx presence via `getrawtransaction`/`gettxout` and mempool queries.
 - Reconciliation: track `blockhash` used in state changes and re-verify after reorgs. Use `getchaintips` to find side branches and `getblock` to inspect blocks.
 
 ## Developer notes and commands
 
 - `bitcoin-cli getchaintips` shows known tips and branch lengths.
 - `bitcoin-cli getblock <hash>` and `getrawtransaction <txid> true` help you inspect whether a transaction is on-chain or just in the mempool.
-- In automated systems, subscribe to new block notifications (ZeroMQ or RPC polling) and keep a short history buffer so you can detect and undo actions if a reorg removes a block your system used.
+- In automated systems, subscribe to new block notifications (ZeroMQ or RPC polling) and keep a short history buffer. This lets you detect and undo actions if a reorg removes a block your system used.
 
 ## Common pitfalls and anti-patterns
 
@@ -55,9 +56,8 @@ Alice broadcasts a transaction and sees it included in block A. Bob, elsewhere o
 
 ## See also
 
-- [Proof_of_work](../Proof_of_work/)
-- [Bitcoin_node](../Bitcoin_node/)
-- [Block_propagation](../Block_propagation/)
+- [Proof of work](../Proof_of_work/)
+- [Bitcoin node](../Bitcoin_node/)
 
 ## Notes and further reading
 

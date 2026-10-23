@@ -3,8 +3,8 @@ title: Testnet
 description: Bitcoin's test networks as of October 2026 — regtest, signet (BIP-325), the retired-in-practice testnet3, and testnet4 (BIP-94) — what each is for, how they differ from mainnet, and how to run them
 aliases: [Test networks, Regtest, Signet, Testnet3, Testnet4, Bitcoin testnet]
 categories: [Bitcoin, Development, Testing]
-updated: 2026-10-20
-last_modified: 2026-10-20
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: Bitcoin test networks
@@ -19,7 +19,9 @@ infobox:
     - Added in: "Signet 0.21.0 (2021); testnet4 28.0 (2024)"
 ---
 
-> **In plain terms:** Test networks are practice versions of Bitcoin where the coins are worthless, so developers can experiment freely.
+**Specifications:** [BIP-325](../BIP_index/#bip-325) · [BIP-94](../BIP_index/#bip-94)
+
+> **In plain terms:** Developers need somewhere to try Bitcoin software without risking real money. Bitcoin Core ships four such networks. Regtest runs on your own machine. Signet and testnet4 are shared public networks whose coins are meant to be worthless. Each makes a different trade-off between realism and convenience.
 
 A **test network** is a separate Bitcoin blockchain with its own genesis block, coins and rules. Coins on it are not bitcoin and are intended to have no value. [Bitcoin Core](../Bitcoin_Core_release_history/) supports four as of October 2026: **regtest**, **signet**, **testnet4** and the older **testnet3**.[^chainparams][^rn-28]
 
@@ -37,7 +39,7 @@ No single design satisfies every need. A developer debugging a wallet wants inst
 
 Its consensus parameters are relaxed. The proof-of-work target is set so that almost any hash qualifies, and difficulty never retargets.[^chainparams] The block subsidy halves every 150 blocks rather than every 210,000, so a developer can reach later subsidy eras in minutes.[^chainparams]
 
-Blocks are created with RPCs. `generatetoaddress` mines to an address, `generatetodescriptor` mines to an [output descriptor](../Miniscript_and_output_descriptors/) (0.20.0), and `generateblock` builds a block from a chosen set of transactions (0.21.0).[^rn-0.20][^rn-0.21] Bitcoin Core's own functional test suite runs on regtest.[^test-framework]
+Blocks are created with RPCs. The `generatetoaddress` RPC mines to an address, and `generatetodescriptor` mines to an [output descriptor](../Miniscript_and_output_descriptors/) (0.20.0).[^rn-0.20] The `generateblock` RPC builds a block from a chosen set of transactions (0.21.0).[^rn-0.21] Bitcoin Core's own functional test suite runs on regtest.[^test-framework]
 
 Since Bitcoin Core 29.0, the BIP-94 timewarp rule is off by default on regtest, so tests can create blocks with arbitrary timestamps.[^rn-29]
 
@@ -140,13 +142,25 @@ bitcoind -testnet -daemon                   # testnet3, deprecated
 
 ## See also
 
-- [Proof_of_work](../Proof_of_work/)
-- [Soft_fork_and_hard_fork](../Soft_fork_and_hard_fork/)
-- [Bitcoin_node](../Bitcoin_node/)
-- [How_to_contribute_to_Bitcoin](../how-to-contribute-to-bitcoin/)
+- [Bitcoin node](../Bitcoin_node/)
+- [Proof of work](../Proof_of_work/)
+- [Chain reorganization](../Chain_reorganization/)
+- [Covenant proposals](../Covenant_proposals/)
+- [AssumeUTXO](../AssumeUTXO/)
+- [How to contribute to Bitcoin](../how-to-contribute-to-bitcoin/)
 
-## Notes and further reading
+## References
 
-- Based on a Bitcoin developer mailing-list thread ("Unbreaking testnet4", March 2025), the Bitcoin Core GitHub pull request #34420, BIP-94 and BIP-325.
-- The forum board has a thread on this: [Fixing Testnet4: proposal](https://bitcointalk.org/index.php?topic=5569103.0); the PR above links back to it.
-- (Add sourcing where appropriate: the current status of testnet4 fixes, faucet lists.)
+[^bip325]: Alm, Karl-Johan. ["BIP 325: Signet"](https://github.com/bitcoin/bips/blob/master/bip-0325.mediawiki). *Bitcoin Improvement Proposals*. Status: Complete (as of October 2026).
+[^bip94]: Jahr, Fabian. ["BIP 94: Testnet 4"](https://github.com/bitcoin/bips/blob/master/bip-0094.mediawiki). *Bitcoin Improvement Proposals*. Status: Deployed (as of October 2026).
+[^rn-0.20]: ["Bitcoin Core 0.20.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.20.0.md). *Bitcoin Core*. June 2020.
+[^rn-0.21]: ["Bitcoin Core 0.21.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-0.21.0.md). *Bitcoin Core*. January 2021.
+[^rn-28]: ["Bitcoin Core 28.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-28.0.md). *Bitcoin Core*. October 2024.
+[^rn-29]: ["Bitcoin Core 29.0 release notes"](https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-29.0.md). *Bitcoin Core*. April 2025.
+[^chainparams]: ["src/kernel/chainparams.cpp"](https://github.com/bitcoin/bitcoin/blob/master/src/kernel/chainparams.cpp). *Bitcoin Core* source code, as of October 2026.
+[^chainparamsbase]: ["src/chainparamsbase.cpp"](https://github.com/bitcoin/bitcoin/blob/master/src/chainparamsbase.cpp). *Bitcoin Core* source code, as of October 2026.
+[^signet-cpp]: ["src/signet.cpp"](https://github.com/bitcoin/bitcoin/blob/master/src/signet.cpp). *Bitcoin Core* source code.
+[^test-framework]: ["test/functional/test_framework/test_framework.py"](https://github.com/bitcoin/bitcoin/blob/master/test/functional/test_framework/test_framework.py). *Bitcoin Core* source code.
+[^feature-signet]: ["test/functional/feature_signet.py"](https://github.com/bitcoin/bitcoin/blob/master/test/functional/feature_signet.py). *Bitcoin Core* source code.
+[^pr-31974]: ["Drop testnet3" (PR #31974)](https://github.com/bitcoin/bitcoin/pull/31974). *Bitcoin Core* GitHub. Closed without merging, 21 May 2026.
+[^inq]: Towns, Anthony (22 July 2026). ["Bitcoin Inquisition 29.4"](https://delvingbitcoin.org/t/bitcoin-inquisition-29-4/2739). *Delving Bitcoin*.

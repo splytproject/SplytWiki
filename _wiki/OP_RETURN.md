@@ -3,7 +3,8 @@ title: OP_RETURN
 description: Overview of the OP_RETURN opcode and output type, and its relationship to witness data and the witness discount
 aliases: [OP_RETURN output, Data carrier output, OP_RETURN and witness data]
 categories: [Bitcoin, Protocol, Scripting, Transactions]
-updated: 2026-10-18
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: OP_RETURN
@@ -16,7 +17,7 @@ infobox:
     - Related specification: BIP-141
 ---
 
-**OP_RETURN** is a Bitcoin script opcode that causes script execution to fail. An output whose locking script begins with it is provably unspendable, and is commonly used to attach a small amount of arbitrary data to a transaction without adding to the set of spendable outputs.
+**OP_RETURN** is a Bitcoin script opcode that causes script execution to fail. An output whose locking script begins with it is provably unspendable. Such outputs are commonly used to attach a small amount of arbitrary data to a transaction without adding to the set of spendable outputs.
 
 ## Opcode and output
 
@@ -44,7 +45,7 @@ Bytes in the base section count as four weight units and witness bytes as one, s
 ### Evidence
 
 - **Historical.** `OP_RETURN` outputs were in use and relayed years before SegWit existed, so they cannot be witness data. A pre-SegWit transaction containing one has no witness section at all.
-- **Specification and code.** In Bitcoin Core's transaction serialization, outputs and witness stacks are written separately, and BIP-141 defines base size as the size of the transaction serialized without witness data.
+- **Specification and code.** In Bitcoin Core's transaction serialization, outputs and witness stacks are written separately. BIP-141 defines base size as the size of the transaction serialized without witness data.
 
 ## Exception
 
@@ -52,13 +53,12 @@ Because `OP_RETURN` is only an opcode, it can also appear inside a witness scrip
 
 ## See also
 
-- [Segregated_Witness](../Segregated_Witness/)
+- [Segregated Witness](../Segregated_Witness/)
 - [Taproot](../Taproot/)
 - [UTXO](../UTXO/)
-- [Bitcoin_Script](../Bitcoin_Script/)
+- [Bitcoin Script](../Bitcoin_Script/)
 
 ## Notes and further reading
 
 - ["Looking for proof OP_RETURN isn't part of witness data" discussion thread](https://bitcointalk.org/index.php?topic=5597097.0), Bitcoin Forum, October 2026
 - BIP-141, Segregated Witness (Consensus layer)
-- (Add sourcing where appropriate: Bitcoin Core release notes describing changes to relay policy for data carrier output size, and annotated weight calculations for real transactions.)

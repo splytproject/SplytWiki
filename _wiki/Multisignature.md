@@ -3,7 +3,8 @@ title: Multisignature
 description: Overview of m-of-n multisignature spending in Bitcoin, the OP_CHECKMULTISIG opcode and its off-by-one quirk, and standardness limits
 aliases: [Multisig, OP_CHECKMULTISIG, m-of-n, CHECKMULTISIG bug]
 categories: [Bitcoin, Protocol, Scripting, Custody]
-updated: 2026-10-18
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: Multisignature
@@ -15,6 +16,8 @@ infobox:
     - Known bug: Pops one extra stack item
     - Replaced in Tapscript by: OP_CHECKSIGADD
 ---
+
+**Specifications:** [BIP-11](../BIP_index/#bip-11) · [BIP-16](../BIP_index/#bip-16) · [BIP-147](../BIP_index/#bip-147)
 
 > **In plain terms:** Multisig is a shared lock. For example, a "2-of-3" setup needs any two of three keys to approve a spend, so losing one key (or having one stolen) isn't fatal.
 
@@ -41,11 +44,11 @@ The dummy must be an empty value under the "NULLDUMMY" rule (BIP-147, part of th
 
 - Up to 20 public keys by script rules, but a P2SH redeem script is limited to 520 bytes, which allows about 15 compressed keys.
 - Legacy sigop accounting counts each `OP_CHECKMULTISIG` as up to 20 signature operations, which constrained how many could fit in a block.
-- **Standardness:** default nodes relay only certain multisig forms. Scripts that are valid by consensus but unusual can be hard to get mined; a proposal to make a common two-path multisig form standard was discussed in Bitcoin Core PR #26348.
+- **Standardness:** default nodes relay only certain multisig forms. Scripts that are valid by consensus but unusual can be hard to get mined. A proposal to make a common two-path multisig form standard was discussed in Bitcoin Core PR #26348.
 
 ## Taproot
 
-Tapscript disables `OP_CHECKMULTISIG`. Multisig there uses `OP_CHECKSIGADD`, or key aggregation (MuSig2) so the group spends via the key path as a single signer (see [Taproot](../Taproot/) and [Schnorr_signature](../Schnorr_signature/)).
+Tapscript disables `OP_CHECKMULTISIG`. Multisig there uses `OP_CHECKSIGADD`, or key aggregation (MuSig2) so the group spends via the key path as a single signer (see [Taproot](../Taproot/) and [Schnorr signature](../Schnorr_signature/)).
 
 ## Developer notes
 
@@ -55,7 +58,7 @@ Tapscript disables `OP_CHECKMULTISIG`. Multisig there uses `OP_CHECKSIGADD`, or 
 
 ## See also
 
-- [Bitcoin_Script](../Bitcoin_Script/)
+- [Bitcoin Script](../Bitcoin_Script/)
 - [PSBT](../PSBT/)
 - [Taproot](../Taproot/)
 - [Mempool](../Mempool/)
@@ -63,5 +66,4 @@ Tapscript disables `OP_CHECKMULTISIG`. Multisig there uses `OP_CHECKSIGADD`, or 
 ## Notes and further reading
 
 - The off-by-one explanation is from a 2011 Bitcoin developer mailing-list discussion; standardness discussions are from Bitcoin Core GitHub (e.g. [PR #26348](https://github.com/bitcoin/bitcoin/pull/26348)).
-- The forum board has a thread on unusual multisig use: [non-standard CHECKMULTISIG usage](https://bitcointalk.org/index.php?topic=5595966.0) (linked, not summarized here).
-- (Add sourcing where appropriate: BIP-147, descriptor documentation.)
+- The forum board has a thread on unusual multisig use: [non-standard CHECKMULTISIG usage](https://bitcointalk.org/index.php?topic=5595966.0).

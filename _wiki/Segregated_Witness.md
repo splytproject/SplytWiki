@@ -3,7 +3,8 @@ title: Segregated Witness
 description: Overview of SegWit, the witness section of transactions, block weight, and the witness discount
 aliases: [SegWit, BIP-141, BIP-143, BIP-144, Witness data, Weight units, vbytes]
 categories: [Bitcoin, Protocol, Transactions, Soft forks]
-updated: 2026-10-18
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: Segregated Witness
@@ -16,13 +17,15 @@ infobox:
     - Address style: Bech32 (bc1…)
 ---
 
+**Specifications:** [BIP-141](../BIP_index/#bip-141) · [BIP-143](../BIP_index/#bip-143) · [BIP-144](../BIP_index/#bip-144) · [BIP-173](../BIP_index/#bip-173) · [BIP-350](../BIP-350/)
+
 > **In plain terms:** SegWit moved the signature data of a transaction into a separate section. That fixed a bug that let third parties tweak transaction ids, and it let blocks hold more transactions.
 
 **Segregated Witness (SegWit)** separates a transaction's unlocking data (signatures and similar items, called the **witness**) from the rest of the transaction. It was deployed as a [soft fork](../Soft_fork_and_hard_fork/) in 2017.
 
 ## What changed
 
-- **Witness separated from the txid.** The transaction id (`txid`) no longer commits to signatures, so changing a signature cannot change the `txid` (this removed a form of transaction malleability, important for protocols that build on unconfirmed transactions). A separate `wtxid` commits to the witness too.
+- **Witness separated from the txid.** The transaction id (`txid`) no longer commits to signatures, so changing a signature cannot change the `txid`. This removed a form of transaction malleability, important for protocols that build on unconfirmed transactions. A separate `wtxid` commits to the witness too.
 - **Witness versions.** Output scripts carry a version number, allowing future upgrades. Version 0 covers P2WPKH and P2WSH; version 1 is [Taproot](../Taproot/).
 - **New signature hash (BIP-143)** that fixes quadratic hashing costs for large transactions.
 - **Weight-based block limit.**
@@ -50,10 +53,9 @@ It addressed malleability, enabled script upgrades via versioning, and raised ef
 - [Taproot](../Taproot/)
 - [OP_RETURN](../OP_RETURN/)
 - [Mempool](../Mempool/)
-- [Bitcoin_Script](../Bitcoin_Script/)
+- [Bitcoin Script](../Bitcoin_Script/)
 
 ## Notes and further reading
 
 - Based on BIP-141, BIP-143, BIP-144, BIP-173, BIP-350.
-- Forum discussion of what counts as witness data: [Looking for proof OP_RETURN isn't part of witness data](https://bitcointalk.org/index.php?topic=5597097.0); and on SegWit as a soft vs hard fork: [How do developers decide whether a Bitcoin upgrade will be a soft or hard fork?](https://bitcointalk.org/index.php?topic=5596302.0)
-- (Add sourcing where appropriate: activation timeline and adoption statistics.)
+- Forum discussion of what counts as witness data: [Looking for proof OP_RETURN isn't part of witness data](https://bitcointalk.org/index.php?topic=5597097.0). Discussion of SegWit as a soft vs hard fork: [How do developers decide whether a Bitcoin upgrade will be a soft or hard fork?](https://bitcointalk.org/index.php?topic=5596302.0)

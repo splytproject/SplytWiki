@@ -3,7 +3,8 @@ title: Bitcoin Script
 description: Overview of Bitcoin's stack-based scripting language, standard script types, and how scripts are evaluated
 aliases: [Script, scriptPubKey, scriptSig, Opcodes, P2PKH, P2SH, P2WPKH, P2WSH, P2TR]
 categories: [Bitcoin, Protocol, Scripting]
-updated: 2026-10-18
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: Bitcoin Script
@@ -38,7 +39,7 @@ The spender provides `<signature> <publicKey>`. The script duplicates the key, h
 |---|---|---|
 | P2PKH | Hash of a public key | Legacy |
 | P2SH | Hash of an arbitrary script, revealed at spend | Enables [multisig](../Multisignature/) addresses |
-| P2WPKH / P2WSH | SegWit v0 versions of the above | See [Segregated_Witness](../Segregated_Witness/) |
+| P2WPKH / P2WSH | SegWit v0 versions of the above | See [Segregated Witness](../Segregated_Witness/) |
 | P2TR | Taproot output key | See [Taproot](../Taproot/) |
 | OP_RETURN | Unspendable data carrier | See [OP_RETURN](../OP_RETURN/) |
 
@@ -60,7 +61,3 @@ Many scripts are valid by consensus but not *standard*, so default nodes won't r
 - [ECDSA](../ECDSA/)
 - [UTXO](../UTXO/)
 
-## Notes and further reading
-
-- Based on standard protocol behaviour and Bitcoin Core documentation.
-- (Add sourcing where appropriate: the opcode reference, Miniscript specification, script limits.)

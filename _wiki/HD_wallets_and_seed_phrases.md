@@ -3,7 +3,8 @@ title: HD wallets and seed phrases
 description: Overview of hierarchical deterministic wallets (BIP-32), mnemonic seed phrases (BIP-39), and derivation paths
 aliases: [BIP-32, BIP-39, BIP-44, BIP-84, BIP-86, Mnemonic, Recovery phrase, xpub, Derivation path]
 categories: [Bitcoin, Wallets, Cryptography]
-updated: 2026-10-18
+updated: 2026-10-23
+last_modified: 2026-10-23
 infobox:
   image: bitcoin.svg
   caption: HD wallets and seed phrases
@@ -16,6 +17,8 @@ infobox:
     - Seed: 512-bit value from the mnemonic
     - Extended public key: xpub
 ---
+
+**Specifications:** [BIP-32](../BIP_index/#bip-32) · [BIP-39](../BIP_index/#bip-39) · [BIP-44](../BIP_index/#bip-44) · [BIP-49](../BIP_index/#bip-49) · [BIP-84](../BIP_index/#bip-84) · [BIP-86](../BIP_index/#bip-86)
 
 > **In plain terms:** Instead of backing up each key separately, a wallet derives all its keys from one secret. That secret is written as 12 or 24 words, your recovery phrase. Anyone with the words can recreate every key.
 
@@ -34,7 +37,7 @@ The optional passphrase gives a completely different wallet; losing it means los
 
 The seed produces a **master private key** and a **chain code**. From any parent key you can derive child keys by index:
 
-- **Non-hardened** children can be derived from the parent *public* key, which is what allows **extended public keys (xpubs)** to generate receiving addresses without private keys.
+- **Non-hardened** children can be derived from the parent *public* key. This is what allows **extended public keys (xpubs)** to generate receiving addresses without private keys.
 - **Hardened** children require the parent private key, so an xpub cannot derive them, and exposure of a child private key can't compromise its parent.
 
 ## Derivation paths
@@ -55,7 +58,7 @@ Before HD wallets, every key needed its own backup. One seed now backs up an unl
 ## Security and privacy notes
 
 - Anyone holding the seed phrase controls all funds. Treat it as the wallet.
-- Sharing an **xpub** exposes every address and balance in that branch to the recipient; it doesn't expose spending keys, but it is a large privacy leak.
+- Sharing an **xpub** exposes every address and balance in that branch to the recipient. It doesn't expose spending keys, but it is a large privacy leak.
 - Never type a recovery phrase into a website or an unverified app.
 
 ## Developer notes
@@ -69,11 +72,10 @@ Before HD wallets, every key needed its own backup. One seed now backs up an unl
 - [Seed phrases and self-custody security](../Seed_phrases_and_self-custody_security/)
 - [ECDSA](../ECDSA/)
 - [PSBT](../PSBT/)
-- [Silent_payments](../Silent_payments/)
+- [Silent payments](../Silent_payments/)
 - [Multisignature](../Multisignature/)
 
 ## Notes and further reading
 
 - Based on BIP-32, BIP-39, BIP-44, BIP-49, BIP-84 and BIP-86.
-- The forum board has a thread of experimental BIP-39 research: [Experimental BIP-39 research: prime-coordinate representation and entropy analysis](https://bitcointalk.org/index.php?topic=5594019.0) (linked, not summarized here; treat experimental claims with caution).
-- (Add sourcing where appropriate: BIP test vectors, descriptor specifications.)
+- The forum board has a thread of experimental BIP-39 research: [Experimental BIP-39 research: prime-coordinate representation and entropy analysis](https://bitcointalk.org/index.php?topic=5594019.0). Treat its experimental claims with caution.
